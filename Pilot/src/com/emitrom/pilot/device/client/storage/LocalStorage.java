@@ -1,0 +1,77 @@
+/**
+   Copyright (c) 2012 Emitrom LLC. All rights reserved. 
+   For licensing questions, please contact us at licensing@emitrom.com
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ */
+package com.emitrom.pilot.device.client.storage;
+
+import com.emitrom.pilot.util.client.core.JsObject;
+import com.google.gwt.core.client.JavaScriptObject;
+
+/**
+ * Provides access to a W3C Storage interface
+ * (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
+ */
+public class LocalStorage extends JsObject {
+
+    LocalStorage(JavaScriptObject obj) {
+        jsObj = obj;
+    }
+
+    /**
+     * Returns the name of the key at the position specified
+     * 
+     * @param position
+     * @return
+     */
+    public native String getKey(int position)/*-{
+		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		return peer.key(position);
+    }-*/;
+
+    /**
+     * Saves and item at the key provided.
+     */
+    public native void setItem(String key, Object item)/*-{
+		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		peer.setItem(key, item);
+    }-*/;
+
+    /**
+     * Returns the item identified by it's key
+     * 
+     * @return T
+     */
+    public native <T> T getItem(String key)/*-{
+		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		return peer.getItem(key);
+    }-*/;
+
+    /**
+     * Removes the item identified by it's key
+     */
+    public native void removeItem(String key)/*-{
+		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		peer.removeItem(key);
+    }-*/;
+
+    /**
+     * Removes all of the key value pairs
+     */
+    public native void clear()/*-{
+		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		peer.clear();
+    }-*/;
+
+}

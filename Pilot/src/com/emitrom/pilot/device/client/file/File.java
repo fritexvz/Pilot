@@ -1,0 +1,81 @@
+/**
+   Copyright (c) 2012 Emitrom LLC. All rights reserved. 
+   For licensing questions, please contact us at licensing@emitrom.com
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ */
+package com.emitrom.pilot.device.client.file;
+
+import java.util.Date;
+
+import com.emitrom.pilot.util.client.core.JsObject;
+import com.emitrom.pilot.util.client.core.JsoHelper;
+import com.google.gwt.core.client.JavaScriptObject;
+
+/**
+ * This object contains attributes of a single file.
+ * 
+ * @see <a href=http://docs.phonegap.com/en/2.2.0/cordova_file_file.md.html>
+ * http://docs.phonegap.com/en/2.2.0/cordova_file_file.md.html</a> 
+ */
+public class File extends JsObject {
+
+    private File(JavaScriptObject obj) {
+        jsObj = obj;
+    }
+
+    /**
+     * The name of the file
+     * 
+     * @return
+     */
+    public String getName() {
+        return JsoHelper.getAttribute(jsObj, "name");
+    }
+
+    /**
+     * The full absolute path from the root to the FileEntry
+     * 
+     * @return
+     */
+    public String getFullPath() {
+        return JsoHelper.getAttribute(jsObj, "fullPath");
+    }
+
+    /**
+     * The mime type of the file.
+     * 
+     * @return
+     */
+    public String getType() {
+        return JsoHelper.getAttribute(jsObj, "type");
+    }
+
+    /**
+     * The last time the file was modified.
+     * 
+     * @return
+     */
+    public Date getLastModifiedDate() {
+        return JsoHelper.getAttributeAsDate(jsObj, "lastModifiedDate");
+    }
+
+    /**
+     * The size of the file in bytes
+     * 
+     * @return
+     */
+    public double getSize() {
+        return JsoHelper.getAttributeAsDouble(jsObj, "size");
+    }
+}
