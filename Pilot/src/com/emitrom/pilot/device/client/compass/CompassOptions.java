@@ -31,7 +31,7 @@ public class CompassOptions extends JsObject {
     /**
      * Sets how often to retrieve the compass heading, in milliseconds.
      * 
-     * @param double
+     * @param value
      */
     public void setFrequency(double value) {
         JsoHelper.setAttribute(jsObj, "frequency", value);

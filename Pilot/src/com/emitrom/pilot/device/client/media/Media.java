@@ -26,8 +26,8 @@ import com.google.gwt.core.client.JavaScriptObject;
  * The Media object provides the ability to record and play back audio files on
  * a device.
  * 
- * @see <a href=http://docs.phonegap.com/en/2.2.0/cordova_media_media.md.html>
- * http://docs.phonegap.com/en/2.2.0/cordova_media_media.md.html</a>
+ * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_media_media.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_media_media.md.html</a>
  */
 public class Media extends Module {
 

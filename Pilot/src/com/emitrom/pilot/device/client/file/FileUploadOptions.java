@@ -16,10 +16,10 @@
  */
 package com.emitrom.pilot.device.client.file;
 
-import java.util.Map;
-
 import com.emitrom.pilot.util.client.core.JsObject;
 import com.emitrom.pilot.util.client.core.JsoHelper;
+
+import java.util.Map;
 
 /**
  * A FileUploadOptions object can be passed to the FileTransfer objects upload
@@ -87,7 +87,6 @@ public class FileUploadOptions extends JsObject {
      * @param value
      */
     public void setHeaders(Map<String, String> value) {
-        // TODO check this
         JsoHelper.setAttribute(jsObj, "headers", value);
     }
 

@@ -24,9 +24,9 @@ import com.google.gwt.core.client.JavaScriptObject;
  * callback with a SQLResultSet.
  * 
  */
-public class SQLResultSetList extends JsObject {
+public class SQLResultSetRowList extends JsObject {
 
-    SQLResultSetList(JavaScriptObject obj) {
+    SQLResultSetRowList(JavaScriptObject obj) {
         jsObj = obj;
     }
 

@@ -53,24 +53,4 @@ public class CaptureImageOptions extends JsObject {
     public int getLimit() {
         return JsoHelper.getAttributeAsInt(jsObj, "limit");
     }
-
-    /**
-     * Sets the image mode. 
-     * 
-     * @param value
-     */
-    public void setMode(ConfigurationData value) {
-        // not supported
-        // TODO check this
-    }
-
-    /**
-     * Gets the image mode.  Returns null since this is not supported
-     * in all platforms.
-     * 
-     * @return ConfigurationData
-     */
-    public ConfigurationData getMode() {
-        return null;
-    }
 }

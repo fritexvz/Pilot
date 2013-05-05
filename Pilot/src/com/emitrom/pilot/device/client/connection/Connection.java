@@ -23,8 +23,8 @@ import com.emitrom.pilot.device.client.core.ModuleFactory;
  * The connection module gives access to the device's cellular and wifi
  * connection information.
  * 
- * @see <a href=http://docs.phonegap.com/en/2.2.0/cordova_connection_connection.md.html>
- * http://docs.phonegap.com/en/2.2.0/cordova_connection_connection.md.html</a>
+ * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_connection_connection.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_connection_connection.md.html</a>
  */
 public class Connection extends Module {
 

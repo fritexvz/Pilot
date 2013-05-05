@@ -18,9 +18,14 @@ package com.emitrom.pilot.device.client.globalization;
 
 import com.emitrom.pilot.util.client.core.JsObject;
 import com.emitrom.pilot.util.client.core.JsoHelper;
+import com.google.gwt.core.client.JavaScriptObject;
 
 public class GlobalizationDate extends JsObject {
-    
+
+    GlobalizationDate(JavaScriptObject obj) {
+        jsObj = obj;
+    }
+
     /**
      * Gets the this date as a localized string.
      * 

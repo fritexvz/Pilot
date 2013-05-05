@@ -20,6 +20,20 @@ import com.emitrom.pilot.device.client.core.Module;
 import com.emitrom.pilot.device.client.core.ModuleFactory;
 import com.emitrom.pilot.device.client.core.handlers.geolocation.GeoLocationHandler;
 
+/**
+ * Geolocation provides location information for the device, such as latitude and longitude. Common sources of location
+ * information include Global Positioning System (GPS) and location inferred from network signals such as IP address,
+ * RFID, WiFi and Bluetooth MAC addresses, and GSM/CDMA cell IDs. No guarantee is given that the API returns the
+ * device's actual location.
+ *
+ * This API is based on the W3C Geolocation API Specification. Some devices (Android, BlackBerry, Bada, Windows Phone 7,
+ * webOS and Tizen, to be specific) already provide an implementation of this spec. For those devices, the built-in
+ * support is used instead of replacing it with Cordova's implementation. For devices that don't have geolocation
+ * support, the Cordova implementation adheres to the W3C specification.
+ *
+ * @see <a http://docs.phonegap.com/en/2.7.0/cordova_geolocation_geolocation.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_geolocation_geolocation.md.html</a>
+ */
 public class GeoLocation extends Module {
 
     private static GeoLocation instance = null;
@@ -130,7 +144,7 @@ public class GeoLocation extends Module {
      * Stop watching for changes to the device's location referenced by the
      * watchID parameter.
      * 
-     * @param handler
+     * @param watchId
      */
     public native void clearWatch(String watchId)/*-{
 		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();

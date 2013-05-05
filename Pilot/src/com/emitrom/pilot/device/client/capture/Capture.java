@@ -32,8 +32,8 @@ import com.emitrom.pilot.device.client.core.handlers.capture.CaptureHandler;
  * </ul>
  * <br/>
  * 
- * @see <a href=http://docs.phonegap.com/en/2.2.0/cordova_media_capture_capture.md.html>
- * http://docs.phonegap.com/en/2.2.0/cordova_media_capture_capture.md.html</a>
+ * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_media_capture_capture.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_media_capture_capture.md.html</a>
  */
 public class Capture extends Module {
 

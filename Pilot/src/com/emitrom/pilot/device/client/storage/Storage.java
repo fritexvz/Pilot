@@ -28,8 +28,8 @@ import com.google.gwt.core.client.JavaScriptObject;
  * storage support, PhoneGap's implementation should be compatible with the W3C
  * specification.
  * 
- * @see <a href=http://docs.phonegap.com/en/2.2.0/cordova_storage_storage.md.html>
- * http://docs.phonegap.com/en/2.2.0/cordova_storage_storage.md.html</a>
+ * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_storage_storage.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_storage_storage.md.html</a>
  * 
  */
 public class Storage {

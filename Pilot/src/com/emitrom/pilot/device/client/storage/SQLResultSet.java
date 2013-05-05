@@ -58,10 +58,10 @@ public class SQLResultSet extends JsObject {
      * 
      * @return
      */
-    public native SQLResultSetList getRows()/*-{
+    public native SQLResultSetRowList getRows()/*-{
 		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
 		var obj = peer.rows;
-		var toReturn = @com.emitrom.pilot.device.client.storage.SQLResultSetList::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
+		var toReturn = @com.emitrom.pilot.device.client.storage.SQLResultSetRowList::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 }

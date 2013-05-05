@@ -30,7 +30,7 @@ import com.google.gwt.core.client.JavaScriptObject;
  * <li>Android</li>
  * <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
  * <li>iOS</li>
- * <li>Windows Phone 7 (Mango)</li>
+ * <li>Windows Phone 7 and 8</li>
  * <li>webOS</li>
  * <li>Tizen</li>
  * </ul>

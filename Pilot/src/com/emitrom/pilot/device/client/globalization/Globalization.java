@@ -17,10 +17,6 @@
 
 package com.emitrom.pilot.device.client.globalization;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import com.emitrom.pilot.device.client.core.Module;
 import com.emitrom.pilot.device.client.core.ModuleFactory;
 import com.emitrom.pilot.device.client.core.handlers.globalization.GlobalizationDateHandler;
@@ -30,10 +26,16 @@ import com.emitrom.pilot.device.client.core.handlers.globalization.Globalization
 import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 /**
  * The globalization object obtains information and performs operations specific
  * to the user's locale and timezone.
- * 
+ *
+ * @see <a http://docs.phonegap.com/en/2.7.0/cordova_globalization_globalization.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_globalization_globalization.md.html</a>
  */
 public class Globalization extends Module {
     private static Globalization instance = null;
@@ -100,14 +102,14 @@ public class Globalization extends Module {
 		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
 		peer
 				.dateToString(
-						date),
+						date,
 						$entry(function(gd) {
 							var dateJso = @com.emitrom.pilot.device.client.globalization.GlobalizationDate::new(Lcom/google/gwt/core/client/JavaScriptObject;)(gd);
 							handler.@com.emitrom.pilot.device.client.core.handlers.globalization.GlobalizationDateHandler::onSuccess(Lcom/emitrom/pilot/device/client/globalization/GlobalizationDate;)(dateJso);
 						}),
 						$entry(function() {
 							handler.@com.emitrom.pilot.device.client.core.handlers.globalization.GlobalizationDateHandler::onError()();
-						}));
+                        }));
     }-*/;
 
     /**
@@ -121,7 +123,7 @@ public class Globalization extends Module {
 		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
 		peer
 				.dateToString(
-						date),
+						date,
 						$entry(function(gd) {
 							var dateJso = @com.emitrom.pilot.device.client.globalization.GlobalizationDate::new(Lcom/google/gwt/core/client/JavaScriptObject;)(gd);
 							handler.@com.emitrom.pilot.device.client.core.handlers.globalization.GlobalizationDateHandler::onSuccess(Lcom/emitrom/pilot/device/client/globalization/GlobalizationDate;)(dateJso);
@@ -137,7 +139,7 @@ public class Globalization extends Module {
      * preferences and calendar using the time zone of the client and returns
      * the corresponding date object.
      * 
-     * @param date
+     * @param dateString
      * @param handler
      */
     public native void stringToDate(String dateString, GlobalizationDateHandler handler) /*-{
@@ -159,7 +161,7 @@ public class Globalization extends Module {
      * preferences and calendar using the time zone of the client and returns
      * the corresponding date object.
      * 
-     * @param date
+     * @param dateString
      * @param handler
      * @param options
      */

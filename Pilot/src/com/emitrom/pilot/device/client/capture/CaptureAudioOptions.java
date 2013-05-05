@@ -70,22 +70,4 @@ public class CaptureAudioOptions extends JsObject {
     public int getDuration() {
         return JsoHelper.getAttributeAsInt(jsObj, "duration");
     }
-
-    /**
-     * Sets the audio mode.
-     */
-    public void setMode(ConfigurationData value) {
-        // not supported
-        // TODO check this
-    }
-
-    /**
-     * Gets the audio mode.  Returns null since this is not supported
-     * in all platforms.
-     * 
-     * @return ConfigurationData
-     */
-    public ConfigurationData getMode() {
-        return null;
-    }
 }

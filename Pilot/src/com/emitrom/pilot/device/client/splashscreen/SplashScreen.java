@@ -23,8 +23,8 @@ import com.google.gwt.user.client.Timer;
 /**
  * Enables developers to show/hide the application's splash screen.
  * 
- * @see <a href=http://docs.phonegap.com/en/2.2.0/cordova_splashscreen_splashscreen.md.html>
- * http://docs.phonegap.com/en/2.2.0/cordova_splashscreen_splashscreen.md.html</a>
+ * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_splashscreen_splashscreen.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_splashscreen_splashscreen.md.html</a>
  */
 public class SplashScreen extends Module {
     private static SplashScreen instance = null;

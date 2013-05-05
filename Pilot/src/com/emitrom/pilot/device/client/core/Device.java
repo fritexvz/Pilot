@@ -18,21 +18,7 @@ package com.emitrom.pilot.device.client.core;
 
 import com.emitrom.pilot.device.client.core.handlers.notification.ConfirmHandler;
 import com.emitrom.pilot.device.client.events.DeviceEvent;
-import com.emitrom.pilot.device.client.handlers.BackButtonEventHandler;
-import com.emitrom.pilot.device.client.handlers.BatteryCriticalEventHandler;
-import com.emitrom.pilot.device.client.handlers.BatteryLowEventHandler;
-import com.emitrom.pilot.device.client.handlers.BatteryStatusEventHandler;
-import com.emitrom.pilot.device.client.handlers.DeviceReadyEventHandler;
-import com.emitrom.pilot.device.client.handlers.EndCallButtonEventHandler;
-import com.emitrom.pilot.device.client.handlers.MenuButtonEventHandler;
-import com.emitrom.pilot.device.client.handlers.OfflineEventHandler;
-import com.emitrom.pilot.device.client.handlers.OnlineEventHandler;
-import com.emitrom.pilot.device.client.handlers.PauseEventHandler;
-import com.emitrom.pilot.device.client.handlers.ResumeEventHandler;
-import com.emitrom.pilot.device.client.handlers.SearchButtonEventHandler;
-import com.emitrom.pilot.device.client.handlers.StartCallButtonEventHandler;
-import com.emitrom.pilot.device.client.handlers.VolumeDownButtonEventHandler;
-import com.emitrom.pilot.device.client.handlers.VolumeUpButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.*;
 import com.emitrom.pilot.device.client.notification.Notification;
 import com.emitrom.pilot.util.client.core.Attributes;
 import com.emitrom.pilot.util.client.core.Function;
@@ -41,8 +27,8 @@ import com.emitrom.pilot.util.client.core.JsoHelper;
 /**
  * The device object describes the device's hardware and software.
  * 
- * @see <a href=http://docs.phonegap.com/en/2.2.0/cordova_device_device.md.html>
- * http://docs.phonegap.com/en/2.2.0/cordova_device_device.md.html</a>
+ * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_device_device.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_device_device.md.html</a>
  */
 public class Device extends Module {
 
@@ -62,7 +48,8 @@ public class Device extends Module {
 
     /**
      * Get the device's model name.
-     * 
+     * @deprecated since version 2.3.0.  Use getModel() instead.
+     *
      * @return
      */
     public String getName() {
@@ -103,6 +90,15 @@ public class Device extends Module {
      */
     public String getVersion() {
         return JsoHelper.getAttribute(jsObj, Attributes.VERSION.getValue());
+    }
+
+    /**
+     * Gets the device's model.
+     *
+     * @return String
+     */
+    public String getModel() {
+        return JsoHelper.getAttribute(jsObj, Attributes.MODEL.getValue());
     }
 
     private Device() {
@@ -391,7 +387,7 @@ public class Device extends Module {
      *            , Dialog message
      * @param title
      *            , Dialog title
-     * @param button
+     * @param buttonLabels
      *            , Button name
      */
     public static void alert(String title, String message, String buttonLabels) {
@@ -405,7 +401,7 @@ public class Device extends Module {
      *            , Dialog message
      * @param title
      *            , Dialog title
-     * @param button
+     * @param buttonLabels
      *            , Button name
      * @param callback
      */
@@ -418,7 +414,7 @@ public class Device extends Module {
      * confirm function.
      * 
      * @param message
-     * @param callBack
+     * @param callback
      */
     public static void confirm(String message, ConfirmHandler callback) {
         Notification.get().confirm(message, callback);
@@ -430,7 +426,7 @@ public class Device extends Module {
      * 
      * @param message
      * @param title
-     * @param callBack
+     * @param callback
      */
     public static void confirm(String title, String message, ConfirmHandler callback) {
         Notification.get().confirm(title, message, callback);
@@ -442,7 +438,7 @@ public class Device extends Module {
      * 
      * @param message
      *            , Dialog message
-     * @param callBack
+     * @param callback
      *            , Callback to invoke with index of button pressed (1, 2 or 3)
      */
     public static void confirm(String title, String message, String buttonLabels, ConfirmHandler callback) {
@@ -471,8 +467,6 @@ public class Device extends Module {
 
     /**
      * Vibrates the device for 1 second.
-     * 
-     * @param times
      */
 
     public static void vibrate() {

@@ -31,7 +31,7 @@ import com.emitrom.pilot.device.client.core.handlers.accelerometer.Accelerometer
  * <li>Android</li>
  * <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
  * <li>iPhone</li>
- * <li>Windows Phone 7 (Mango)</li>
+ * <li>Windows Phone 7 and 8</li>
  * <li>Bada 1.2 & 2.x</li>
  * <li>Tizen</li>
  * </ul>
@@ -45,8 +45,8 @@ import com.emitrom.pilot.device.client.core.handlers.accelerometer.Accelerometer
  * reported from a phoneGap watchAccelerometer call.</li>
  * </ul>
  * 
- * @see <a href=http://docs.phonegap.com/en/2.2.0/cordova_accelerometer_accelerometer.md.html#Accelerometer>
- * http://docs.phonegap.com/en/2.2.0/cordova_accelerometer_accelerometer.md.html#Accelerometer</a>
+ * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_accelerometer_accelerometer.md.html#Accelerometer>
+ * http://docs.phonegap.com/en/2.7.0/cordova_accelerometer_accelerometer.md.html#Accelerometer</a>
  */
 public class Accelerometer extends Module {
 
@@ -62,11 +62,7 @@ public class Accelerometer extends Module {
     /**
      * Gets the current acceleration along the x, y, and z axis.
      * 
-     * @param successHandler
-     *            , onSuccess callback that provides the Acceleration
-     *            information.
-     * @param errorHandler
-     *            , onError function for acceleration functions.
+     * @param callBack
      */
     public native void getCurrentAcceleration(AccelerometerHandler callBack)/*-{
 		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
@@ -84,11 +80,7 @@ public class Accelerometer extends Module {
     /**
      * At a regular interval, get the acceleration along the x, y, and z axis.
      * 
-     * @param successHandler
-     *            , onSuccess callback that provides the Acceleration
-     *            information.
-     * @param errorHandler
-     *            , onError function for acceleration functions.
+     * @param callBack
      */
     public native String watchAcceleration(AccelerometerHandler callBack)/*-{
 		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
@@ -106,11 +98,8 @@ public class Accelerometer extends Module {
     /**
      * At a regular interval, get the acceleration along the x, y, and z axis.
      * 
-     * @param successHandler
-     *            , onSuccess callback that provides the Acceleration
-     *            information.
-     * @param errorHandler
-     *            , onError function for acceleration functions.
+     * @param callBack
+     * @param options
      */
     public native String watchAcceleration(AccelerometerHandler callBack, AccelerometerOptions options)/*-{
 		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();

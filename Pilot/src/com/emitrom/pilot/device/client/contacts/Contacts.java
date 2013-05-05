@@ -16,9 +16,6 @@
  */
 package com.emitrom.pilot.device.client.contacts;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.emitrom.pilot.device.client.core.Module;
 import com.emitrom.pilot.device.client.core.ModuleFactory;
 import com.emitrom.pilot.device.client.core.handlers.contacts.ContactFindHandler;
@@ -26,11 +23,14 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayString;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * The contacts module provides access to the device contacts database.
  * 
- * @see <a href=http://docs.phonegap.com/en/2.2.0/cordova_contacts_contacts.md.html>
- * http://docs.phonegap.com/en/2.2.0/cordova_contacts_contacts.md.html</a>
+ * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_contacts_contacts.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_contacts_contacts.md.html</a>
  */
 public class Contacts extends Module {
 

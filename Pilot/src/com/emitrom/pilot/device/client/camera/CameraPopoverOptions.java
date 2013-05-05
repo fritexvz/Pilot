@@ -85,7 +85,7 @@ public class CameraPopoverOptions extends JsObject
      * 
      * @param value
      */
-    public void setPopoverOptions(PopoverArrowDirection value)
+    public void setArrowDirection(PopoverArrowDirection value)
     {
         JsoHelper.setAttribute(jsObj, "arrowDir", value.getValue());
     }

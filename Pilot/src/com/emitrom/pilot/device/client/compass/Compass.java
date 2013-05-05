@@ -23,8 +23,8 @@ import com.emitrom.pilot.device.client.core.handlers.compass.CompassHandler;
 /**
  * Obtains the direction that the device is pointing.
  * 
- * @see <a href=http://docs.phonegap.com/en/2.2.0/cordova_compass_compass.md.html>
- * http://docs.phonegap.com/en/2.2.0/cordova_compass_compass.md.html</a>
+ * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_compass_compass.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_compass_compass.md.html</a>
  */
 public class Compass extends Module {
 

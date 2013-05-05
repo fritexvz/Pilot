@@ -113,6 +113,28 @@ public class FileReader extends JsObject {
     }-*/;
 
     /**
+     * Reads file as binary and returns a binary string.
+     *
+     * @param file
+     */
+    public native void readAsBinaryString(DirectoryEntry file)/*-{
+        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        peer
+            .readAsBinaryString(file.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+    }-*/;
+
+    /**
+     * Reads file as an ArrayBuffer.
+     *
+     * @param file
+     */
+    public native void readAsArrayBuffer(DirectoryEntry file)/*-{
+        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        peer
+            .readAsArrayBuffer(file.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+    }-*/;
+
+    /**
      * Called when the read starts
      * 
      * @param handler

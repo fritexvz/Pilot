@@ -24,8 +24,8 @@ import com.emitrom.pilot.util.client.core.Function;
 /**
  * Visual, audible, and tactile device notifications.<br/>
  * 
- * @see <a href=http://docs.phonegap.com/en/2.2.0/cordova_notification_notification.md.html>
- * http://docs.phonegap.com/en/2.2.0/cordova_notification_notification.md.html</a>
+ * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_notification_notification.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_notification_notification.md.html</a>
  */
 public class Notification extends Module {
 
@@ -188,7 +188,7 @@ public class Notification extends Module {
     /**
      * Vibrates the device for the specified amount of time.
      * 
-     * @param times
+     * @param time
      */
     public native void vibrate(int time)/*-{
 		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();

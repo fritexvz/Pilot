@@ -21,6 +21,8 @@ import com.emitrom.pilot.device.client.core.handlers.file.FileTransferProgressHa
 import com.emitrom.pilot.util.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
 
+import java.util.Map;
+
 /**
  * The FileTransfer object provides a way to upload files to a remote server
  * using an HTTP multi-part POST request. Both HTTP and HTTPS protocols are
@@ -30,8 +32,6 @@ import com.google.gwt.core.client.JavaScriptObject;
  * occurs, the error callback will be invoked with a FileTransferError object.
  * It is also possible to download a file from remote and save it on the device
  * (only iOS and Android).
- * 
- * 
  */
 public class FileTransfer extends JsObject {
 
@@ -81,6 +81,7 @@ public class FileTransfer extends JsObject {
      * @param filePath
      * @param server
      * @param handler
+     * @param options
      */
     public native void upload(String filePath, String server, FileTransferHandler handler, FileUploadOptions options)/*-{
 		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
@@ -97,6 +98,34 @@ public class FileTransfer extends JsObject {
 							handler.@com.emitrom.pilot.device.client.core.handlers.file.FileTransferHandler::onError(Lcom/emitrom/pilot/device/client/file/FileTransferError;)(errorObject);
 						}),
 						options.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+    }-*/;
+
+    /**
+     * sends a file to a server.
+     *
+     * @param filePath
+     * @param server
+     * @param handler
+     * @param options
+     * @param trustAllHosts
+     */
+    public native void upload(String filePath, String server, FileTransferHandler handler, FileUploadOptions options, boolean trustAllHosts)/*-{
+        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        peer
+            .upload(
+                filePath,
+                server,
+                $entry(function(r) {
+                    var result = @com.emitrom.pilot.device.client.file.FileUploadResult::new(Lcom/google/gwt/core/client/JavaScriptObject;)(r);
+                    hander.@com.emitrom.pilot.device.client.core.handlers.file.FileTransferHandler::onSuccess(Lcom/emitrom/pilot/device/client/file/FileUploadResult;)(result);
+                }),
+                $entry(function(error) {
+                    var errorObject = @com.emitrom.pilot.device.client.file.FileTransferError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
+                    handler.@com.emitrom.pilot.device.client.core.handlers.file.FileTransferHandler::onError(Lcom/emitrom/pilot/device/client/file/FileTransferError;)(errorObject);
+                }),
+                options.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
+                trustAllHosts
+            );
     }-*/;
 
     /**
@@ -120,6 +149,62 @@ public class FileTransfer extends JsObject {
 							var errorObject = @com.emitrom.pilot.device.client.file.FileTransferError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
 							handler.@com.emitrom.pilot.device.client.core.handlers.file.FileTransferHandler::onError(Lcom/emitrom/pilot/device/client/file/FileTransferError;)(errorObject);
 						}));
+    }-*/;
+
+    /**
+     * download a file from a server.
+     *
+     * @param source, URL of the server to receive the file
+     * @param target, Full path of the file on the device
+     * @param handler
+     * @param trustAllHosts  Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates.
+     *                       Not recommended for production use.
+     */
+    public native void download(String source, String target, FileTransferHandler handler, boolean trustAllHosts)/*-{
+        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        peer
+            .download(
+                source,
+                target,
+                $entry(function(r) {
+                    var result = @com.emitrom.pilot.device.client.file.FileUploadResult::new(Lcom/google/gwt/core/client/JavaScriptObject;)(r);
+                    hander.@com.emitrom.pilot.device.client.core.handlers.file.FileTransferHandler::onSuccess(Lcom/emitrom/pilot/device/client/file/FileUploadResult;)(result);
+                }),
+                $entry(function(error) {
+                    var errorObject = @com.emitrom.pilot.device.client.file.FileTransferError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
+                    handler.@com.emitrom.pilot.device.client.core.handlers.file.FileTransferHandler::onError(Lcom/emitrom/pilot/device/client/file/FileTransferError;)(errorObject);
+                }),
+                trustAllHosts
+            );
+    }-*/;
+
+    /**
+     * download a file from a server.
+     *
+     * @param source, URL of the server to receive the file
+     * @param target, Full path of the file on the device
+     * @param handler
+     * @param trustAllHosts  Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates.
+     *                       Not recommended for production use.
+     * @param options Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
+     */
+    public native void download(String source, String target, FileTransferHandler handler, boolean trustAllHosts, Map<String, String> options)/*-{
+        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        peer
+            .download(
+                source,
+                target,
+                $entry(function(r) {
+                    var result = @com.emitrom.pilot.device.client.file.FileUploadResult::new(Lcom/google/gwt/core/client/JavaScriptObject;)(r);
+                    hander.@com.emitrom.pilot.device.client.core.handlers.file.FileTransferHandler::onSuccess(Lcom/emitrom/pilot/device/client/file/FileUploadResult;)(result);
+                }),
+                $entry(function(error) {
+                    var errorObject = @com.emitrom.pilot.device.client.file.FileTransferError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
+                    handler.@com.emitrom.pilot.device.client.core.handlers.file.FileTransferHandler::onError(Lcom/emitrom/pilot/device/client/file/FileTransferError;)(errorObject);
+                }),
+                trustAllHosts,
+                options
+            );
     }-*/;
     
     /**

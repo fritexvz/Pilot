@@ -17,7 +17,14 @@
 package com.emitrom.pilot.device.client.connection;
 
 public enum ConnectionType {
-    UNKNOWN("Unknown"), ETHERNET("Ethernet"), WIFI("WiFi"), CELL_2G("2G"), CELL_3G("3G"), CELL_4G("4G"), NONE("None");
+    UNKNOWN("Unknown"),
+    ETHERNET("Ethernet"),
+    WIFI("WiFi"),
+    CELL_2G("2G"),
+    CELL_3G("3G"),
+    CELL_4G("4G"),
+    CELL("cell"),
+    NONE("None");
 
     private String value;
 
@@ -38,6 +45,8 @@ public enum ConnectionType {
             return ConnectionType.CELL_3G;
         } else if (value.equalsIgnoreCase(ConnectionType.CELL_4G.value)) {
             return ConnectionType.CELL_4G;
+        } else if (value.equalsIgnoreCase(ConnectionType.CELL.value)) {
+            return ConnectionType.CELL;
         } else if (value.equalsIgnoreCase(ConnectionType.NONE.value)) {
             return ConnectionType.NONE;
         }

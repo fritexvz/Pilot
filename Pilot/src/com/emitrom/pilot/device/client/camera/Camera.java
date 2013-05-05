@@ -24,8 +24,8 @@ import com.emitrom.pilot.device.client.core.handlers.camera.CameraPictureHandler
 /**
  * The camera module provides access to the device's default camera application
  * 
- * @see <a htef=http://docs.phonegap.com/en/2.2.0/cordova_camera_camera.md.html>
- * http://docs.phonegap.com/en/2.2.0/cordova_camera_camera.md.html</a>
+ * @see <a htef=http://docs.phonegap.com/en/2.7.0/cordova_camera_camera.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_camera_camera.md.html</a>
  */
 public class Camera extends Module {
 
@@ -50,11 +50,11 @@ public class Camera extends Module {
     /**
      * Takes a photo using the camera or retrieves a photo from the device's album. 
      * 
-     * @param callback
+     * @param callBack
      */
-    public native void getPicture(CameraPictureHandler callBack)/*-{
+    public native CameraPopoverHandle getPicture(CameraPictureHandler callBack)/*-{
 		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		peer
+		return peer
 				.getPicture(
 						$entry(function(data) {
 							callBack.@com.emitrom.pilot.device.client.core.handlers.camera.CameraPictureHandler::onSuccess(Ljava/lang/String;)(data);
@@ -67,12 +67,12 @@ public class Camera extends Module {
     /**
      * Takes a photo using the camera or retrieves a photo from the device's album.
      * 
-     * @param callback
+     * @param callBack
      * @param options
      */
-    public native void getPicture(CameraPictureHandler callBack, CameraOptions options)/*-{
+    public native CameraPopoverHandle getPicture(CameraPictureHandler callBack, CameraOptions options)/*-{
 		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		peer
+		return peer
 				.getPicture(
 						$entry(function(data) {
 							callBack.@com.emitrom.pilot.device.client.core.handlers.camera.CameraPictureHandler::onSuccess(Ljava/lang/String;)(data);

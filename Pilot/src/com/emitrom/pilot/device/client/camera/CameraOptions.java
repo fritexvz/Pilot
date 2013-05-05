@@ -120,4 +120,13 @@ public class CameraOptions extends JsObject {
     public void setSaveToPhotoAlbum(boolean value) {
         JsoHelper.setAttribute(jsObj, "saveToPhotoAlbum", value);
     }
+
+    /**
+     * Choose the camera to use (front- or back-facing).
+     *
+     * @param value
+     */
+    public void setCameraDirection(CameraDirection value) {
+        JsoHelper.setAttribute(jsObj, "cameraDirection", value.getValue());
+    }
 }

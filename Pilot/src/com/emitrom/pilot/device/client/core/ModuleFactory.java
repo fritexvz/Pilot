@@ -48,7 +48,7 @@ public class ModuleFactory {
     }-*/;
 
     public static native JavaScriptObject createNativeConnection()/*-{
-		return $wnd.navigator.network.connection;
+		return $wnd.navigator.connection;
     }-*/;
 
     public static native JavaScriptObject createNativeContacts()/*-{
@@ -71,4 +71,7 @@ public class ModuleFactory {
         return $wnd.navigator.splashscreen;
     }-*/;
 
+    public static native JavaScriptObject createNativeInAppBrowser()/*-{
+        return $wnd.window;
+    }-*/;
 }

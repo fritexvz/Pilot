@@ -14,36 +14,37 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
+
 package com.emitrom.pilot.device.client.camera;
 
+import com.emitrom.pilot.util.client.core.JsObject;
+import com.emitrom.pilot.util.client.core.JsoHelper;
+
 /**
- * Choose the format of the return value
+ * A handle to the popover dialog created by camera.getPicture.
+ *
+ * Supported platforms:
+ * iOS
  */
-public enum DestinationType {
+public class CameraPopoverHandle extends JsObject
+{
 
-    DATA_URL(0),
-    FILE_URI(1),
-    NATIVE_URI(2);
-
-    private int value;
-
-    private DestinationType(int type) {
-        value = type;
+    /**
+     * Constructor.
+     */
+    public CameraPopoverHandle()
+    {
+        jsObj = JsoHelper.createObject();
     }
 
-    public int getValue() {
-        return value;
-    }
-
-    public static DestinationType fromValue(int value) {
-        if (value == 0) {
-            return DestinationType.DATA_URL;
-        } else if (value == 1) {
-            return DestinationType.FILE_URI;
-        } else if (value == 2) {
-            return DestinationType.NATIVE_URI;
-        }
-
-        return null;
-    }
+    /**
+     * Set the position of the popover.
+     * 
+     * @param value
+     */
+    public native void setPosition(CameraPopoverOptions value)/*-{
+        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        peer
+                .setPosition(value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+    }-*/;
 }
