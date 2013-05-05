@@ -22,6 +22,9 @@ import com.google.gwt.core.client.JavaScriptObject;
 /**
  * The InAppBrowser is a web-browser that is shown in your app when you use the
  * window.open call.
+ *
+ * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_inappbrowser_inappbrowser.md.html>
+ * http://docs.phonegap.com/en/2.7.0/cordova_inappbrowser_inappbrowser.md.html</a>
  */
 public class InAppBrowser extends JsObject {
 
