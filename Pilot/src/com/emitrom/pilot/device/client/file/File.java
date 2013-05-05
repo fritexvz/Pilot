@@ -1,32 +1,32 @@
 /**
-   Copyright (c) 2012 Emitrom LLC. All rights reserved. 
-   For licensing questions, please contact us at licensing@emitrom.com
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Copyright (c) 2012 Emitrom LLC. All rights reserved. For licensing questions,
+ * please contact us at licensing@emitrom.com
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  */
 package com.emitrom.pilot.device.client.file;
+
+import java.util.Date;
 
 import com.emitrom.pilot.util.client.core.JsObject;
 import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 
-import java.util.Date;
-
 /**
  * This object contains attributes of a single file.
  * 
  * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_file_file.md.html>
- * http://docs.phonegap.com/en/2.7.0/cordova_file_file.md.html</a>
+ *      http://docs.phonegap.com/en/2.7.0/cordova_file_file.md.html</a>
  */
 public class File extends JsObject {
 
@@ -80,16 +80,19 @@ public class File extends JsObject {
     }
 
     /**
-     * Returns a new File object, for which FileReader will return only the specified portion of the file.
-     * Negative values for start or end are measured from the end of the file. The indexes are always relative to the
+     * Returns a new File object, for which FileReader will return only the
+     * specified portion of the file. Negative values for start or end are
+     * measured from the end of the file. The indexes are always relative to the
      * current slice.
-     *
-     * @param start The index of the first byte to read, inclusive.
-     * @param end The index of the byte after the last one to read.
+     * 
+     * @param start
+     *            The index of the first byte to read, inclusive.
+     * @param end
+     *            The index of the byte after the last one to read.
      */
     public native File slice(int start, int end) /*-{
-        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-        return peer
-                    .slice(start, end);
+		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var obj = peer.slice(start, end);
+		return @com.emitrom.pilot.device.client.file.File::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
 }
