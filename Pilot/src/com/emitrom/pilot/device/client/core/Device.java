@@ -114,8 +114,8 @@ public class Device extends Module {
      * This method checks if the application is running natively or not. It also
      * gives the user the ability to override any setting specified (or not) in
      * the .html file. The global JavaScript variable that determines if an app
-     * is running natively or not is called NATIVE (all caps). Override this
-     * method with care, as it will take precedence over the NATIVE variable
+     * is running natively or not is called EMITROM_NATIVE (all caps). Override this
+     * method with care, as it will take precedence over the EMITROM_NATIVE variable
      * that may have been defined in the .html file.
      * 
      * @return boolean true if the application should wait for the device to

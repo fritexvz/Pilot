@@ -25,25 +25,7 @@ import com.emitrom.pilot.device.client.core.handlers.accelerometer.Accelerometer
  * movement relative to the current device orientation. The accelerometer can
  * detect 3D movement along the x, y, and z axis.<br/>
  * 
- * The acceleration is returned using the AccelerometerSuccessHandler callback <br/>
- * Supported platforms: <br/>
- * <ul>
- * <li>Android</li>
- * <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
- * <li>iPhone</li>
- * <li>Windows Phone 7 and 8</li>
- * <li>Bada 1.2 & 2.x</li>
- * <li>Tizen</li>
- * </ul>
- * <h2>iPhone Quirks</h2>
- * <ul>
- * <li>iPhone doesn't have the concept of getting the current acceleration at
- * any given point.</li>
- * <li>You must watch the acceleration and capture the data at given time
- * intervals.</li>
- * <li>Thus, the getCurrentAcceleration function will give you the last value
- * reported from a phoneGap watchAccelerometer call.</li>
- * </ul>
+ * The acceleration is returned using the AccelerometerSuccessHandler callback.<br/>
  * 
  * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_accelerometer_accelerometer.md.html#Accelerometer>
  * http://docs.phonegap.com/en/2.7.0/cordova_accelerometer_accelerometer.md.html#Accelerometer</a>
