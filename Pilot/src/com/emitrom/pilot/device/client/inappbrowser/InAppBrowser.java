@@ -52,8 +52,38 @@ public class InAppBrowser extends JsObject {
      * @param handler
      *            , the handler that will handle the event
      */
-    public void addLoadStartHandler(InAppBrowserEventHandler handler) {
-        addEventListener("loadstart", handler);
+    public InAppBrowserHandlerRegistration addLoadStartHandler(InAppBrowserEventHandler handler) {
+        return addEventListener("loadstart", handler);
+    }
+
+    /**
+     * event fired when the InAppBrowser finished loading a URL
+     * 
+     * @param handler
+     *            , the handler that will handle the event
+     */
+    public InAppBrowserHandlerRegistration addLoadStopHandler(InAppBrowserEventHandler handler) {
+        return addEventListener("loadstop", handler);
+    }
+
+    /**
+     * event fired when the InAppBrowser encounters an error loading a URL
+     * 
+     * @param handler
+     *            , the handler that will handle the event
+     */
+    public InAppBrowserHandlerRegistration addLoadErrorHandler(InAppBrowserEventHandler handler) {
+        return addEventListener("loaderror", handler);
+    }
+
+    /**
+     * event fired when the InAppBrowser window is closed
+     * 
+     * @param handler
+     *            , the handler that will handle the event
+     */
+    public InAppBrowserHandlerRegistration addExitHandler(InAppBrowserEventHandler handler) {
+        return addEventListener("exit", handler);
     }
 
     /**
