@@ -2,7 +2,6 @@
 <module>
     <inherits name='com.google.gwt.core.Core' />
     <inherits name='com.google.gwt.user.DOM' />
-    <inherits name='com.google.gwt.http.HTTP' />
     <inherits name='com.emitrom.pilot.util.Util' />
     <set-configuration-property name='xsiframe.failIfScriptTag' value='FALSE' />
     <add-linker name="xsiframe" />
