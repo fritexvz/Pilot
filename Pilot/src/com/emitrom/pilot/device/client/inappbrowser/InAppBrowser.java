@@ -25,9 +25,12 @@ import com.google.gwt.core.client.JavaScriptObject;
 /**
  * The InAppBrowser is a web-browser that is shown in your app when you use the
  * window.open call.
- *
- * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_inappbrowser_inappbrowser.md.html>
- * http://docs.phonegap.com/en/2.7.0/cordova_inappbrowser_inappbrowser.md.html</a>
+ * 
+ * @see <a
+ *      href=http://docs.phonegap.com/en/2.7.0/cordova_inappbrowser_inappbrowser
+ *      .md.html>
+ *      http://docs.phonegap.com/en/2.7.0/cordova_inappbrowser_inappbrowser
+ *      .md.html</a>
  */
 public class InAppBrowser extends JsObject {
 
@@ -56,111 +59,143 @@ public class InAppBrowser extends JsObject {
      * Closes this InAppBrowser window.
      */
     public native void close() /*-{
-        var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
-        jso.close();
+		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
+		jso.close();
     }-*/;
 
     /**
      * Injects JavaScript code into the InAppBrowser window
-     *
+     * 
      * @param url
      *            the URL containing the script that will be executed
      */
     public native void executeScriptFromFile(String url) /*-{
-        var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
-        jso.executeScript({file: url});
+		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
+		jso.executeScript({
+			file : url
+		});
     }-*/;
 
     /**
      * Injects JavaScript code into the InAppBrowser window
-     *
+     * 
      * @param url
      *            , the URL containing the script that will be executed
      * @param handler
-     *
+     * 
      */
     public native void executeScriptFromFile(String url, InAppBrowserExecuteScriptHandler handler) /*-{
-        var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
-        var result = jso.executeScript({file: url});
+		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
+		var result = jso
+				.executeScript(
+						{
+							file : url
+						},
+						function(result) {
+							handler.@com.emitrom.pilot.device.client.handlers.InAppBrowserExecuteScriptHandler::onScriptFinished(Ljava/lang/Object;)(result);
+						});
 
-        handler.@com.emitrom.pilot.device.client.handlers.InAppBrowserExecuteScriptHandler::onScriptFinished(Ljava/lang/Object;)(result)
     }-*/;
 
     /**
      * Injects JavaScript code into the InAppBrowser window
-     *
+     * 
      * @param script
      *            , text of the script to inject
      */
     public native void executeScriptFromCode(String script) /*-{
-        var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
-        jso.executeScript({code: script});
+		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
+		jso.executeScript({
+			code : script
+		});
     }-*/;
 
     /**
      * Injects JavaScript code into the InAppBrowser window
-     *
+     * 
      * @param script
      *            , text of the script to inject
      * @param handler
      */
     public native void executeScriptFromCode(String script, InAppBrowserExecuteScriptHandler handler) /*-{
-        var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
-        var result = jso.executeScript({code: script});
+		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
+		var result = jso
+				.executeScript(
+						{
+							code : script
+						},
+						function(result) {
+							handler.@com.emitrom.pilot.device.client.handlers.InAppBrowserExecuteScriptHandler::onScriptFinished(Ljava/lang/Object;)(result);
+						});
 
-        handler.@com.emitrom.pilot.device.client.handlers.InAppBrowserExecuteScriptHandler::onScriptFinished(Ljava/lang/Object;)(result);
     }-*/;
 
     /**
      * Injects CSS into the InAppBrowser window
-     *
+     * 
      * @param url
      *            , the URL of the stylesheet to inject
      */
-    public native void insertCssFromUrl(String url)  /*-{
-        var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
-        jso.insertCss({file: url});
+    public native void insertCssFromUrl(String url) /*-{
+		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
+		jso.insertCss({
+			file : url
+		});
     }-*/;
 
     /**
      * Injects CSS into the InAppBrowser window
-     *
-     * @param css
+     * 
+     * @param url
      *            , the URL of the stylesheet to inject
-     *
+     * 
      * @param handler
      */
-    public native void insertCssFromCode(String css, InAppBrowserInsertCssHandler handler)  /*-{
-        var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
-        jso.insertCss({file: url.toString()});
-
-        handler.@com.emitrom.pilot.device.client.handlers.InAppBrowserInsertCssHandler::onCssInserted()();
+    public native void insertCssFromUrl(String url, InAppBrowserInsertCssHandler handler) /*-{
+		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
+		jso
+				.insertCss(
+						{
+							file : url
+						},
+						function() {
+							handler.@com.emitrom.pilot.device.client.handlers.InAppBrowserInsertCssHandler::onCssInserted()();
+						});
     }-*/;
 
     /**
      * Injects CSS into the InAppBrowser window
-     *
+     * 
      * @param css
      *            , text of the stylesheet to inject
      */
-    public native void insertCss(String css)  /*-{
-        var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
-        jso.insertCss({code: css});
+    public native void insertCssFromCode(String css) /*-{
+		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
+		jso.insertCss({
+			code : css
+		});
     }-*/;
 
     /**
      * Injects CSS into the InAppBrowser window
-     *
+     * 
      * @param css
      *            , text of the stylesheet to inject
-     *
+     * 
      * @param handler
      */
-    public native void insertCss(String css, InAppBrowserInsertCssHandler handler)  /*-{
-        var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
-        jso.insertCss({code: css});
+    public native void insertCssFromCode(String css, InAppBrowserInsertCssHandler handler) /*-{
+		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
+		jso
+				.insertCss(
+						{
+							code : css
+						},
+						function() {
 
-        handler.@com.emitrom.pilot.device.client.handlers.InAppBrowserInsertCssHandler::onCssInserted()();
+							handler.@com.emitrom.pilot.device.client.handlers.InAppBrowserInsertCssHandler::onCssInserted()();
+						});
+
     }-*/;
 
     /**
@@ -206,7 +241,7 @@ public class InAppBrowser extends JsObject {
     /**
      * Adds a listener for an event from the InAppBrowser.
      */
-    public native InAppBrowserHandlerRegistration addEventListener(String event, InAppBrowserEventHandler handler) /*-{
+    private native InAppBrowserHandlerRegistration addEventListener(String event, InAppBrowserEventHandler handler) /*-{
 		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::jsObj;
 		var fn = function(e) {
 			var event = @com.emitrom.pilot.device.client.inappbrowser.InAppBrowserEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
