@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.streetview;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * A collection of references to adjacent Street View panos.
@@ -40,12 +40,12 @@ public class StreetViewLink extends JsObject {
      * @param value
      */
     public native void setDescription(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.description = value;
     }-*/;
 
     public native String getDescription()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.description;
     }-*/;
 
@@ -55,12 +55,12 @@ public class StreetViewLink extends JsObject {
      * @param value
      */
     public native void setHeading(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.heading = value;
     }-*/;
 
     public native String getHeading()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.heading;
     }-*/;
 
@@ -71,12 +71,12 @@ public class StreetViewLink extends JsObject {
      * @param value
      */
     public native void setPano(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.pano = value;
     }-*/;
 
     public native String getPano()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.pano;
     }-*/;
 
@@ -86,12 +86,12 @@ public class StreetViewLink extends JsObject {
      * @param value
      */
     public native void setRoadColor(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.roadColor = value;
     }-*/;
 
     public native String getRoadColor()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.roadColor;
     }-*/;
 
@@ -101,12 +101,12 @@ public class StreetViewLink extends JsObject {
      * @param value
      */
     public native void setRoadOpacity(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.roadOpacity = value;
     }-*/;
 
     public native String getRoadOpacitiy()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.roadOpacitiy;
     }-*/;
 

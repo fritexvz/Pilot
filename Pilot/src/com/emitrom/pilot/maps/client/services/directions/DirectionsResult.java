@@ -18,10 +18,10 @@ package com.emitrom.pilot.maps.client.services.directions;
 
 import java.util.ArrayList;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
+import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * The directions response retrieved from the directions server. You can render
@@ -60,7 +60,7 @@ public class DirectionsResult extends JsObject {
     }
 
     private final native JsArray<JavaScriptObject> _getRoutes()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.routes;
     }-*/;
 

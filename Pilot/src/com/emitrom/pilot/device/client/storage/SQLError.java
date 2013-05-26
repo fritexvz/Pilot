@@ -18,8 +18,8 @@ package com.emitrom.pilot.device.client.storage;
 
 import com.emitrom.pilot.device.client.core.ModuleError;
 import com.emitrom.pilot.util.client.core.Attributes;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.JsoHelper;
 
 public class SQLError extends ModuleError {
 

@@ -1,20 +1,20 @@
 /**
-   Copyright (c) 2012 Emitrom LLC. All rights reserved. 
-   For licensing questions, please contact us at licensing@emitrom.com
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Copyright (c) 2012 Emitrom LLC. All rights reserved. For licensing questions,
+ * please contact us at licensing@emitrom.com
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  */
-package com.emitrom.pilot.util.client.core;
+package com.pilot.shared.client;
 
 import java.util.Date;
 import java.util.Iterator;
@@ -50,7 +50,7 @@ public class JsoHelper {
     public static native JavaScriptObject[] getAttributeAsJavaScriptObjectArray(JavaScriptObject elem, String attr) /*-{
 		var arrayJS = elem[attr];
 		return (arrayJS === undefined) ? null
-				: @com.emitrom.pilot.util.client.core.JsoHelper::toArray(Lcom/google/gwt/core/client/JavaScriptObject;)(arrayJS);
+				: @com.pilot.shared.client.JsoHelper::toArray(Lcom/google/gwt/core/client/JavaScriptObject;)(arrayJS);
     }-*/;
 
     public static JavaScriptObject[] toArray(JavaScriptObject array) {
@@ -113,7 +113,7 @@ public class JsoHelper {
 
     public static native void setAttribute(JavaScriptObject elem, String attr, Function handler) /*-{
 		elem[attr] = function() {
-			handler.@com.emitrom.pilot.util.client.core.Function::execute()();
+			handler.@com.pilot.shared.client.Function::execute()();
 		};
     }-*/;
 
@@ -150,7 +150,7 @@ public class JsoHelper {
 
     public static native Date getAttributeAsDate(JavaScriptObject elem, String attr) /*-{
                                                                                    var ret = elem[attr];
-                                                                                   return (ret === undefined || ret == null) ? null: @com.emitrom.pilot.util.client.core.JsoHelper::toDate(D)(ret.getTime());
+                                                                                   return (ret === undefined || ret == null) ? null: @com.pilot.shared.client.JsoHelper::toDate(D)(ret.getTime());
                                                                                    }-*/;
 
     public static native float getAttributeAsFloat(JavaScriptObject elem, String attr) /*-{
@@ -447,11 +447,11 @@ public class JsoHelper {
     }
 
     public static native String[] getProperties(JavaScriptObject jsObj) /*-{
-		var props = @com.emitrom.pilot.util.client.core.JsoHelper::createJavaScriptArray()();
+		var props = @com.pilot.shared.client.JsoHelper::createJavaScriptArray()();
 		for ( var k in jsObj) {
 			props.push(k);
 		}
-		return @com.emitrom.pilot.util.client.core.JsoHelper::convertToJavaStringArray(Lcom/google/gwt/core/client/JavaScriptObject;)(props);
+		return @com.pilot.shared.client.JsoHelper::convertToJavaStringArray(Lcom/google/gwt/core/client/JavaScriptObject;)(props);
     }-*/;
 
     public static native String getPropertiesAsString(JavaScriptObject jsObj) /*-{

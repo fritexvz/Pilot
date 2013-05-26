@@ -18,9 +18,9 @@ package com.emitrom.pilot.maps.client.maptypes;
 
 import java.util.ArrayList;
 
-import com.emitrom.pilot.util.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
+import com.pilot.shared.client.JsObject;
 
 /**
  * Creates a MapType with a custom style

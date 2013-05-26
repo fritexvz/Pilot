@@ -17,8 +17,8 @@
 package com.emitrom.pilot.device.client.storage;
 
 import com.emitrom.pilot.device.client.core.handlers.storage.SQLTransactionHandler;
-import com.emitrom.pilot.util.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.JsObject;
 
 public class SQLTransaction extends JsObject {
 
@@ -27,12 +27,12 @@ public class SQLTransaction extends JsObject {
     }
 
     public native void executeSql(String sql)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.executeSql(sql);
     }-*/;
 
     public native void executeSql(String sql, SQLTransactionHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer
 				.executeSql(
 						sql,

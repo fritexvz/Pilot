@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-package com.emitrom.pilot.util.client.core;
+package com.pilot.shared.client;
 
 /**
  * Generic interface to use as callback

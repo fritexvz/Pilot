@@ -35,7 +35,7 @@ public class DirectoryEntry extends FileEntry {
      * @return {@link DirectoryReader}
      */
     public native DirectoryReader createReader()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = peer.createReader();
 		var toReturn = @com.emitrom.pilot.device.client.file.DirectoryReader::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -50,11 +50,11 @@ public class DirectoryEntry extends FileEntry {
      * @param handler
      */
     public native void getDirectory(String path, Flags flags, DirectoryHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer
 				.getDirectory(
 						path,
-						flags.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
+						flags.@com.pilot.shared.client.JsObject::getJsObj()(),
 						$entry(function(parent) {
 							var parentObject = @com.emitrom.pilot.device.client.file.DirectoryEntry::new(Lcom/google/gwt/core/client/JavaScriptObject;)(parent);
 							handler.@com.emitrom.pilot.device.client.core.handlers.file.DirectoryHandler::onSuccess(Lcom/emitrom/pilot/device/client/file/DirectoryEntry;)(parentObject);
@@ -74,11 +74,11 @@ public class DirectoryEntry extends FileEntry {
      * @param handler
      */
     public native void getFile(String path, Flags flags, DirectoryHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer
 				.getFile(
 						path,
-						flags.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
+						flags.@com.pilot.shared.client.JsObject::getJsObj()(),
 						$entry(function(parent) {
 							var parentObject = @com.emitrom.pilot.device.client.file.DirectoryEntry::new(Lcom/google/gwt/core/client/JavaScriptObject;)(parent);
 							handler.@com.emitrom.pilot.device.client.core.handlers.file.DirectoryHandler::onSuccess(Lcom/emitrom/pilot/device/client/file/DirectoryEntry;)(parentObject);
@@ -99,7 +99,7 @@ public class DirectoryEntry extends FileEntry {
      * @param handler
      */
     public native void removeRecursively(DirectoryHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer
 				.removeRecursively(
 						$entry(function(parent) {

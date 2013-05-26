@@ -18,8 +18,8 @@ package com.emitrom.pilot.maps.client.services.streetview;
 
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.emitrom.pilot.maps.client.services.handlers.StreetViewServiceHandler;
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
+import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * A StreetViewService object performs searches for Street View data.
@@ -38,10 +38,10 @@ public class StreetViewService extends JsObject {
      * change between sessions.
      */
     public native void getPanoramaById(String pano, StreetViewServiceHandler callBack)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		$entry(jso
 				.getPanoramaById(
-						pano.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
+						pano.@com.pilot.shared.client.JsObject::getJsObj()(),
 						function(data, status) {
 							var streetViewStatus = @com.emitrom.pilot.maps.client.services.streetview.StreetViewStatus::fromValue(Ljava/lang/String;)(status);
 							var dataObject = @com.emitrom.pilot.maps.client.streetview.StreetviewPanoramaData::new(Lcom/google/gwt/core/client/JavaScriptObject;)(data);
@@ -60,10 +60,10 @@ public class StreetViewService extends JsObject {
      * @param callBack
      */
     public native void getPanoramaByLocation(LatLng latLgn, double radius, StreetViewServiceHandler callBack)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		$entry(jso
 				.getPanoramaByLocation(
-						latLgn.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
+						latLgn.@com.pilot.shared.client.JsObject::getJsObj()(),
 						radius,
 						function(data, status) {
 							var streetViewStatus = @com.emitrom.pilot.maps.client.services.streetview.StreetViewStatus::fromValue(Ljava/lang/String;)(status);

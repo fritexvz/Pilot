@@ -17,9 +17,9 @@
 package com.emitrom.pilot.device.client.core;
 
 import com.emitrom.pilot.util.client.core.Attributes;
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * Generic error that contains a message.

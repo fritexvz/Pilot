@@ -17,7 +17,7 @@
 
 package com.emitrom.pilot.maps.client.overlays.options;
 
-import com.emitrom.pilot.util.client.core.JsoHelper;
+import com.pilot.shared.client.JsoHelper;
 
 public class PolylineOptions extends AbstractOption {
 
@@ -31,12 +31,12 @@ public class PolylineOptions extends AbstractOption {
      * @param value
      */
     public native void setClickable(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.clickable = value;
     }-*/;
 
     public native boolean isClickable()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.clickable;
     }-*/;
 
@@ -48,12 +48,12 @@ public class PolylineOptions extends AbstractOption {
      * @param value
      */
     public native void setGeodesic(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.geodesic = value;
     }-*/;
 
     public native boolean getGeodesic()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.geodesic;
     }-*/;
 
@@ -67,12 +67,12 @@ public class PolylineOptions extends AbstractOption {
      * @param values
      */
     public native void setPath(Object values)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.path = values;
     }-*/;
 
     public native <T> T getPath()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.path;
     }-*/;
 
@@ -83,12 +83,12 @@ public class PolylineOptions extends AbstractOption {
      * @param value
      */
     public native void setStrokeColor(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.strokeColor = value;
     }-*/;
 
     public native String getStrokeColor()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.strokeColor;
     }-*/;
 
@@ -98,12 +98,12 @@ public class PolylineOptions extends AbstractOption {
      * @param value
      */
     public native void setStrokeOpacity(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.strokeOpacity = value;
     }-*/;
 
     public native double getStrokeOpacity()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.strokeOpacity;
     }-*/;
 
@@ -113,12 +113,12 @@ public class PolylineOptions extends AbstractOption {
      * @param value
      */
     public native void setStrokeWeight(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.strokeWeight = value;
     }-*/;
 
     public native double getStrokeWeight()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.strokeWeight;
     }-*/;
 
@@ -128,12 +128,12 @@ public class PolylineOptions extends AbstractOption {
      * @param value
      */
     public native void setZIndex(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.zIndex = value;
     }-*/;
 
     public native double getZIndex()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.zIndex;
     }-*/;
 

@@ -56,12 +56,12 @@ public class Marker extends MVCObject {
 	}
 
 	public native void setTitle(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setTitle(value);
 	}-*/;
 
 	public native String getTitle()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getTitle();
 	}-*/;
 
@@ -78,51 +78,51 @@ public class Marker extends MVCObject {
 	}
 
 	public final native String _getAnimation()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getAnimation();
 	}-*/;
 
 	public final native boolean isClickable()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getClickable();
 	}-*/;
 
 	public final native String getCursor()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getCursor();
 	}-*/;
 
 	public final native boolean isDraggable()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getDraggable();
 	}-*/;
 
 	public final native boolean isFlat()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getFlat();
 	}-*/;
 
 	public final native String getIcon()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getIcon();
 	}-*/;
 
 	public final native MarkerImage getIconAsMarkerImage()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.getIcon();
 		var toReturn = @com.emitrom.pilot.maps.client.overlays.MarkerImage::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
 	}-*/;
 
 	public final native StreetViewPanorama getMapAsStreeviewPanorama()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.getMap();
 		var toReturn = @com.emitrom.pilot.maps.client.streetview.StreetViewPanorama::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
 	}-*/;
 
 	public final native LatLng getPosition()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.getPosition();
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -133,7 +133,7 @@ public class Marker extends MVCObject {
 	}-*/;
 
 	public final native MarkerImage getShadowAsMarkerImage()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.getShadow();
 		var toReturn = @com.emitrom.pilot.maps.client.overlays.MarkerImage::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -144,12 +144,12 @@ public class Marker extends MVCObject {
 	}-*/;
 
 	public final native boolean isVisible() /*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getVisible();
 	}-*/;
 
 	public final native double getZIndex()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getZIndex();
 	}-*/;
 
@@ -165,44 +165,44 @@ public class Marker extends MVCObject {
 	}
 
 	private final native void setAnimation(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setAnimation(value);
 	}-*/;
 
 	public final native void setVisible(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setVisible(value);
 	}-*/;
 
 	public final native void setClickable(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setClickable(value);
 	}-*/;
 
 	public final native void setCursor(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setCursor(value);
 	}-*/;
 
 	public final native void setDraggable(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setDraggable(value);
 	}-*/;
 
 	public final native void setFlat(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setFlat(value);
 	}-*/;
 
 	public final native void setIcon(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setIcon(value);
 	}-*/;
 
 	public final native void setIcon(MarkerImage value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso
-				.setIcon(value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setIcon(value.@com.pilot.shared.client.JsObject::getJsObj()());
 	}-*/;
 
 	/**
@@ -212,37 +212,37 @@ public class Marker extends MVCObject {
 	 * @param value
 	 */
 	public final native void setMap(StreetViewPanorama value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso
-				.setMap(value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setMap(value.@com.pilot.shared.client.JsObject::getJsObj()());
 	}-*/;
 
 	public final native void setOptions(MarkerOptions options)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso
-				.setOptions(options.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setOptions(options.@com.pilot.shared.client.JsObject::getJsObj()());
 	}-*/;
 
 	public final native void setShadow(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setShadow(value);
 	}-*/;
 
 	public final native void setShadow(MarkerImage value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso
-				.setShadow(value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setShadow(value.@com.pilot.shared.client.JsObject::getJsObj()());
 	}-*/;
 
 	public final native void setZIndex(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setZIndex(value);
 	}-*/;
 
 	public final native void setShape(MarkerShape value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso
-				.setShape(value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setShape(value.@com.pilot.shared.client.JsObject::getJsObj()());
 	}-*/;
 
 	public void addTapHandler(TapHandler handler) {
@@ -291,12 +291,12 @@ public class Marker extends MVCObject {
 	}-*/;
 
 	private native void setMap(JavaScriptObject value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setMap(value);
 	}-*/;
 
 	private native void setPosition(JavaScriptObject value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setPosition(value);
 	}-*/;
 

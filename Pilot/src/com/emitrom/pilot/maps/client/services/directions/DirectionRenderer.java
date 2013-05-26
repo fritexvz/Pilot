@@ -57,7 +57,7 @@ public class DirectionRenderer extends MVCObject {
      * @return
      */
     public native DirectionsResult getDirections()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.getDirections();
 		var toReturn = @com.emitrom.pilot.maps.client.services.directions.DirectionsResult::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -69,7 +69,7 @@ public class DirectionRenderer extends MVCObject {
      * @return
      */
     public native GMap getMap()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.getMap();
 		var toReturn = @com.emitrom.pilot.maps.client.GMap::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -82,7 +82,7 @@ public class DirectionRenderer extends MVCObject {
      * @return
      */
     public native int getRouteIndex()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getRouteIndex();
     }-*/;
 
@@ -94,9 +94,9 @@ public class DirectionRenderer extends MVCObject {
      * @param value
      */
     public native void setDirections(DirectionsResult value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		this
-				.setDirections(value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setDirections(value.@com.pilot.shared.client.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -106,9 +106,9 @@ public class DirectionRenderer extends MVCObject {
      * @param value
      */
     public native void setMap(GMap value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		this
-				.setMap(value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setMap(value.@com.pilot.shared.client.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -118,13 +118,13 @@ public class DirectionRenderer extends MVCObject {
      * @param options
      */
     public native void setOptions(DirectionRendererOptions options)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		this
-				.setOptions(options.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setOptions(options.@com.pilot.shared.client.JsObject::getJsObj()());
     }-*/;
 
     public native void setRouteIndex(int value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setRouteIndex(value);
     }-*/;
 

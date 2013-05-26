@@ -18,11 +18,11 @@ package com.emitrom.pilot.maps.client.services.distancematrix;
 
 import java.util.ArrayList;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayString;
+import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * The response to a DistanceMatrixService request, consisting of the formatted
@@ -55,7 +55,7 @@ public class DistanceMatrixResponse extends JsObject {
     }
     
     private native JsArrayString _getDestinationAdresses()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.destinationAddresses;
     }-*/;
 
@@ -73,7 +73,7 @@ public class DistanceMatrixResponse extends JsObject {
     	return originAdresses;
     }
     private native JsArrayString _getOriginAddresses()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.originAddresses;
     }-*/;
 
@@ -93,7 +93,7 @@ public class DistanceMatrixResponse extends JsObject {
     }
 
     private native JsArray<JavaScriptObject> _getRows()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.rows;
     }-*/;
     

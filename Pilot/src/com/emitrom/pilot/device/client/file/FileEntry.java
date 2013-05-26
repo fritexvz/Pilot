@@ -36,7 +36,7 @@ public class FileEntry extends EntryBase {
      * represents.
      */
     public native void createWriter(FileWriterCreationHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer
 				.createWriter(
 						$entry(function(w) {
@@ -54,7 +54,7 @@ public class FileEntry extends EntryBase {
      * this FileEntry represents.
      */
     public native void getFile(FileHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer
 				.file(
 						$entry(function(file) {

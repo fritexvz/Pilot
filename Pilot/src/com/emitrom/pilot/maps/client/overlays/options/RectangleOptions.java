@@ -17,7 +17,7 @@
 package com.emitrom.pilot.maps.client.overlays.options;
 
 import com.emitrom.pilot.maps.client.core.LatLngBounds;
-import com.emitrom.pilot.util.client.core.JsoHelper;
+import com.pilot.shared.client.JsoHelper;
 
 public class RectangleOptions extends AbstractOption {
 
@@ -31,15 +31,15 @@ public class RectangleOptions extends AbstractOption {
      * @return
      */
     public final native LatLngBounds getBounds()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.bounds;
 		var toReturn = @com.emitrom.pilot.maps.client.core.LatLngBounds::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public final native void setBounds(LatLngBounds value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.bounds = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		jso.bounds = value.@com.pilot.shared.client.JsObject::getJsObj()();
 		;
     }-*/;
 
@@ -49,12 +49,12 @@ public class RectangleOptions extends AbstractOption {
      * @param value
      */
     public final native void setClickable(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.clickable = value;
     }-*/;
 
     public final native boolean isClickable()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.clickable;
     }-*/;
 
@@ -66,12 +66,12 @@ public class RectangleOptions extends AbstractOption {
      * @param value
      */
     public final native void setGeodesic(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.geodesic = value;
     }-*/;
 
     public final native boolean getGeodesic()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.geodesic;
     }-*/;
 
@@ -85,12 +85,12 @@ public class RectangleOptions extends AbstractOption {
      * @param values
      */
     public final native void setPath(Object values)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.path = values;
     }-*/;
 
     public final native <T> T getPath()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.path;
     }-*/;
 
@@ -101,12 +101,12 @@ public class RectangleOptions extends AbstractOption {
      * @param value
      */
     public final native void setStrokeColor(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.strokeColor = value;
     }-*/;
 
     public final native String getStrokeColor()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.strokeColor;
     }-*/;
 
@@ -116,12 +116,12 @@ public class RectangleOptions extends AbstractOption {
      * @param value
      */
     public final native void setStrokeOpacity(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.strokeOpacity = value;
     }-*/;
 
     public final native double getStrokeOpacity()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.strokeOpacity;
     }-*/;
 
@@ -131,12 +131,12 @@ public class RectangleOptions extends AbstractOption {
      * @param value
      */
     public final native void setStrokeWeight(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.strokeWeight = value;
     }-*/;
 
     public final native double getStrokeWeight()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.strokeWeight;
     }-*/;
 
@@ -146,12 +146,12 @@ public class RectangleOptions extends AbstractOption {
      * @param value
      */
     public final native void setZIndex(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.zIndex = value;
     }-*/;
 
     public final native double getZIndex()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.zIndex;
     }-*/;
 }

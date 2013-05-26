@@ -18,11 +18,11 @@ package com.emitrom.pilot.maps.client.services.geocoder;
 
 import java.util.ArrayList;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayString;
+import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * A single geocoder result retrieved from the geocode server. A geocode request
@@ -52,7 +52,7 @@ public class GeocoderResult extends JsObject {
     }
 
     private native JsArray<JavaScriptObject> _getAddressComponents()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.address_components;
     }-*/;
 
@@ -62,7 +62,7 @@ public class GeocoderResult extends JsObject {
      * @return
      */
     public native String getFormattedAdrress()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.formatted_adrress;
     }-*/;
 
@@ -71,7 +71,7 @@ public class GeocoderResult extends JsObject {
      * @return
      */
     public native GeocoderGeometry getGeometry()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.geometry;
 		var toReturn = @com.emitrom.pilot.maps.client.services.geocoder.GeocoderGeometry::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -85,7 +85,7 @@ public class GeocoderResult extends JsObject {
      * @return
      */
     public native JsArrayString getTypes()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.types;
     }-*/;
 

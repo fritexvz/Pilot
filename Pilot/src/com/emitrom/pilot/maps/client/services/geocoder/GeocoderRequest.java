@@ -18,8 +18,8 @@ package com.emitrom.pilot.maps.client.services.geocoder;
 
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.emitrom.pilot.maps.client.core.LatLngBounds;
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
+import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * The specification for a geocoding request to be sent to the Geocoder.
@@ -37,12 +37,12 @@ public class GeocoderRequest extends JsObject {
      * @param value
      */
     public native void setAddress(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.address = value;
     }-*/;
 
     public native String getAddress()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.address;
     }-*/;
 
@@ -52,15 +52,15 @@ public class GeocoderRequest extends JsObject {
      * @return
      */
     public native LatLngBounds getBounds()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.bounds;
 		var toReturn = @com.emitrom.pilot.maps.client.core.LatLngBounds::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setBounds(LatLngBounds value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.bounds = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		jso.bounds = value.@com.pilot.shared.client.JsObject::getJsObj()();
 		;
     }-*/;
 
@@ -70,15 +70,15 @@ public class GeocoderRequest extends JsObject {
      * @return
      */
     public native LatLng getLocation()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.location;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setLocation(LatLng value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.location = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		jso.location = value.@com.pilot.shared.client.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -87,12 +87,12 @@ public class GeocoderRequest extends JsObject {
      * @param value
      */
     public native void setRegion(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.region = value;
     }-*/;
 
     public native String getRegion()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.region;
     }-*/;
 

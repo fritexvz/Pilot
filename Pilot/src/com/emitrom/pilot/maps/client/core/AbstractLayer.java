@@ -33,7 +33,7 @@ public class AbstractLayer extends MVCObject {
      * @return
      */
     public final native GMap getMap()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getMap();
     }-*/;
 
@@ -44,7 +44,7 @@ public class AbstractLayer extends MVCObject {
      * @param map
      */
     public final native void setMap(GMap map)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.setMap(map);
     }-*/;
 

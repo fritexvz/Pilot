@@ -16,7 +16,7 @@
  */
 package com.emitrom.pilot.maps.client.layers.kml;
 
-import com.emitrom.pilot.util.client.core.JsObject;
+import com.pilot.shared.client.JsObject;
 
 public class KmlFeatureData extends JsObject {
 

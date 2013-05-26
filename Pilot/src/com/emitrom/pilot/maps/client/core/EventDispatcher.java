@@ -17,8 +17,8 @@
 package com.emitrom.pilot.maps.client.core;
 
 import com.emitrom.pilot.maps.client.events.handlers.MapEventHandler;
-import com.emitrom.pilot.util.client.core.Function;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.Function;
 
 public class EventDispatcher {
 

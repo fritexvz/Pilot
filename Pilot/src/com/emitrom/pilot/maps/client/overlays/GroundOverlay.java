@@ -21,8 +21,8 @@ import com.emitrom.pilot.maps.client.GMap;
 import com.emitrom.pilot.maps.client.core.LatLngBounds;
 import com.emitrom.pilot.maps.client.core.MVCObject;
 import com.emitrom.pilot.maps.client.overlays.options.GroundOverlayOptions;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * A rectangular image overlay on the map.
@@ -65,7 +65,7 @@ public class GroundOverlay extends MVCObject {
      * @return
      */
     public final native LatLngBounds getBounds()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.getBounds();
 		var toReturn = @com.emitrom.pilot.maps.client.core.LatLngBounds::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -77,7 +77,7 @@ public class GroundOverlay extends MVCObject {
      * @param value
      */
     public final native GMap getMap()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.getMap();
 		var toReturn = @com.emitrom.pilot.maps.client.GMap::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -89,7 +89,7 @@ public class GroundOverlay extends MVCObject {
      * @return
      */
     public final native String getUrl()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getUrl();
     }-*/;
 
@@ -100,9 +100,9 @@ public class GroundOverlay extends MVCObject {
      * @param map
      */
     public final native void setMap(GMap map)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		this
-				.setMap(map.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setMap(map.@com.pilot.shared.client.JsObject::getJsObj()());
     }-*/;
 
     private static native JavaScriptObject create(String url, JavaScriptObject bounds) /*-{

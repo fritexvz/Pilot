@@ -17,9 +17,9 @@
 package com.emitrom.pilot.maps.client.streetview;
 
 import com.emitrom.pilot.maps.client.geom.Size;
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.JsoHelper;
 
 public class StreetViewTileData extends JsObject {
 
@@ -44,7 +44,7 @@ public class StreetViewTileData extends JsObject {
      * @return
      */
     public final native String getTileUrl(String pano, double tileZoom, double tileX, double tileY)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.getTileUrl(pano, tileZoom, tileX, tileY);
     }-*/;
 
@@ -54,12 +54,12 @@ public class StreetViewTileData extends JsObject {
      * @param value
      */
     public final native void setCenterHeading(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.centerHeading = value;
     }-*/;
 
     public final native double getCenterHeading()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.centerHeading;
     }-*/;
 
@@ -70,13 +70,13 @@ public class StreetViewTileData extends JsObject {
      * @param value
      */
     public final native void setTileSize(Size value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		this.tileSize = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		this.tileSize = value.@com.pilot.shared.client.JsObject::getJsObj()();
 		;
     }-*/;
 
     public final native Size getTileSize()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.titleSize;
 		var toReturn = @com.emitrom.pilot.maps.client.geom.Size::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

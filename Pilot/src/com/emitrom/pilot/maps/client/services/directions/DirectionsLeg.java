@@ -21,10 +21,10 @@ import java.util.ArrayList;
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.emitrom.pilot.maps.client.core.Distance;
 import com.emitrom.pilot.maps.client.core.Duration;
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
+import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * A single leg consisting of a set of steps in a DirectionsResult. Some fields
@@ -51,12 +51,12 @@ public class DirectionsLeg extends JsObject {
      * @param value
      */
     public native void setDistance(Distance value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.distance = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		jso.distance = value.@com.pilot.shared.client.JsObject::getJsObj()();
     }-*/;
 
     public native Distance getDistance()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.distance;
 		var toReturn = @com.emitrom.pilot.maps.client.core.Distance::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -69,12 +69,12 @@ public class DirectionsLeg extends JsObject {
      * @param value
      */
     public native void setDuration(Duration value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		this.duration = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		this.duration = value.@com.pilot.shared.client.JsObject::getJsObj()();
     }-*/;
 
     public native Duration getDuration()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.duration;
 		var toReturn = @com.emitrom.pilot.maps.client.core.Duration::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -86,12 +86,12 @@ public class DirectionsLeg extends JsObject {
      * @param value
      */
     public native void setEndAddress(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.end_address = value;
     }-*/;
 
     public native String getEndAddress()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.end_address;
     }-*/;
 
@@ -105,13 +105,13 @@ public class DirectionsLeg extends JsObject {
      * @param value
      */
     public native void setEndLocation(LatLng value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.end_location = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		jso.end_location = value.@com.pilot.shared.client.JsObject::getJsObj()();
 		;
     }-*/;
 
     public native LatLng getEndLocation()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.end_location;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -123,12 +123,12 @@ public class DirectionsLeg extends JsObject {
      * @param value
      */
     public native void setStartAddress(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.start_address = value;
     }-*/;
 
     public native String getStartAddress()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.start_address;
     }-*/;
 
@@ -142,13 +142,13 @@ public class DirectionsLeg extends JsObject {
      * @param value
      */
     public native void setStartLocation(LatLng value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.start_location = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		jso.start_location = value.@com.pilot.shared.client.JsObject::getJsObj()();
 		;
     }-*/;
 
     public native LatLng getStartLocation()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.start_location;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -177,7 +177,7 @@ public class DirectionsLeg extends JsObject {
     }
 
     private native void _setSteps(JsArray<JavaScriptObject> values)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.steps = values;
     }-*/;
 
@@ -191,7 +191,7 @@ public class DirectionsLeg extends JsObject {
     }
 
     private native JsArray<JavaScriptObject> _getSteps()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.steps;
     }-*/;
 
@@ -232,7 +232,7 @@ public class DirectionsLeg extends JsObject {
     }
 
     public native JsArray<JavaScriptObject> _getViaWayPpoints()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.via_waypoints;
     }-*/;
 

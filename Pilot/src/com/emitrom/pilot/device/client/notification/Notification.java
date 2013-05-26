@@ -1,31 +1,34 @@
 /**
-   Copyright (c) 2012 Emitrom LLC. All rights reserved. 
-   For licensing questions, please contact us at licensing@emitrom.com
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Copyright (c) 2012 Emitrom LLC. All rights reserved. For licensing questions,
+ * please contact us at licensing@emitrom.com
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  */
 package com.emitrom.pilot.device.client.notification;
 
 import com.emitrom.pilot.device.client.core.Module;
 import com.emitrom.pilot.device.client.core.ModuleFactory;
 import com.emitrom.pilot.device.client.core.handlers.notification.ConfirmHandler;
-import com.emitrom.pilot.util.client.core.Function;
+import com.pilot.shared.client.Function;
 
 /**
  * Visual, audible, and tactile device notifications.<br/>
  * 
- * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_notification_notification.md.html>
- * http://docs.phonegap.com/en/2.7.0/cordova_notification_notification.md.html</a>
+ * @see <a
+ *      href=http://docs.phonegap.com/en/2.7.0/cordova_notification_notification
+ *      .md.html>
+ *      http://docs.phonegap.com/en/2.7.0/cordova_notification_notification
+ *      .md.html</a>
  */
 public class Notification extends Module {
 
@@ -50,10 +53,11 @@ public class Notification extends Module {
     /**
      * Shows a custom alert or dialog box.
      * 
-     * @param message, Dialog message
+     * @param message
+     *            , Dialog message
      */
     public native void alert(String message)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
 
 		}));
@@ -62,23 +66,26 @@ public class Notification extends Module {
     /**
      * Shows a custom alert or dialog box.
      * 
-     * @param message, Dialog message
+     * @param message
+     *            , Dialog message
      */
     public native void alert(String message, Function callBack)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
-			callBack.@com.emitrom.pilot.util.client.core.Function::execute()();
+			callBack.@com.pilot.shared.client.Function::execute()();
 		}));
     }-*/;
 
     /**
      * Shows a custom alert or dialog box.
      * 
-     * @param message, Dialog message
-     * @param title, Dialog title
+     * @param message
+     *            , Dialog message
+     * @param title
+     *            , Dialog title
      */
     public native void alert(String title, String message)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
 		}), title);
     }-*/;
@@ -86,25 +93,30 @@ public class Notification extends Module {
     /**
      * Shows a custom alert or dialog box.
      * 
-     * @param message, Dialog message
-     * @param title, Dialog title
+     * @param message
+     *            , Dialog message
+     * @param title
+     *            , Dialog title
      */
     public native void alert(String title, String message, Function callBack)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
-			callBack.@com.emitrom.pilot.util.client.core.Function::execute()();
+			callBack.@com.pilot.shared.client.Function::execute()();
 		}), title);
     }-*/;
 
     /**
      * Shows a custom alert or dialog box.
      * 
-     * @param message, Dialog message
-     * @param title, Dialog title
-     * @param button, Button name
+     * @param message
+     *            , Dialog message
+     * @param title
+     *            , Dialog title
+     * @param button
+     *            , Button name
      */
     public native void alert(String title, String message, String button)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
 		}), title, button);
     }-*/;
@@ -112,14 +124,17 @@ public class Notification extends Module {
     /**
      * Shows a custom alert or dialog box.
      * 
-     * @param message, Dialog message
-     * @param title, Dialog title
-     * @param button, Button name
+     * @param message
+     *            , Dialog message
+     * @param title
+     *            , Dialog title
+     * @param button
+     *            , Button name
      */
     public native void alert(String title, String message, String button, Function callBack)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
-			callBack.@com.emitrom.pilot.util.client.core.Function::execute()();
+			callBack.@com.pilot.shared.client.Function::execute()();
 		}), title, button);
     }-*/;
 
@@ -131,7 +146,7 @@ public class Notification extends Module {
      * @param callBack
      */
     public native void confirm(String message, ConfirmHandler callBack)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer
 				.confirm(
 						message,
@@ -148,7 +163,7 @@ public class Notification extends Module {
      * @param callBack
      */
     public native void confirm(String title, String message, ConfirmHandler callBack)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer
 				.confirm(
 						message,
@@ -161,12 +176,13 @@ public class Notification extends Module {
      * displays a native dialog box that is more customizable than the browser's
      * confirm function.
      * 
-     * @param message, Dialog message
-     * @param callBack, Callback to invoke with index of button pressed (1, 2 or
-     *            3)
+     * @param message
+     *            , Dialog message
+     * @param callBack
+     *            , Callback to invoke with index of button pressed (1, 2 or 3)
      */
     public native void confirm(String title, String message, String buttonLabels, ConfirmHandler callBack)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer
 				.confirm(
 						message,
@@ -181,7 +197,7 @@ public class Notification extends Module {
      * @param times
      */
     public native void beep(int times)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.beep(times);
     }-*/;
 
@@ -191,7 +207,7 @@ public class Notification extends Module {
      * @param time
      */
     public native void vibrate(int time)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.vibrate(time);
     }-*/;
 
@@ -200,7 +216,7 @@ public class Notification extends Module {
      * 
      */
     public native void vibrate()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.vibrate(1000);
     }-*/;
 

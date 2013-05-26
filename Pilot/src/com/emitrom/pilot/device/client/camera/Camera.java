@@ -53,7 +53,7 @@ public class Camera extends Module {
      * @param callBack
      */
     public native CameraPopoverHandle getPicture(CameraPictureHandler callBack)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return peer
 				.getPicture(
 						$entry(function(data) {
@@ -71,7 +71,7 @@ public class Camera extends Module {
      * @param options
      */
     public native CameraPopoverHandle getPicture(CameraPictureHandler callBack, CameraOptions options)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return peer
 				.getPicture(
 						$entry(function(data) {
@@ -80,7 +80,7 @@ public class Camera extends Module {
 						$entry(function(message) {
 							callBack.@com.emitrom.pilot.device.client.core.handlers.camera.CameraPictureHandler::onError(Ljava/lang/String;)(message);
 						}),
-						options.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+						options.@com.pilot.shared.client.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -92,7 +92,7 @@ public class Camera extends Module {
      * @param callBack
      */
     public native void cleanUp(CameraCleanUpHandler callBack)/*-{
-        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
         peer
                 .cleanup(
                         $entry(function() {

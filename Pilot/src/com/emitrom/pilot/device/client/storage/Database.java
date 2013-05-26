@@ -17,8 +17,8 @@
 package com.emitrom.pilot.device.client.storage;
 
 import com.emitrom.pilot.device.client.core.handlers.storage.DatabaseHandler;
-import com.emitrom.pilot.util.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.JsObject;
 
 /**
  * Contains methods that allow the user to manipulate the Database
@@ -35,7 +35,7 @@ public class Database extends JsObject {
      * @param handler
      */
     public native void transaction(DatabaseHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer
 				.transaction(
 						$entry(function(tx) {
@@ -59,7 +59,7 @@ public class Database extends JsObject {
      * @param newVersion
      */
     public native void changeVersion(String oldVersion, String newVersion)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.changeVersion(oldVersion, newVersion);
     }-*/;
 

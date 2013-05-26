@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.device.client.storage;
 
-import com.emitrom.pilot.util.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.JsObject;
 
 /**
  * When the executeSql method of a SQLTransaction is called it will invoke it's
@@ -37,7 +37,7 @@ public class SQLResultSet extends JsObject {
      * @return
      */
     public native int getInsertId()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return peer.insertId;
     }-*/;
 
@@ -48,7 +48,7 @@ public class SQLResultSet extends JsObject {
      * @return
      */
     public native int getRowAffected()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return peer.rowAffected;
     }-*/;
 
@@ -59,7 +59,7 @@ public class SQLResultSet extends JsObject {
      * @return
      */
     public native SQLResultSetRowList getRows()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = peer.rows;
 		var toReturn = @com.emitrom.pilot.device.client.storage.SQLResultSetRowList::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

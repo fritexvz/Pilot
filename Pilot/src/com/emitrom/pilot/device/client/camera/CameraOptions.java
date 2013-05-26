@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.device.client.camera;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
+import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * Optional parameters to customize the camera settings.

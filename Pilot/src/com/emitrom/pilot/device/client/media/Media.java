@@ -49,7 +49,7 @@ public class Media extends Module {
      * @param handler
      */
     public native void getCurrentPosition(MediaPositionHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer
 				.getCurrentPosition(
 						$entry(function() {
@@ -68,7 +68,7 @@ public class Media extends Module {
      * @return
      */
     public native int getDuration()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return peer.getDuration();
     }-*/;
 
@@ -76,7 +76,7 @@ public class Media extends Module {
      * synchronous function that pauses playing an audio file.
      */
     public native void pause()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.pause();
     }-*/;
 
@@ -84,7 +84,7 @@ public class Media extends Module {
      * Starts or resumes playing an audio file.
      */
     public native void play()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.play();
     }-*/;
 
@@ -92,7 +92,7 @@ public class Media extends Module {
      * Releases the underlying operating systems audio resources.
      */
     public native void release()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.release();
     }-*/;
 
@@ -100,7 +100,7 @@ public class Media extends Module {
      * Sets the current position within an audio file.
      */
     public native void seekTo(int milliseconds)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.seekTo(milliseconds);
     }-*/;
 
@@ -108,7 +108,7 @@ public class Media extends Module {
      * synchronous function that starts recording an audio file.
      */
     public native void startRecord()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.startRecord();
     }-*/;
 
@@ -116,7 +116,7 @@ public class Media extends Module {
      * Stops playing an audio file.
      */
     public native void stop()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.stop();
     }-*/;
 
@@ -124,7 +124,7 @@ public class Media extends Module {
      * Stops recording an audio file.
      */
     public native void stopRecord()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		peer.stopRecord();
     }-*/;
 

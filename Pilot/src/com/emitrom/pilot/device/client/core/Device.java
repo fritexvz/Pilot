@@ -1,34 +1,48 @@
 /**
-   Copyright (c) 2012 Emitrom LLC. All rights reserved. 
-   For licensing questions, please contact us at licensing@emitrom.com
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Copyright (c) 2012 Emitrom LLC. All rights reserved. For licensing questions,
+ * please contact us at licensing@emitrom.com
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  */
 package com.emitrom.pilot.device.client.core;
 
 import com.emitrom.pilot.device.client.core.handlers.notification.ConfirmHandler;
 import com.emitrom.pilot.device.client.events.DeviceEvent;
-import com.emitrom.pilot.device.client.handlers.*;
+import com.emitrom.pilot.device.client.handlers.BackButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.BatteryCriticalEventHandler;
+import com.emitrom.pilot.device.client.handlers.BatteryLowEventHandler;
+import com.emitrom.pilot.device.client.handlers.BatteryStatusEventHandler;
+import com.emitrom.pilot.device.client.handlers.DeviceReadyEventHandler;
+import com.emitrom.pilot.device.client.handlers.EndCallButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.MenuButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.OfflineEventHandler;
+import com.emitrom.pilot.device.client.handlers.OnlineEventHandler;
+import com.emitrom.pilot.device.client.handlers.PauseEventHandler;
+import com.emitrom.pilot.device.client.handlers.ResumeEventHandler;
+import com.emitrom.pilot.device.client.handlers.SearchButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.StartCallButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.VolumeDownButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.VolumeUpButtonEventHandler;
 import com.emitrom.pilot.device.client.notification.Notification;
 import com.emitrom.pilot.util.client.core.Attributes;
-import com.emitrom.pilot.util.client.core.Function;
-import com.emitrom.pilot.util.client.core.JsoHelper;
+import com.pilot.shared.client.Function;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * The device object describes the device's hardware and software.
  * 
  * @see <a href=http://docs.phonegap.com/en/2.7.0/cordova_device_device.md.html>
- * http://docs.phonegap.com/en/2.7.0/cordova_device_device.md.html</a>
+ *      http://docs.phonegap.com/en/2.7.0/cordova_device_device.md.html</a>
  */
 public class Device extends Module {
 
@@ -48,8 +62,9 @@ public class Device extends Module {
 
     /**
      * Get the device's model name.
-     * @deprecated since version 2.3.0.  Use getModel() instead.
-     *
+     * 
+     * @deprecated since version 2.3.0. Use getModel() instead.
+     * 
      * @return
      */
     public String getName() {
@@ -94,7 +109,7 @@ public class Device extends Module {
 
     /**
      * Gets the device's model.
-     *
+     * 
      * @return String
      */
     public String getModel() {
@@ -114,9 +129,9 @@ public class Device extends Module {
      * This method checks if the application is running natively or not. It also
      * gives the user the ability to override any setting specified (or not) in
      * the .html file. The global JavaScript variable that determines if an app
-     * is running natively or not is called EMITROM_NATIVE (all caps). Override this
-     * method with care, as it will take precedence over the EMITROM_NATIVE variable
-     * that may have been defined in the .html file.
+     * is running natively or not is called EMITROM_NATIVE (all caps). Override
+     * this method with care, as it will take precedence over the EMITROM_NATIVE
+     * variable that may have been defined in the .html file.
      * 
      * @return boolean true if the application should wait for the device to
      *         load; false otherwise.
@@ -159,7 +174,7 @@ public class Device extends Module {
      */
     public native static void addEventListener(String event, Function callBack)/*-{
 		$doc.addEventListener(event, $entry(function() {
-			callBack.@com.emitrom.pilot.util.client.core.Function::execute()();
+			callBack.@com.pilot.shared.client.Function::execute()();
 		}), false);
     }-*/;
 

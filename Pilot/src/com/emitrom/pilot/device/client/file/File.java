@@ -18,9 +18,9 @@ package com.emitrom.pilot.device.client.file;
 
 import java.util.Date;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.JsoHelper;
 
 /**
  * This object contains attributes of a single file.
@@ -91,7 +91,7 @@ public class File extends JsObject {
      *            The index of the byte after the last one to read.
      */
     public native File slice(int start, int end) /*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = peer.slice(start, end);
 		return @com.emitrom.pilot.device.client.file.File::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;

@@ -17,8 +17,8 @@
 package com.emitrom.pilot.maps.client.overlays.options;
 
 import com.emitrom.pilot.maps.client.base.LatLng;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.JsoHelper;
 
 public class CircleOptions extends AbstractOption {
 
@@ -32,7 +32,7 @@ public class CircleOptions extends AbstractOption {
      * @return
      */
     public native LatLng getCenter()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		var obj = jso.center;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -48,12 +48,12 @@ public class CircleOptions extends AbstractOption {
      * @param value
      */
     public native void setClickable(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.clickable = value;
     }-*/;
 
     public native boolean isClickable()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.clickable;
     }-*/;
 
@@ -64,12 +64,12 @@ public class CircleOptions extends AbstractOption {
      * @param value
      */
     public native void setFillColor(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.fillColor = value;
     }-*/;
 
     public native String getFillColor()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.fillColor;
     }-*/;
 
@@ -79,12 +79,12 @@ public class CircleOptions extends AbstractOption {
      * @param value
      */
     public native void setFillOpacitiy(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.fillOpacitiy = value;
     }-*/;
 
     public native double getFillOpacitiy()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.fillOpacitiy;
     }-*/;
 
@@ -92,12 +92,12 @@ public class CircleOptions extends AbstractOption {
      * The radius in meters on the Earth's surface
      */
     public native void setRadius(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.radius = value;
     }-*/;
 
     public native double getRadius()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.radius;
     }-*/;
 
@@ -108,12 +108,12 @@ public class CircleOptions extends AbstractOption {
      * @param value
      */
     public native void setStrokeColor(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.strokeColor = value;
     }-*/;
 
     public native String getStrokeColor()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.strokeColor;
     }-*/;
 
@@ -123,12 +123,12 @@ public class CircleOptions extends AbstractOption {
      * @param value
      */
     public native void setStrokeOpacity(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.strokeOpacity = value;
     }-*/;
 
     public native double getStrokeOpacity()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.strokeOpacity;
     }-*/;
 
@@ -138,12 +138,12 @@ public class CircleOptions extends AbstractOption {
      * @param value
      */
     public native void setStrokeWeight(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.strokeWeight = value;
     }-*/;
 
     public native double getStrokeWeight()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.strokeWeight;
     }-*/;
 
@@ -153,17 +153,17 @@ public class CircleOptions extends AbstractOption {
      * @param value
      */
     public native void setZIndex(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.zIndex = value;
     }-*/;
 
     public native double getZIndex()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		return jso.zIndex;
     }-*/;
 
     private native void setCenter(JavaScriptObject value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
 		jso.center = value;
     }-*/;
 }
