@@ -19,7 +19,7 @@ package com.emitrom.pilot.maps.client.services.geocoder;
 
 import com.emitrom.pilot.maps.client.services.handlers.GeocoderHandler;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.core.JsObject;
 
 /**
  * A service for converting between an address and a LatLng.
@@ -38,7 +38,7 @@ public class Geocoder extends JsObject {
     }
 
     public native void geocode(GeocoderRequest request, GeocoderHandler callBack)/*-{
-    	var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+    	var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		$entry(jso
 				.geocode(
 						request,

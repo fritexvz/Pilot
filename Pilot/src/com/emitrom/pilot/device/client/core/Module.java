@@ -16,7 +16,7 @@
  */
 package com.emitrom.pilot.device.client.core;
 
-import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.core.JsObject;
 
 /**
  * Parent class of all modules

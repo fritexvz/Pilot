@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module>
    <inherits name='com.google.gwt.core.Core' />
+   
+   <generate-with class="com.pilot.shared.rebind.BeanModelGenerator">
+		<when-type-assignable class="ccom.pilot.shared.data.BeanLookup" />
+	</generate-with>
 </module>

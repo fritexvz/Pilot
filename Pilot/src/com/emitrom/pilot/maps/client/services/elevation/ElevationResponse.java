@@ -19,7 +19,7 @@ package com.emitrom.pilot.maps.client.services.elevation;
 
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.core.JsObject;
 
 public class ElevationResponse extends JsObject {
 
@@ -32,12 +32,12 @@ public class ElevationResponse extends JsObject {
     }
 
     public native double getElevation() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.elevation;
     }-*/;
 
     public native LatLng geLocation() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.location;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

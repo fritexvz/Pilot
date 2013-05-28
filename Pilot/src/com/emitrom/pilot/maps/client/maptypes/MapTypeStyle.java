@@ -20,8 +20,8 @@ import java.util.ArrayList;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * The MapTypeStyle is a collection of selectors and stylers that define how the
@@ -52,7 +52,7 @@ public class MapTypeStyle extends JsObject {
     }
 
     private native void setElementType(String element)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.elementType = element;
     }-*/;
 
@@ -61,7 +61,7 @@ public class MapTypeStyle extends JsObject {
     }
 
     private native String _getElementType()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.elementType;
     }-*/;
 
@@ -77,7 +77,7 @@ public class MapTypeStyle extends JsObject {
     }
 
     private native void setFeatureType(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.featureType = value;
     }-*/;
 
@@ -86,7 +86,7 @@ public class MapTypeStyle extends JsObject {
     }
 
     private native String _getFeatureType()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.featureType;
     }-*/;
 

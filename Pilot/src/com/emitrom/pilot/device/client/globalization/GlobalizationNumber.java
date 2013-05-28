@@ -16,7 +16,7 @@
  */
 package com.emitrom.pilot.device.client.globalization;
 
-import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.core.JsObject;
 
 public class GlobalizationNumber extends JsObject {
 

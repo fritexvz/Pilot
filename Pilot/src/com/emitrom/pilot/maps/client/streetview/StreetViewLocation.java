@@ -18,8 +18,8 @@ package com.emitrom.pilot.maps.client.streetview;
 
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A representation of a location in the Street View panorama
@@ -42,12 +42,12 @@ public class StreetViewLocation extends JsObject {
      * @param value
      */
     public native void setDescription(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.description = value;
     }-*/;
 
     public native String getDescription()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.description;
     }-*/;
 
@@ -57,12 +57,12 @@ public class StreetViewLocation extends JsObject {
      * @param value
      */
     public native void setLatLgn(LatLng value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		jso.latLgn = value.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.latLgn = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native LatLng getLatLgn()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.latLgn;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -75,12 +75,12 @@ public class StreetViewLocation extends JsObject {
      * @param value
      */
     public native void setPano(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.pano = value;
     }-*/;
 
     public native String getPano()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.pano;
     }-*/;
 

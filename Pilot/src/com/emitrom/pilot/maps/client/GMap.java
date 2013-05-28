@@ -39,18 +39,18 @@ public class GMap extends MVCObject {
      * @param zoom
      */
     public final native void setZoom(double value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.setZoom(value);
     }-*/;
 
     public final native void setCenter(LatLng latLgn)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		var latln = latLgn.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var latln = latLgn.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.setCenter(latln);
     }-*/;
 
     public final native LatLng getCenter()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getCenter();
 		return @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
@@ -64,7 +64,7 @@ public class GMap extends MVCObject {
     }
 
     private final native void _setMapType(String id)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.setMapTypeId(id);
     }-*/;
 
@@ -73,7 +73,7 @@ public class GMap extends MVCObject {
     }
 
     private final native String _getMapType()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.getMapTypeId();
     }-*/;
 

@@ -18,8 +18,8 @@ package com.emitrom.pilot.maps.client.services.geocoder;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayString;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A single address component within a GeocoderResult. A full address may
@@ -41,7 +41,7 @@ public class GeocoderAddressComponent extends JsObject {
      * @return
      */
     public native String getLongName()/*-{
-		var jso = jso.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = jso.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.long_name;
     }-*/;
 
@@ -51,7 +51,7 @@ public class GeocoderAddressComponent extends JsObject {
      * @return
      */
     public native String getShortName()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.short_name;
     }-*/;
 
@@ -61,7 +61,7 @@ public class GeocoderAddressComponent extends JsObject {
      * @return
      */
     public native JsArrayString getTypes()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.types;
     }-*/;
 

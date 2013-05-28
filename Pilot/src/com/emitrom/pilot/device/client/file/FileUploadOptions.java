@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.device.client.file;
 
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 import java.util.Map;
 

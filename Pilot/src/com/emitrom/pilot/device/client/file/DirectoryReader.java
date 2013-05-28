@@ -18,7 +18,7 @@ package com.emitrom.pilot.device.client.file;
 
 import com.emitrom.pilot.device.client.core.handlers.file.DirectoryReaderHandler;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.core.JsObject;
 
 /**
  * An object that lists files and directories in a directory.
@@ -35,7 +35,7 @@ public class DirectoryReader extends JsObject {
      * @param handler
      */
     public native void readEntries(DirectoryReaderHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.readEntries(
 						$entry(function(entries) {

@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.device.client.contacts;
 
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Contains properties that can be used to filter the results of a contacts.find() operations.

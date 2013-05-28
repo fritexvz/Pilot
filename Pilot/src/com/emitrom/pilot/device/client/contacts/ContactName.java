@@ -17,8 +17,8 @@
 package com.emitrom.pilot.device.client.contacts;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Contains name properties of a Contact object.

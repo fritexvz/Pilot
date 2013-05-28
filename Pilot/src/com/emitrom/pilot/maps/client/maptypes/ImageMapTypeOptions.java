@@ -17,8 +17,8 @@
 package com.emitrom.pilot.maps.client.maptypes;
 
 import com.emitrom.pilot.maps.client.geom.Size;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * This class is used to create a MapType that renders image tiles
@@ -37,12 +37,12 @@ public class ImageMapTypeOptions extends JsObject {
      * @param value
      */
     public native void setAlt(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.alt = value;
     }-*/;
 
     public native String getAlt()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.alt;
     }-*/;
 
@@ -53,7 +53,7 @@ public class ImageMapTypeOptions extends JsObject {
      * @return
      */
     public native String getTitleUrl(ImageTypeFunction func)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.getTitleUrl = function(coord, zoom) {
 			func.@com.emitrom.pilot.maps.client.maptypes.ImageTypeFunction::execute(Lcom/emitrom/pilot/maps/client/geom/Point;D)(coord, zoom);
 		};
@@ -65,12 +65,12 @@ public class ImageMapTypeOptions extends JsObject {
      * @param value
      */
     public native void setMaxZoom(double value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.maxZoom = value;
     }-*/;
 
     public native double getMaxZoom()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.maxZoom;
     }-*/;
 
@@ -81,12 +81,12 @@ public class ImageMapTypeOptions extends JsObject {
      * @param value
      */
     public native void setMinZoom(double value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.minZoom = value;
     }-*/;
 
     public native double getMinZoom()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.minZoom;
     }-*/;
 
@@ -96,12 +96,12 @@ public class ImageMapTypeOptions extends JsObject {
      * @param value
      */
     public native void setName(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.name = value;
     }-*/;
 
     public native String getName()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.name;
     }-*/;
 
@@ -113,12 +113,12 @@ public class ImageMapTypeOptions extends JsObject {
      * @param value
      */
     public native void setOpacity(double value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.opacity = value;
     }-*/;
 
     public native double getOpacity()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.opacity;
     }-*/;
 
@@ -128,15 +128,15 @@ public class ImageMapTypeOptions extends JsObject {
      * @return
      */
     public native Size getTileSize()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.titleSize;
 		var toReturn = @com.emitrom.pilot.maps.client.geom.Size::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return this.tileSize;
     }-*/;
 
     public native void setTileSize(Size value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		this.tileSize = value.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		this.tileSize = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
 }

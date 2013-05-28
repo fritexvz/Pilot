@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.core.JsObject;
 
 /**
  * Creates a MapType with a custom style

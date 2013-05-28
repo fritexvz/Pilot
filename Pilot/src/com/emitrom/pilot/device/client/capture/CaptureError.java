@@ -18,8 +18,8 @@ package com.emitrom.pilot.device.client.capture;
 
 import com.emitrom.pilot.util.client.core.Attributes;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Encapsulates the error code resulting from a failed media capture operation.

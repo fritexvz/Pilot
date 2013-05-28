@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.maps.client.maptypes;
 
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 public class StyledMapTypeOptions extends JsObject {
 
@@ -32,12 +32,12 @@ public class StyledMapTypeOptions extends JsObject {
      * @param value
      */
     public native void setAlt(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.alt = value;
     }-*/;
 
     public native String getAlt()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.alt;
     }-*/;
 
@@ -47,12 +47,12 @@ public class StyledMapTypeOptions extends JsObject {
      * @param value
      */
     public native void setMaxZoom(double value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.maxZoom = value;
     }-*/;
 
     public native double getMaxZoom()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.maxZoom;
     }-*/;
 
@@ -63,12 +63,12 @@ public class StyledMapTypeOptions extends JsObject {
      * @param value
      */
     public native void setMinZoom(double value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.minZoom = value;
     }-*/;
 
     public native double getMinZoom()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.minZoom;
     }-*/;
 
@@ -78,12 +78,12 @@ public class StyledMapTypeOptions extends JsObject {
      * @param value
      */
     public native void setName(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.name = value;
     }-*/;
 
     public native String getName()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.name;
     }-*/;
 

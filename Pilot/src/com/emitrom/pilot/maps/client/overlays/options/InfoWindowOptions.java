@@ -19,7 +19,7 @@ package com.emitrom.pilot.maps.client.overlays.options;
 
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.emitrom.pilot.maps.client.geom.Size;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsoHelper;
 
 public class InfoWindowOptions extends AbstractOption {
 
@@ -28,7 +28,7 @@ public class InfoWindowOptions extends AbstractOption {
     }
 
     public native String getContent() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.content;
     }-*/;
 
@@ -41,7 +41,7 @@ public class InfoWindowOptions extends AbstractOption {
      * @param value
      */
     public native void setContent(String value) /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.content = value;
     }-*/;
 
@@ -52,12 +52,12 @@ public class InfoWindowOptions extends AbstractOption {
      * @param value
      */
     public native void setDisableAutoPan(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.disableAutoPan = value;
     }-*/;
 
     public native boolean isDisableAutoPanEnabled()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.disableAutoPan;
     }-*/;
 
@@ -70,12 +70,12 @@ public class InfoWindowOptions extends AbstractOption {
      * @param value
      */
     public native void setMaxWidth(double value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.maxWidth = value;
     }-*/;
 
     public native double getMaxWidth()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.maxWidth;
     }-*/;
 
@@ -102,12 +102,12 @@ public class InfoWindowOptions extends AbstractOption {
      * @param value
      */
     public native void setPosition(LatLng value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		jso.position = value.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.position = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native LatLng getPosition()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.position;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -123,12 +123,12 @@ public class InfoWindowOptions extends AbstractOption {
      * @param value
      */
     public native void setZIndex(double value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.zIndex = value;
     }-*/;
 
     public native double getZIndex()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.zIndex;
     }-*/;
 

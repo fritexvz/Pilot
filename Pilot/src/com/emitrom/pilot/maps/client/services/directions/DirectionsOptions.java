@@ -19,7 +19,7 @@ package com.emitrom.pilot.maps.client.services.directions;
 
 import com.emitrom.pilot.maps.client.services.TravelMode;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.core.JsObject;
 
 public class DirectionsOptions extends JsObject {
 
@@ -35,32 +35,32 @@ public class DirectionsOptions extends JsObject {
     }
 
     public native boolean avoidHighways() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.avoidHighways;
     }-*/;
 
     public native void setAvoidHighways(boolean value) /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.avoidHighways = value;
     }-*/;
 
     public native String getCountryCode() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.countryCode;
     }-*/;
 
     public native void setCountryCode(String value) /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.coutryCode = value;
     }-*/;
 
     public native String getLanguage() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.language;
     }-*/;
 
     public native void setLanguage(String value) /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.language = value;
     }-*/;
 
@@ -69,7 +69,7 @@ public class DirectionsOptions extends JsObject {
     }
 
     private native String _getTravelMode() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.travelMode;
     }-*/;
 
@@ -78,7 +78,7 @@ public class DirectionsOptions extends JsObject {
     }
 
     private native void _setTravelMode(String value) /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.travelMode = value;
     }-*/;
 

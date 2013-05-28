@@ -49,7 +49,7 @@ public class SplashScreen extends Module {
      * Displays the splash screen.
      */
     public native void show() /*-{
-        var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
         peer.show();
     }-*/;
     
@@ -73,7 +73,7 @@ public class SplashScreen extends Module {
      * Hides the splash screen.
      */
     public native void hide() /*-{
-        var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
         peer.hide();
     }-*/;
 }

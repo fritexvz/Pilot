@@ -34,7 +34,7 @@ public class InAppBrowserHandlerRegistration {
 
     public native void unregister() /*-{
 		var obj = this.@com.emitrom.pilot.device.client.inappbrowser.InAppBrowserHandlerRegistration::iapp;
-		var objjso = obj.@com.pilot.shared.client.JsObject::jsObj;
+		var objjso = obj.@com.pilot.shared.client.core.JsObject::jsObj;
 		var action = this.@com.emitrom.pilot.device.client.inappbrowser.InAppBrowserHandlerRegistration::eventName;
 		var fn = this.@com.emitrom.pilot.device.client.inappbrowser.InAppBrowserHandlerRegistration::fn;
 		objjso.removeEventListener(action, fn);

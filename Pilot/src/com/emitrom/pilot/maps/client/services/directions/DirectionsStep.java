@@ -24,8 +24,8 @@ import com.emitrom.pilot.maps.client.core.Duration;
 import com.emitrom.pilot.maps.client.services.TravelMode;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A single DirectionsStep in a DirectionsResult. Some fields may be undefined.
@@ -51,13 +51,13 @@ public class DirectionsStep extends JsObject {
      * @param value
      */
     public native void setDistance(Distance value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		jso.distance = value.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.distance = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		;
     }-*/;
 
     public native Distance getDistance()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.distance;
 		var toReturn = @com.emitrom.pilot.maps.client.core.Distance::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -70,13 +70,13 @@ public class DirectionsStep extends JsObject {
      * @param value
      */
     public native void setDuration(Duration value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		jso.duration = value.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.duration = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		;
     }-*/;
 
     public native Duration getDuration()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.duration;
 		var toReturn = @com.emitrom.pilot.maps.client.core.Duration::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -88,12 +88,12 @@ public class DirectionsStep extends JsObject {
      * @param value
      */
     public native void setEndLocation(LatLng value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		this.end_location = value.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		this.end_location = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native LatLng getEndLocation()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.end_location;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -105,12 +105,12 @@ public class DirectionsStep extends JsObject {
      * @param value
      */
     public native void setInstructions(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.instructions = value;
     }-*/;
 
     public native String getInstructions()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.instructions;
     }-*/;
 
@@ -179,7 +179,7 @@ public class DirectionsStep extends JsObject {
     }
 
     private native void setTravelMode(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.travelMode = value;
     }-*/;
 
@@ -188,7 +188,7 @@ public class DirectionsStep extends JsObject {
     }
 
     private native String _getTravelMode()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.travelMode;
     }-*/;
 

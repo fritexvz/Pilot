@@ -18,7 +18,7 @@ package com.emitrom.pilot.maps.client.services.directions;
 
 import com.emitrom.pilot.maps.client.services.handlers.DirectionsServiceHandler;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.core.JsObject;
 
 /**
  * A service for computing directions between two or more places.
@@ -41,7 +41,7 @@ public class DirectionsService extends JsObject {
      */
 
     public final native void route(DirectionsRequest request, DirectionsServiceHandler callBack)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso
 				.route(
 						request,

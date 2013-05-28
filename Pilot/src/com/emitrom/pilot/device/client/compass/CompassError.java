@@ -19,7 +19,7 @@ package com.emitrom.pilot.device.client.compass;
 import com.emitrom.pilot.device.client.core.ModuleError;
 import com.emitrom.pilot.util.client.core.Attributes;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A CompassError object is returned to the compassError callback function when

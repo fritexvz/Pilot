@@ -35,8 +35,8 @@ import com.emitrom.pilot.device.client.handlers.VolumeDownButtonEventHandler;
 import com.emitrom.pilot.device.client.handlers.VolumeUpButtonEventHandler;
 import com.emitrom.pilot.device.client.notification.Notification;
 import com.emitrom.pilot.util.client.core.Attributes;
-import com.pilot.shared.client.Function;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.Function;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * The device object describes the device's hardware and software.
@@ -174,7 +174,7 @@ public class Device extends Module {
      */
     public native static void addEventListener(String event, Function callBack)/*-{
 		$doc.addEventListener(event, $entry(function() {
-			callBack.@com.pilot.shared.client.Function::execute()();
+			callBack.@com.pilot.shared.client.core.Function::execute()();
 		}), false);
     }-*/;
 

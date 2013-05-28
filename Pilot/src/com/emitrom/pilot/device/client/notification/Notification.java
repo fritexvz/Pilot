@@ -19,7 +19,7 @@ package com.emitrom.pilot.device.client.notification;
 import com.emitrom.pilot.device.client.core.Module;
 import com.emitrom.pilot.device.client.core.ModuleFactory;
 import com.emitrom.pilot.device.client.core.handlers.notification.ConfirmHandler;
-import com.pilot.shared.client.Function;
+import com.pilot.shared.client.core.Function;
 
 /**
  * Visual, audible, and tactile device notifications.<br/>
@@ -57,7 +57,7 @@ public class Notification extends Module {
      *            , Dialog message
      */
     public native void alert(String message)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
 
 		}));
@@ -70,9 +70,9 @@ public class Notification extends Module {
      *            , Dialog message
      */
     public native void alert(String message, Function callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
-			callBack.@com.pilot.shared.client.Function::execute()();
+			callBack.@com.pilot.shared.client.core.Function::execute()();
 		}));
     }-*/;
 
@@ -85,7 +85,7 @@ public class Notification extends Module {
      *            , Dialog title
      */
     public native void alert(String title, String message)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
 		}), title);
     }-*/;
@@ -99,9 +99,9 @@ public class Notification extends Module {
      *            , Dialog title
      */
     public native void alert(String title, String message, Function callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
-			callBack.@com.pilot.shared.client.Function::execute()();
+			callBack.@com.pilot.shared.client.core.Function::execute()();
 		}), title);
     }-*/;
 
@@ -116,7 +116,7 @@ public class Notification extends Module {
      *            , Button name
      */
     public native void alert(String title, String message, String button)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
 		}), title, button);
     }-*/;
@@ -132,9 +132,9 @@ public class Notification extends Module {
      *            , Button name
      */
     public native void alert(String title, String message, String button, Function callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.alert(message, $entry(function() {
-			callBack.@com.pilot.shared.client.Function::execute()();
+			callBack.@com.pilot.shared.client.core.Function::execute()();
 		}), title, button);
     }-*/;
 
@@ -146,7 +146,7 @@ public class Notification extends Module {
      * @param callBack
      */
     public native void confirm(String message, ConfirmHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.confirm(
 						message,
@@ -163,7 +163,7 @@ public class Notification extends Module {
      * @param callBack
      */
     public native void confirm(String title, String message, ConfirmHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.confirm(
 						message,
@@ -182,7 +182,7 @@ public class Notification extends Module {
      *            , Callback to invoke with index of button pressed (1, 2 or 3)
      */
     public native void confirm(String title, String message, String buttonLabels, ConfirmHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.confirm(
 						message,
@@ -197,7 +197,7 @@ public class Notification extends Module {
      * @param times
      */
     public native void beep(int times)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.beep(times);
     }-*/;
 
@@ -207,7 +207,7 @@ public class Notification extends Module {
      * @param time
      */
     public native void vibrate(int time)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.vibrate(time);
     }-*/;
 
@@ -216,7 +216,7 @@ public class Notification extends Module {
      * 
      */
     public native void vibrate()/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.vibrate(1000);
     }-*/;
 

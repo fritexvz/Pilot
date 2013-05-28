@@ -17,8 +17,8 @@
 package com.emitrom.pilot.maps.client.core;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A representation of distance as a numeric value and a display string.

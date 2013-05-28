@@ -18,8 +18,8 @@
 package com.emitrom.pilot.maps.client.controls;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Options for the rendering of the map scale control.

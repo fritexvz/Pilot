@@ -17,7 +17,7 @@
 package com.emitrom.pilot.device.client.accelerometer;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
+import com.pilot.shared.client.core.JsObject;
 
 /**
  * Contains Accelerometer data captured at a specific point in time. This object
@@ -47,7 +47,7 @@ public class Acceleration extends JsObject {
      * @return double
      */
     public native double getX()/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.x;
     }-*/;
 
@@ -57,7 +57,7 @@ public class Acceleration extends JsObject {
      * @return double
      */
     public native double getY()/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.y;
     }-*/;
 
@@ -67,7 +67,7 @@ public class Acceleration extends JsObject {
      * @return double
      */
     public native double getZ()/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.z;
     }-*/;
 
@@ -77,7 +77,7 @@ public class Acceleration extends JsObject {
      * @return double
      */
     public native double getTimestamp()/*-{
-        var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
         return peer.timestamp;
     }-*/;
 }

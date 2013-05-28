@@ -18,8 +18,8 @@ package com.emitrom.pilot.maps.client.services.directions;
 
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A DirectionsWaypoint represents a location between origin and destination
@@ -44,8 +44,8 @@ public class DirectionsWaypoints extends JsObject {
      * @param value
      */
     public final native void setLocation(LatLng value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		jso.location = value.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.location = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -54,12 +54,12 @@ public class DirectionsWaypoints extends JsObject {
      * @param value
      */
     public final native void setLocation(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.location = value;
     }-*/;
 
     public final native LatLng getLocation()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.location;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -73,12 +73,12 @@ public class DirectionsWaypoints extends JsObject {
      * @param value
      */
     public final native void setStopOver(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.stopover = value;
     }-*/;
 
     public final native boolean isStopOver()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.stopover;
     }-*/;
 

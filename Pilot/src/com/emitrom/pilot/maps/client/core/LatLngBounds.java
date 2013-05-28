@@ -19,8 +19,8 @@ package com.emitrom.pilot.maps.client.core;
 
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A <b>LatLngBounds</b> instance represents a rectangle in geographical
@@ -67,9 +67,9 @@ public class LatLngBounds extends JsObject {
      * @return
      */
     public final native boolean isEqualTo(LatLngBounds other) /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso
-				.equals(other.@com.pilot.shared.client.JsObject::getJsObj()());
+				.equals(other.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -78,9 +78,9 @@ public class LatLngBounds extends JsObject {
      * @param point
      */
     public final native LatLng extend(LatLng point) /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso
-				.extend(point.@com.pilot.shared.client.JsObject::getJsObj()());
+				.extend(point.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -89,7 +89,7 @@ public class LatLngBounds extends JsObject {
      * @return
      */
     public final native LatLng getCenter() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getCenter();
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -101,7 +101,7 @@ public class LatLngBounds extends JsObject {
      * @return
      */
     public final native LatLng getNorthEast() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getNorthEast();
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -113,7 +113,7 @@ public class LatLngBounds extends JsObject {
      * @return
      */
     public final native LatLng getSouthWest() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getSouthWest();
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -126,9 +126,9 @@ public class LatLngBounds extends JsObject {
      * @return
      */
     public final native boolean intersects(LatLngBounds other) /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso
-				.intersects(other.@com.pilot.shared.client.JsObject::getJsObj()());
+				.intersects(other.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -137,7 +137,7 @@ public class LatLngBounds extends JsObject {
      * @return
      */
     public final native boolean isEmpty() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.isEmpty();
     }-*/;
 
@@ -148,9 +148,9 @@ public class LatLngBounds extends JsObject {
      * @return
      */
     public final native LatLng toSpan(LatLngBounds other) /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso
-				.toSpan(other.@com.pilot.shared.client.JsObject::getJsObj()());
+				.toSpan(other.@com.pilot.shared.client.core.JsObject::getJsObj()());
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
@@ -161,9 +161,9 @@ public class LatLngBounds extends JsObject {
      * @param other
      */
     public final native void union(LatLngBounds other) /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso
-				.union(other.@com.pilot.shared.client.JsObject::getJsObj()());
+				.union(other.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -173,7 +173,7 @@ public class LatLngBounds extends JsObject {
      * @return
      */
     public final native String toUrlValue() /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.toUrlValue();
     }-*/;
 
@@ -185,7 +185,7 @@ public class LatLngBounds extends JsObject {
      * @return
      */
     public final native String toUrlValue(double precision) /*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.toUrlValue(precision);
     }-*/;
 
@@ -195,7 +195,7 @@ public class LatLngBounds extends JsObject {
      * @return
      */
     public final native String toStringValue()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.toString();
     }-*/;
 

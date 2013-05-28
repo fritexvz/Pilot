@@ -14,7 +14,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.pilot.shared.client;
+package com.pilot.shared.client.core;
 
 import java.util.Date;
 import java.util.Iterator;
@@ -50,7 +50,7 @@ public class JsoHelper {
     public static native JavaScriptObject[] getAttributeAsJavaScriptObjectArray(JavaScriptObject elem, String attr) /*-{
 		var arrayJS = elem[attr];
 		return (arrayJS === undefined) ? null
-				: @com.pilot.shared.client.JsoHelper::toArray(Lcom/google/gwt/core/client/JavaScriptObject;)(arrayJS);
+				: @com.pilot.shared.client.core.JsoHelper::toArray(Lcom/google/gwt/core/client/JavaScriptObject;)(arrayJS);
     }-*/;
 
     public static JavaScriptObject[] toArray(JavaScriptObject array) {
@@ -113,7 +113,7 @@ public class JsoHelper {
 
     public static native void setAttribute(JavaScriptObject elem, String attr, Function handler) /*-{
 		elem[attr] = function() {
-			handler.@com.pilot.shared.client.Function::execute()();
+			handler.@com.pilot.shared.client.core.Function::execute()();
 		};
     }-*/;
 
@@ -150,7 +150,7 @@ public class JsoHelper {
 
     public static native Date getAttributeAsDate(JavaScriptObject elem, String attr) /*-{
                                                                                    var ret = elem[attr];
-                                                                                   return (ret === undefined || ret == null) ? null: @com.pilot.shared.client.JsoHelper::toDate(D)(ret.getTime());
+                                                                                   return (ret === undefined || ret == null) ? null: @com.pilot.shared.client.core.JsoHelper::toDate(D)(ret.getTime());
                                                                                    }-*/;
 
     public static native float getAttributeAsFloat(JavaScriptObject elem, String attr) /*-{
@@ -447,11 +447,11 @@ public class JsoHelper {
     }
 
     public static native String[] getProperties(JavaScriptObject jsObj) /*-{
-		var props = @com.pilot.shared.client.JsoHelper::createJavaScriptArray()();
+		var props = @com.pilot.shared.client.core.JsoHelper::createJavaScriptArray()();
 		for ( var k in jsObj) {
 			props.push(k);
 		}
-		return @com.pilot.shared.client.JsoHelper::convertToJavaStringArray(Lcom/google/gwt/core/client/JavaScriptObject;)(props);
+		return @com.pilot.shared.client.core.JsoHelper::convertToJavaStringArray(Lcom/google/gwt/core/client/JavaScriptObject;)(props);
     }-*/;
 
     public static native String getPropertiesAsString(JavaScriptObject jsObj) /*-{

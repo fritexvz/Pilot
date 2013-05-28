@@ -17,8 +17,8 @@
 
 package com.emitrom.pilot.device.client.camera;
 
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A handle to the popover dialog created by camera.getPicture.
@@ -43,8 +43,8 @@ public class CameraPopoverHandle extends JsObject
      * @param value
      */
     public native void setPosition(CameraPopoverOptions value)/*-{
-        var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
         peer
-                .setPosition(value.@com.pilot.shared.client.JsObject::getJsObj()());
+                .setPosition(value.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 }

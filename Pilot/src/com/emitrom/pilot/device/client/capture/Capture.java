@@ -76,7 +76,7 @@ public class Capture extends Module {
      * @param callBack
      */
     public native void captureAudio(CaptureHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.captureAudio(
 						$entry(function(mediaFiles) {
@@ -113,7 +113,7 @@ public class Capture extends Module {
      * @param options
      */
     public native void captureAudio(CaptureHandler callBack, CaptureAudioOptions options)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.captureAudio(
 						$entry(function(mediaFiles) {
@@ -124,7 +124,7 @@ public class Capture extends Module {
 							var errorObject = @com.emitrom.pilot.device.client.capture.CaptureError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
 							callBack.@com.emitrom.pilot.device.client.core.handlers.capture.CaptureHandler::onError(Lcom/emitrom/pilot/device/client/capture/CaptureError;)(errorObject);
 						}),
-						options.@com.pilot.shared.client.JsObject::getJsObj()());
+						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
 
     }-*/;
 
@@ -135,7 +135,7 @@ public class Capture extends Module {
      * @param callBack
      */
     public native void captureImage(CaptureHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.captureImage(
 						$entry(function(mediaFiles) {
@@ -162,7 +162,7 @@ public class Capture extends Module {
      * @param options
      */
     public native void captureImage(CaptureHandler callBack, CaptureImageOptions options)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.captureImage(
 						$entry(function(mediaFiles) {
@@ -173,7 +173,7 @@ public class Capture extends Module {
 							var errorObject = @com.emitrom.pilot.device.client.capture.CaptureError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
 							callBack.@com.emitrom.pilot.device.client.core.handlers.capture.CaptureHandler::onError(Lcom/emitrom/pilot/device/client/capture/CaptureError;)(errorObject);
 						}),
-						options.@com.pilot.shared.client.JsObject::getJsObj()());
+						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
 
     }-*/;
 
@@ -184,7 +184,7 @@ public class Capture extends Module {
      * @param callBack
      */
     public native void captureVideo(CaptureHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.captureVideo(
 						$entry(function(mediaFiles) {
@@ -211,7 +211,7 @@ public class Capture extends Module {
      * @param options
      */
     public native void captureVideo(CaptureHandler callBack, CaptureVideoOptions options)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.captureVideo(
 						$entry(function(mediaFiles) {
@@ -222,7 +222,7 @@ public class Capture extends Module {
 							var errorObject = @com.emitrom.pilot.device.client.capture.CaptureError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
 							callBack.@com.emitrom.pilot.device.client.core.handlers.capture.CaptureHandler::onError(Lcom/emitrom/pilot/device/client/capture/CaptureError;)(errorObject);
 						}),
-						options.@com.pilot.shared.client.JsObject::getJsObj()());
+						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
 
     }-*/;
 

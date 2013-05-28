@@ -14,7 +14,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.pilot.shared.client;
+package com.pilot.shared.client.core;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -47,8 +47,8 @@ public abstract class JsObject {
     }
 
     public native String[] getProperties() /*-{
-		var jsObj = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		return @com.pilot.shared.client.JsoHelper::getProperties(Lcom/google/gwt/core/client/JavaScriptObject;)(jsObj);
+		var jsObj = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		return @com.pilot.shared.client.core.JsoHelper::getProperties(Lcom/google/gwt/core/client/JavaScriptObject;)(jsObj);
     }-*/;
 
 }

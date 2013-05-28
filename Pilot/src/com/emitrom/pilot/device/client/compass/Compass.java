@@ -57,7 +57,7 @@ public class Compass extends Module {
      * @param callBack
      */
     public native void getCurrentHeading(CompassHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getCurrentHeading(
 						$entry(function(heading) {
@@ -84,7 +84,7 @@ public class Compass extends Module {
      * @param options
      */
     public native void getCurrentHeading(CompassHandler callBack, CompassOptions options)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getCurrentHeading(
 						$entry(function(heading) {
@@ -95,7 +95,7 @@ public class Compass extends Module {
 							var errorObject = @com.emitrom.pilot.device.client.compass.CompassError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
 							callBack.@com.emitrom.pilot.device.client.core.handlers.capture.CaptureHandler::onError(Lcom/emitrom/pilot/device/client/capture/CaptureError;)(errorObject);
 						}),
-						options.@com.pilot.shared.client.JsObject::getJsObj()());
+						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
 
     }-*/;
 
@@ -111,7 +111,7 @@ public class Compass extends Module {
      * @return int
      */
     public native int watchHeading(CompassHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 
 		return peer
 				.watchHeading(
@@ -141,7 +141,7 @@ public class Compass extends Module {
      * @return int
      */
     public native int watchHeading(CompassHandler callBack, CompassOptions options)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 
 		return peer
 				.watchHeading(
@@ -153,7 +153,7 @@ public class Compass extends Module {
 							var errorObject = @com.emitrom.pilot.device.client.compass.CompassError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
 							callBack.@com.emitrom.pilot.device.client.core.handlers.capture.CaptureHandler::onError(Lcom/emitrom/pilot/device/client/capture/CaptureError;)(errorObject);
 						}),
-						options.@com.pilot.shared.client.JsObject::getJsObj()());
+						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
 
     }-*/;
 
@@ -163,12 +163,12 @@ public class Compass extends Module {
      * @param watchId
      */
     public native void clearWatch(int watchId)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.clearWatch(watchId);
     }-*/;
 
     public native int watchHeadingFilter(CompassHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer
 				.watchHeadingFilter(
 						$entry(function(heading) {
@@ -183,7 +183,7 @@ public class Compass extends Module {
     }-*/;
 
     public native int watchHeadingFilter(CompassHandler callBack, CompassOptions options)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer
 				.watchHeadingFilter(
 						$entry(function(heading) {
@@ -194,12 +194,12 @@ public class Compass extends Module {
 							var errorObject = @com.emitrom.pilot.device.client.compass.CompassError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
 							callBack.@com.emitrom.pilot.device.client.core.handlers.capture.CaptureHandler::onError(Lcom/emitrom/pilot/device/client/capture/CaptureError;)(errorObject);
 						}),
-						options.@com.pilot.shared.client.JsObject::getJsObj()());
+						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
 
     }-*/;
 
     public native void clearWatchFilter(int watchId)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.clearWatchFilter(watchId);
     }-*/;
 

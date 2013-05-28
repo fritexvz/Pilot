@@ -22,8 +22,8 @@ import java.util.Date;
 import com.emitrom.pilot.device.client.core.handlers.capture.MediaFileFormatDataHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Encapsulates properties of a media capture file.
@@ -67,7 +67,7 @@ public class MediaFile extends JsObject {
      * @return
      */
     public native Date getLastModifiedDate()/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.lastModifiedDate;
     }-*/;
 
@@ -86,7 +86,7 @@ public class MediaFile extends JsObject {
      * @param callBack
      */
     public native void getFormatData(MediaFileFormatDataHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getFormatData(
 						$entry(function(data) {

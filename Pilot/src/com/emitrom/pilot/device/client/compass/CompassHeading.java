@@ -17,8 +17,8 @@
 package com.emitrom.pilot.device.client.compass;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A CompassHeading object is returned to the compassSuccess callback function

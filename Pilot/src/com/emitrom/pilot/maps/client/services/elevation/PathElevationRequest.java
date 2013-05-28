@@ -21,8 +21,8 @@ import java.util.ArrayList;
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * An elevation query sent by the ElevationService containing the path along
@@ -65,7 +65,7 @@ public class PathElevationRequest extends JsObject {
     }
 
     private native void _setPath(JsArray<JavaScriptObject> values)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.path = values;
     }-*/;
 
@@ -79,7 +79,7 @@ public class PathElevationRequest extends JsObject {
     }
 
     private native JsArray<JavaScriptObject> _getPath()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.path;
     }-*/;
 
@@ -91,12 +91,12 @@ public class PathElevationRequest extends JsObject {
      * @param value
      */
     public final native void setSamples(double value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.samples = value;
     }-*/;
 
     public final native double getSamples()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.samples;
     }-*/;
 

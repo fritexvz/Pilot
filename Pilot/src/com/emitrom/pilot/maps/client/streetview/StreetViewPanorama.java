@@ -22,8 +22,8 @@ import com.emitrom.pilot.maps.client.base.LatLng;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.dom.client.Element;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Displays the panorama for a given LatLng or panorama ID. A StreetViewPanorama
@@ -78,7 +78,7 @@ public class StreetViewPanorama extends JsObject {
     }
 
     private final native JsArray<JavaScriptObject> _getLinks()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.getLinks();
     }-*/;
 
@@ -89,7 +89,7 @@ public class StreetViewPanorama extends JsObject {
      * @return
      */
     public final native String getPano()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.getPano();
     }-*/;
 
@@ -99,7 +99,7 @@ public class StreetViewPanorama extends JsObject {
      * @return
      */
     public final native LatLng getPosition()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getPosition();
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -111,7 +111,7 @@ public class StreetViewPanorama extends JsObject {
      * @return
      */
     public final native StreetViewPov getPov()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getPov();
 		var toReturn = @com.emitrom.pilot.maps.client.streetview.StreetViewPov::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -124,7 +124,7 @@ public class StreetViewPanorama extends JsObject {
      * @return
      */
     public final native boolean isVisible()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.getVisible();
     }-*/;
 
@@ -134,7 +134,7 @@ public class StreetViewPanorama extends JsObject {
      * @param value
      */
     public final native void setPano(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.setPano(value);
     }-*/;
 
@@ -144,9 +144,9 @@ public class StreetViewPanorama extends JsObject {
      * @param position
      */
     public final native void setPosition(LatLng position)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		this
-				.setPosition(position.@com.pilot.shared.client.JsObject::getJsObj()());
+				.setPosition(position.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -155,9 +155,9 @@ public class StreetViewPanorama extends JsObject {
      * @param pov
      */
     public final native void setPov(StreetViewPov pov)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		this
-				.setPov(pov.@com.pilot.shared.client.JsObject::getJsObj()());
+				.setPov(pov.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -167,7 +167,7 @@ public class StreetViewPanorama extends JsObject {
      * @param value
      */
     public final native void setVisible(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.setVisible(value);
     }-*/;
 

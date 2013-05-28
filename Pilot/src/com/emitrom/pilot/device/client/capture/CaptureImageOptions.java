@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.device.client.capture;
 
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Encapsulates image capture configuration options.

@@ -18,8 +18,8 @@ package com.emitrom.pilot.device.client.file;
 
 import com.emitrom.pilot.device.client.core.handlers.file.FileReaderHandler;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * The FileReader object is a way to read files from the devices file system.
@@ -72,7 +72,7 @@ public class FileReader extends JsObject {
      * Aborts reading file.
      */
     public native void abort()/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.abort();
     }-*/;
 
@@ -80,36 +80,36 @@ public class FileReader extends JsObject {
      * Read file and return data as a base64 encoded data url.
      */
     public native void readAsDataUrl(File file)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
-				.readAsDataUrl(file.@com.pilot.shared.client.JsObject::getJsObj()());
+				.readAsDataUrl(file.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
      * Reads text file.
      */
     public native void readAsText(File file)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
-				.readAsText(file.@com.pilot.shared.client.JsObject::getJsObj()());
+				.readAsText(file.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
      * Read file and return data as a base64 encoded data url.
      */
     public native void readAsDataUrl(DirectoryEntry file)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
-				.readAsDataUrl(file.@com.pilot.shared.client.JsObject::getJsObj()());
+				.readAsDataUrl(file.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
      * Reads text file.
      */
     public native void readAsText(DirectoryEntry file)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
-				.readAsText(file.@com.pilot.shared.client.JsObject::getJsObj()());
+				.readAsText(file.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -118,9 +118,9 @@ public class FileReader extends JsObject {
      * @param file
      */
     public native void readAsBinaryString(DirectoryEntry file)/*-{
-        var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
         peer
-            .readAsBinaryString(file.@com.pilot.shared.client.JsObject::getJsObj()());
+            .readAsBinaryString(file.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -129,9 +129,9 @@ public class FileReader extends JsObject {
      * @param file
      */
     public native void readAsArrayBuffer(DirectoryEntry file)/*-{
-        var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
         peer
-            .readAsArrayBuffer(file.@com.pilot.shared.client.JsObject::getJsObj()());
+            .readAsArrayBuffer(file.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -140,7 +140,7 @@ public class FileReader extends JsObject {
      * @param handler
      */
     public native void onLoadStart(FileReaderHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.onloadStart = $entry(function(reader) {
 			var readerObject = @com.emitrom.pilot.device.client.file.FileReader::new(Lcom/google/gwt/core/client/JavaScriptObject;)(reader);
 			handler.@com.emitrom.pilot.device.client.core.handlers.file.FileReaderHandler::onEvent(Lcom/emitrom/pilot/device/client/file/FileReader;)(readerObject);
@@ -153,7 +153,7 @@ public class FileReader extends JsObject {
      * @param handler
      */
     public native void onLoad(FileReaderHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.onload = $entry(function(reader) {
 			var readerObject = @com.emitrom.pilot.device.client.file.FileReader::new(Lcom/google/gwt/core/client/JavaScriptObject;)(reader);
 			handler.@com.emitrom.pilot.device.client.core.handlers.file.FileReaderHandler::onEvent(Lcom/emitrom/pilot/device/client/file/FileReader;)(readerObject);
@@ -167,7 +167,7 @@ public class FileReader extends JsObject {
      * @param handler
      */
     public native void onAbort(FileReaderHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.onabort = $entry(function(reader) {
 			var readerObject = @com.emitrom.pilot.device.client.file.FileReader::new(Lcom/google/gwt/core/client/JavaScriptObject;)(reader);
 			handler.@com.emitrom.pilot.device.client.core.handlers.file.FileReaderHandler::onEvent(Lcom/emitrom/pilot/device/client/file/FileReader;)(readerObject);
@@ -180,7 +180,7 @@ public class FileReader extends JsObject {
      * @param handler
      */
     public native void onError(FileReaderHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.onerror = $entry(function(reader) {
 			var readerObject = @com.emitrom.pilot.device.client.file.FileReader::new(Lcom/google/gwt/core/client/JavaScriptObject;)(reader);
 			handler.@com.emitrom.pilot.device.client.core.handlers.file.FileReaderHandler::onEvent(Lcom/emitrom/pilot/device/client/file/FileReader;)(readerObject);
@@ -193,7 +193,7 @@ public class FileReader extends JsObject {
      * @param handler
      */
     public native void onLoadEnd(FileReaderHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.onloadEnd = $entry(function(reader) {
 			var readerObject = @com.emitrom.pilot.device.client.file.FileReader::new(Lcom/google/gwt/core/client/JavaScriptObject;)(reader);
 			handler.@com.emitrom.pilot.device.client.core.handlers.file.FileReaderHandler::onEvent(Lcom/emitrom/pilot/device/client/file/FileReader;)(readerObject);

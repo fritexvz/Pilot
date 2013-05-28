@@ -20,8 +20,8 @@ import java.util.ArrayList;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A row of the response to a DistanceMatrixService request, consisting of a
@@ -50,7 +50,7 @@ public class DistanceMatrixResponseRow extends JsObject {
     }
 
     private native JsArray<JavaScriptObject> _getElements()/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.elements;
     }-*/;
 

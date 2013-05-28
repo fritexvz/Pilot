@@ -18,7 +18,7 @@ package com.emitrom.pilot.device.client.geolocation;
 
 import com.emitrom.pilot.device.client.core.ModuleError;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * object returned to the user through the geolocationError callback function

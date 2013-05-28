@@ -19,8 +19,8 @@ package com.emitrom.pilot.maps.client.streetview;
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.emitrom.pilot.maps.client.controls.PanControlOptions;
 import com.emitrom.pilot.maps.client.controls.ZoomControlOptions;
-import com.pilot.shared.client.JsObject;
-import com.pilot.shared.client.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Options defining the properties of a StreetViewPanorama object.
@@ -38,13 +38,13 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param value
      */
     public native void setAddressControl(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.addressControl = value;
     }-*/;
 
     public native void setAddressControlOptions(StreetViewAddressContropOptions options)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		jso.addressControlOptions = options.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.addressControlOptions = options.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -53,7 +53,7 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param value
      */
     public native void setDisableDoubleClickZoom(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.disableDoubleClickZoom = value;
     }-*/;
 
@@ -63,7 +63,7 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param value
      */
     public native void setEnableCloseButton(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.enableCloseButton = value;
     }-*/;
 
@@ -73,7 +73,7 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param value
      */
     public native void setLinksControl(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.linksControl = value;
     }-*/;
 
@@ -83,7 +83,7 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param value
      */
     public native void setPanControl(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.panControl = value;
     }-*/;
 
@@ -93,8 +93,8 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param options
      */
     public native void setPanControlOptions(PanControlOptions options)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		this.panControlOptions = options.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		this.panControlOptions = options.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		;
     }-*/;
 
@@ -104,7 +104,7 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param value
      */
     public native void setPano(String value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.pano = value;
     }-*/;
 
@@ -114,8 +114,8 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param value
      */
     public native void setPosition(LatLng value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		jso.position = value.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.position = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		;
     }-*/;
 
@@ -126,8 +126,8 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param value
      */
     public native void setPov(StreetViewPov value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		jso.pov = value.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.pov = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -137,7 +137,7 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param value
      */
     public native void setScrollwWheel(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.scrollwheel = value;
     }-*/;
 
@@ -147,7 +147,7 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param value
      */
     public native void setVisible(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.visible = value;
     }-*/;
 
@@ -157,7 +157,7 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param value
      */
     public native void setZoomControl(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.zoomControl = value;
     }-*/;
 
@@ -167,8 +167,8 @@ public class StreetViewPanoramaOptions extends JsObject {
      * @param options
      */
     public native void setZoomControlOptions(ZoomControlOptions options)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
-		jso.zoomControlOptions = options.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.zoomControlOptions = options.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
 }

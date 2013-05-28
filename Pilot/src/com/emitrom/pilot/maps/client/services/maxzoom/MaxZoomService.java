@@ -51,10 +51,10 @@ public class MaxZoomService extends JavaScriptObject {
      * @param callBack
      */
     public final native void getMaxZoomAtLatLgn(LatLng latLgn, MaxZoomServiceHandler callBack)/*-{
-		var jso = this.@com.pilot.shared.client.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		$entry(jso
 				.getMaxZoomAtLatLgn(
-						latLgn.@com.pilot.shared.client.JsObject::getJsObj()(),
+						latLgn.@com.pilot.shared.client.core.JsObject::getJsObj()(),
 						function(result) {
 							var resultObject = @com.emitrom.pilot.maps.client.services.maxzoom.MaxZoomResult::new(Lcom/google/gwt/core/client/JavaScriptObject;)(result);
 							callBack.@com.emitrom.pilot.maps.client.services.handlers.MaxZoomServiceHandler::onSuccess(Lcom/emitrom/pilot/maps/client/services/maxzoom/MaxZoomResult;)(resultObject);

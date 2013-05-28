@@ -17,7 +17,7 @@
 package com.emitrom.pilot.device.client.storage;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.BaseDataModel;
+import com.pilot.shared.client.data.BaseDataModel;
 
 public class SQLResultSetRow extends BaseDataModel {
 
