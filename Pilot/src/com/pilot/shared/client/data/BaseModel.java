@@ -15,16 +15,16 @@ import com.pilot.shared.client.core.JsoHelper;
  * Base class for all data to be displayed in data driven components
  */
 
-public class BaseDataModel extends JsObject {
+public class BaseModel extends JsObject {
 
     protected Map<String, Object> map = new HashMap<String, Object>();
     protected boolean allowNestedValues = true;
 
-    public BaseDataModel() {
+    public BaseModel() {
         jsObj = JsoHelper.createObject();
     }
 
-    protected BaseDataModel(JavaScriptObject obj) {
+    protected BaseModel(JavaScriptObject obj) {
         super(obj);
     }
 
@@ -40,10 +40,10 @@ public class BaseDataModel extends JsObject {
         _setNative(property, value);
     }
 
-    public void set(String property, List<BaseDataModel> values) {
+    public void set(String property, List<BaseModel> values) {
         map.put(property, values);
         JsArray<JavaScriptObject> rawValues = JsArray.createArray().cast();
-        for (BaseDataModel model : values) {
+        for (BaseModel model : values) {
             rawValues.push(model.getJsObj());
         }
         _setNative(property, rawValues);
@@ -98,26 +98,26 @@ public class BaseDataModel extends JsObject {
 		}
     }-*/;
 
-    static JsArray<JavaScriptObject> fromList(List<BaseDataModel> models) {
+    static JsArray<JavaScriptObject> fromList(List<BaseModel> models) {
         JsArray<JavaScriptObject> values = JsArray.createArray().cast();
-        for (BaseDataModel model : models) {
+        for (BaseModel model : models) {
             values.push(model.getJsObj());
         }
         return values;
     }
 
-    public static List<BaseDataModel> fromJsArray(JavaScriptObject array) {
-        List<BaseDataModel> toReturn = new ArrayList<BaseDataModel>();
+    public static List<BaseModel> fromJsArray(JavaScriptObject array) {
+        List<BaseModel> toReturn = new ArrayList<BaseModel>();
         int size = JsoHelper.getArrayLength(array);
         for (int i = 0; i < size; i++) {
             JavaScriptObject peer = JsoHelper.getValueFromJavaScriptObjectArray(array, i);
-            toReturn.add(new BaseDataModel(peer));
+            toReturn.add(new BaseModel(peer));
         }
         return toReturn;
     }
 
-    public static BaseDataModel from(JavaScriptObject obj) {
-        return new BaseDataModel(obj);
+    public static BaseModel from(JavaScriptObject obj) {
+        return new BaseModel(obj);
     }
 
     public void update(JavaScriptObject obj) {
@@ -317,7 +317,7 @@ public class BaseDataModel extends JsObject {
     }-*/;
 
     /**
-     * Set the BaseDataModel's ID.
+     * Set the BaseModel's ID.
      * 
      * @param id
      *            the record ID

@@ -37,7 +37,7 @@ import com.pilot.shared.client.core.FastMap;
  * 
  * @see BeanFactory
  */
-public class Bean extends BaseDataModel {
+public class Bean extends BaseModel {
 
     transient protected Object bean;
     protected Map<String, Bean> nestedModels = new FastMap<Bean>();
