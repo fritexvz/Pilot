@@ -36,7 +36,7 @@ import com.pilot.shared.client.data.Bean;
 import com.pilot.shared.client.data.BeanFactory;
 import com.pilot.shared.client.data.BeanLookup;
 import com.pilot.shared.client.data.BeanMarker;
-import com.pilot.shared.client.data.BeanMarker.BEAN;
+import com.pilot.shared.client.data.BeanMarker.BeanClass;
 import com.pilot.shared.client.data.BeanTag;
 import com.pilot.shared.client.data.NestedModelUtil;
 
@@ -207,7 +207,7 @@ public class BeanModelGenerator extends Generator {
     }
 
     protected JClassType getMarkerBean(JClassType type) throws NotFoundException {
-        BEAN pojo = type.getAnnotation(BEAN.class);
+        BeanClass pojo = type.getAnnotation(BeanClass.class);
         return oracle.getType(pojo.value().getCanonicalName());
     }
 

@@ -29,7 +29,7 @@ public interface BeanMarker {
 
 	@Target(ElementType.TYPE)
 	@Retention(RetentionPolicy.CLASS)
-	public @interface BEAN {
+	public @interface BeanClass {
 		Class<?> value();
 	}
 }
