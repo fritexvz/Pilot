@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.core;
 
+import com.emitrom.pilot.core.shared.client.core.Function;
 import com.emitrom.pilot.maps.client.events.handlers.MapEventHandler;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.Function;
 
 public class EventDispatcher {
 
@@ -36,7 +36,7 @@ public class EventDispatcher {
      */
     public static native void addEventListener(JavaScriptObject target, String event, Function handler)/*-{
 		$wnd.google.maps.event.addListener(target, event, function() {
-			handler.@com.pilot.shared.client.core.Function::execute()();
+			handler.@com.emitrom.pilot.core.shared.client.core.Function::execute()();
 		});
     }-*/;
 
@@ -50,7 +50,7 @@ public class EventDispatcher {
      */
     public static native void addEventListenerOnce(JavaScriptObject target, String event, Function handler)/*-{
 		$wnd.google.maps.event.addListenerOnce(target, event, function() {
-			handler.@com.pilot.shared.client.core.Function::execute()();
+			handler.@com.emitrom.pilot.core.shared.client.core.Function::execute()();
 		});
     }-*/;
 

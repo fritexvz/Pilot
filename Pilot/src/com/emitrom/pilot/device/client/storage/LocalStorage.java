@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.device.client.storage;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
 
 /**
  * Provides access to a W3C Storage interface
@@ -36,7 +36,7 @@ public class LocalStorage extends JsObject {
      * @return
      */
     public native String getKey(int position)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return peer.key(position);
     }-*/;
 
@@ -44,7 +44,7 @@ public class LocalStorage extends JsObject {
      * Saves and item at the key provided.
      */
     public native void setItem(String key, Object item)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.setItem(key, item);
     }-*/;
 
@@ -54,7 +54,7 @@ public class LocalStorage extends JsObject {
      * @return T
      */
     public native <T> T getItem(String key)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return peer.getItem(key);
     }-*/;
 
@@ -62,7 +62,7 @@ public class LocalStorage extends JsObject {
      * Removes the item identified by it's key
      */
     public native void removeItem(String key)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.removeItem(key);
     }-*/;
 
@@ -70,7 +70,7 @@ public class LocalStorage extends JsObject {
      * Removes all of the key value pairs
      */
     public native void clear()/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.clear();
     }-*/;
 

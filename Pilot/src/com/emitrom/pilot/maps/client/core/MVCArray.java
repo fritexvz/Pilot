@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.core;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.core.JsObject;
 
 /**
  * A mutable MVC Array.
@@ -49,7 +49,7 @@ public class MVCArray extends JsObject {
      * Removes all elements from the array.
      */
     public final native void clear()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.clear();
     }-*/;
 
@@ -60,7 +60,7 @@ public class MVCArray extends JsObject {
      * @return
      */
     public final native JsArray<?> getArray()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.getArray();
     }-*/;
 
@@ -72,7 +72,7 @@ public class MVCArray extends JsObject {
      * @return
      */
     public final native <T> T getAt(int index)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.getAt(index);
     }-*/;
 
@@ -82,7 +82,7 @@ public class MVCArray extends JsObject {
      * @return
      */
     public final native int getLength()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.getLength();
     }-*/;
 
@@ -93,7 +93,7 @@ public class MVCArray extends JsObject {
      * @param element
      */
     public final native void insertAt(int index, Object element)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.insertAt(index, element);
     }-*/;
 
@@ -104,7 +104,7 @@ public class MVCArray extends JsObject {
      * @return
      */
     public final native <T> T pop()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.pop();
     }-*/;
 
@@ -115,7 +115,7 @@ public class MVCArray extends JsObject {
      * @param element
      */
     public final native void push(Object element)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.push(element);
     }-*/;
     
@@ -127,8 +127,8 @@ public class MVCArray extends JsObject {
      * @param element
      */
     public final native void push(JsObject element)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.push(element.@com.pilot.shared.client.core.JsObject::getJsObj()());
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.push(element.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -137,7 +137,7 @@ public class MVCArray extends JsObject {
      * @param index
      */
     public final native void removeAt(int index)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.removeAt(index);
     }-*/;
 
@@ -148,7 +148,7 @@ public class MVCArray extends JsObject {
      * @param element
      */
     public final native void setAt(int index, Object element)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.setAt(index, element);
     }-*/;
 

@@ -47,7 +47,7 @@ public class Accelerometer extends Module {
      * @param callBack
      */
     public native void getCurrentAcceleration(AccelerometerHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getCurrentAcceleration(
 						$entry(function(acceleration) {
@@ -65,7 +65,7 @@ public class Accelerometer extends Module {
      * @param callBack
      */
     public native String watchAcceleration(AccelerometerHandler callBack)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return peer
 				.watchAcceleration(
 						$entry(function(acceleration) {
@@ -84,7 +84,7 @@ public class Accelerometer extends Module {
      * @param options
      */
     public native String watchAcceleration(AccelerometerHandler callBack, AccelerometerOptions options)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return peer
 				.watchAcceleration(
 						$entry(function(acceleration) {
@@ -94,7 +94,7 @@ public class Accelerometer extends Module {
 						$entry(function() {
 							callBack.@com.emitrom.pilot.device.client.core.handlers.accelerometer.AccelerometerHandler::onError()();
 						}),
-						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
+						options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -104,7 +104,7 @@ public class Accelerometer extends Module {
      *            , The ID returned by Accelerometer.watchAcceleration.
      */
     public native void clearWatch(String watchId)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.clearWatch(watchId);
     }-*/;
 

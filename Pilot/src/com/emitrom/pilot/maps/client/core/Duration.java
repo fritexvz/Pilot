@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.core;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A representation of duration as a numeric value and a display string
@@ -64,12 +64,9 @@ public class Duration extends JsObject {
     }
 
     /**
-     * 
      * Return the distance in meters.
      * 
-     * @param val
      */
-
     public double getValue() {
         return JsoHelper.getAttributeAsDouble(jsObj, "value");
     }

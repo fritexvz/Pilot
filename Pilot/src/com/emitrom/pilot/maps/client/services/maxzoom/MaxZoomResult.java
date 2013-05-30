@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.services.maxzoom;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A MaxZoom result in JSON format retrieved from the MaxZoomService.
@@ -37,14 +37,14 @@ public class MaxZoomResult extends JsObject {
     /**
      * The maximum zoom level found at the given LatLng.
      * 
-     * @param value
+     * @param status
      */
     public void setStatus(MaxZoomStatus status) {
         setStatus(status.getValue());
     }
 
     private native void setStatus(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.status = value;
     }-*/;
 
@@ -53,7 +53,7 @@ public class MaxZoomResult extends JsObject {
     }
 
     private native String _getStatus()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.status;
     }-*/;
 
@@ -63,12 +63,12 @@ public class MaxZoomResult extends JsObject {
      * @param value
      */
     public native void setZoom(double value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.zoom = value;
     }-*/;
 
     public native double getZoom()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.zoom;
     }-*/;
 

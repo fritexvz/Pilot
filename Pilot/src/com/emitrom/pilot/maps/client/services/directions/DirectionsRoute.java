@@ -16,15 +16,15 @@
  */
 package com.emitrom.pilot.maps.client.services.directions;
 
-import java.util.ArrayList;
-
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayNumber;
 import com.google.gwt.core.client.JsArrayString;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+
+import java.util.ArrayList;
 
 /**
  * A single route containing a set of legs in a DirectionsResult. (This object
@@ -49,13 +49,13 @@ public class DirectionsRoute extends JsObject {
      * @param value
      */
     public native void setBounds(LatLng value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		this.bounds = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		this.bounds = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		;
     }-*/;
 
     public native LatLng getBounds()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.bounds;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -67,12 +67,12 @@ public class DirectionsRoute extends JsObject {
      * @param value
      */
     public native void setCopyrights(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.copyrights = value;
     }-*/;
 
     public native String getCopyrights()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.copyrights;
     }-*/;
 
@@ -83,7 +83,7 @@ public class DirectionsRoute extends JsObject {
      * DirectionsLeg and a route with one waypoint will contain two. (This
      * property was formerly known as "routes".)
      * 
-     * @param values
+     * @param legs
      */
     public void setLegs(ArrayList<DirectionsLeg> legs) {
         JsArray<JavaScriptObject> values = JsArray.createArray().cast();
@@ -102,7 +102,7 @@ public class DirectionsRoute extends JsObject {
     }
 
     private native void _setLegs(JsArray<JavaScriptObject> values)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.legs = values;
     }-*/;
 
@@ -116,7 +116,7 @@ public class DirectionsRoute extends JsObject {
     }
 
     private native JsArray<JavaScriptObject> _getLegs()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.legs;
     }-*/;
 
@@ -125,7 +125,7 @@ public class DirectionsRoute extends JsObject {
      * path is simplified in order to make it suitable in contexts where a small
      * number of vertices is required (such as Static Maps API URLs).
      * 
-     * @param values
+     * @param points
      */
     public void setOverviewPath(ArrayList<LatLng> points) {
         JsArray<JavaScriptObject> values = JsArray.createArray().cast();
@@ -153,19 +153,19 @@ public class DirectionsRoute extends JsObject {
     }
 
     private native void _setOverviewPath(JsArray<JavaScriptObject> values)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.overview_path = values;
     }-*/;
 
     private native JsArray<JavaScriptObject> _getOverviewPath()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.overview_path;
     }-*/;
 
     /**
      * Warnings to be displayed when showing these directions.
      * 
-     * @param values
+     * @param warnings
      */
     public void setWarnings(String[] warnings) {
         JsArrayString strings = JsArrayString.createArray().cast();
@@ -176,7 +176,7 @@ public class DirectionsRoute extends JsObject {
     }
 
     private native void _setWarnings(JsArrayString values)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.warnings = values;
     }-*/;
 
@@ -190,7 +190,7 @@ public class DirectionsRoute extends JsObject {
     }
 
     private native JsArrayString _getWarnings()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.warnings;
     }-*/;
 

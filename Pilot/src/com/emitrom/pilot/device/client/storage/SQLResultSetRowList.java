@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.device.client.storage;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
 
 /**
  * When the executeSql method of a SQLTransaction is called it will invoke it's
@@ -36,7 +36,7 @@ public class SQLResultSetRowList extends JsObject {
      * @return
      */
     public native int getLength()/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return peer.length;
     }-*/;
 
@@ -46,7 +46,7 @@ public class SQLResultSetRowList extends JsObject {
      * @return
      */
     public native SQLResultSetRow getItem(int index)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = peer.item(index);
 		var toReturn = @com.emitrom.pilot.device.client.storage.SQLResultSetRow::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

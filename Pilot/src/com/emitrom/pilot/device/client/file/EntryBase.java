@@ -16,15 +16,15 @@
  */
 package com.emitrom.pilot.device.client.file;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.device.client.core.handlers.file.FileActionHandler;
 import com.emitrom.pilot.device.client.core.handlers.file.MetadataActionHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Base class for FileEntry and DirectoryEntry
@@ -78,7 +78,7 @@ public class EntryBase extends JsObject {
      * @return
      */
     public native Metadata getMetadata()/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = peer.getMetadata();
 		var toReturn = @com.emitrom.pilot.device.client.file.Metadata::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -87,11 +87,11 @@ public class EntryBase extends JsObject {
     /**
      * Set metadata on a file.  Only works on iOS currently.
      * 
-     * @param metatdata
+     * @param metadata
      * @param handler
      */
-    public native void setMetadata(Metadata metatada, MetadataActionHandler handler)/*-{
-        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+    public native void setMetadata(Metadata metadata, MetadataActionHandler handler)/*-{
+        var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
         peer
                 .setMetadata(
                             $entry(function() {
@@ -100,7 +100,7 @@ public class EntryBase extends JsObject {
                             $entry(function() {
                                 handler.@com.emitrom.pilot.device.client.core.handlers.file.MetadataActionHandler::onError()();
                             }),
-                            metatada.@com.pilot.shared.client.core.JsObject::getJsObj()());
+                            metatada.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -114,15 +114,15 @@ public class EntryBase extends JsObject {
      * In addition, an attempt to move a file on top of an existing file must
      * attempt to delete and replace that file.
      * 
-     * @param directory
+     * @param parent
      * @param newName
      * @param handler
      */
     public native void moveTo(DirectoryEntry parent, String newName, FileActionHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.moveTo(
-						parent.@com.pilot.shared.client.core.JsObject::getJsObj()(),
+						parent.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()(),
 						newName,
 						$entry(function(entry) {
 							var entryObject = @com.emitrom.pilot.device.client.file.EntryBase::new(Lcom/google/gwt/core/client/JavaScriptObject;)(entry);
@@ -143,15 +143,15 @@ public class EntryBase extends JsObject {
      * </ul>
      * 
      * 
-     * @param directory
+     * @param parent
      * @param newName
      * @param handler
      */
     public native void copyTo(DirectoryEntry parent, String newName, FileActionHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.copyTo(
-						parent.@com.pilot.shared.client.core.JsObject::getJsObj()(),
+						parent.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()(),
 						newName,
 						$entry(function(entry) {
 							var entryObject = @com.emitrom.pilot.device.client.file.EntryBase::new(Lcom/google/gwt/core/client/JavaScriptObject;)(entry);
@@ -169,7 +169,7 @@ public class EntryBase extends JsObject {
      * @return
      */
     public native String toURL()/*-{
-        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+        var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
         return peer.toURL();
     }-*/;    
 
@@ -177,7 +177,7 @@ public class EntryBase extends JsObject {
      * Deletes a file.
      */
     public native void remove(FileActionHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.remove(
 						$entry(function(entry) {
@@ -194,7 +194,7 @@ public class EntryBase extends JsObject {
      * Look up the parent DirectoryEntry containing the file.
      */
     public native void getParent(FileActionHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getParent(
 						$entry(function(entry) {

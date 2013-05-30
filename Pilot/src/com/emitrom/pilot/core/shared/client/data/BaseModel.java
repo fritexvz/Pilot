@@ -1,15 +1,28 @@
-package com.pilot.shared.client.data;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+/**
+ Copyright (c) 2012 Emitrom LLC. All rights reserved.
+ For licensing questions, please contact us at licensing@emitrom.com
 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
+package com.emitrom.pilot.core.shared.client.data;
+
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+
+import java.util.*;
 
 /**
  * Base class for all data to be displayed in data driven components
@@ -50,7 +63,7 @@ public class BaseModel extends JsObject {
     }
 
     public native String get(String property)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		if (jso.get) {
 			return jso.get(property);
 		} else {
@@ -59,7 +72,7 @@ public class BaseModel extends JsObject {
     }-*/;
 
     public native double getNumber(String property)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		if (jso.get) {
 			return jso.get(property);
 		} else {
@@ -68,7 +81,7 @@ public class BaseModel extends JsObject {
     }-*/;
 
     public native boolean getBoolean(String property)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		if (jso.get) {
 			return jso.get(property);
 		} else {
@@ -81,7 +94,7 @@ public class BaseModel extends JsObject {
     }
 
     private native <X> X _setNative(String property, X value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		if (jso.set) {
 			jso.set(property, value);
 		} else {
@@ -90,7 +103,7 @@ public class BaseModel extends JsObject {
     }-*/;
 
     private native void _setNative(String property, double value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		if (jso.set) {
 			jso.set(property, value);
 		} else {
@@ -135,7 +148,7 @@ public class BaseModel extends JsObject {
      * @return ID of the record
      */
     public native String getId() /*-{
-		var record = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var record = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var id = record.id;
 		return (id == null || id === undefined) ? null : id.toString();
     }-*/;
@@ -155,7 +168,7 @@ public class BaseModel extends JsObject {
      * @return the field value
      */
     public native String getAsString(String field) /*-{
-		var record = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var record = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var value;
 		if (record.get) {
 			value = record.get(field);
@@ -177,7 +190,7 @@ public class BaseModel extends JsObject {
      * @return the filed value
      */
     public native Object getAsObject(String field) /*-{
-		var record = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var record = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var value;
 		if (record.get) {
 			value = record.get(field);
@@ -197,7 +210,7 @@ public class BaseModel extends JsObject {
      * @return true if modified
      */
     public native boolean isModified(String fieldName) /*-{
-		var record = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var record = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		if (record.isModified) {
 			return record.isModified(fieldName);
 		}
@@ -212,7 +225,7 @@ public class BaseModel extends JsObject {
      * @return true if null or undefined
      */
     public native boolean isNull(String fieldName) /*-{
-		var record = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var record = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var value;
 		if (record.get) {
 			value = record.get(fieldName);
@@ -231,7 +244,7 @@ public class BaseModel extends JsObject {
      * @return true if empty
      */
     public native boolean isEmpty(String fieldName) /*-{
-		var record = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var record = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var value;
 		if (record.get) {
 			value = record.get(fieldName);
@@ -249,7 +262,7 @@ public class BaseModel extends JsObject {
      * @return the field value
      */
     public native int getAsInteger(String field) /*-{
-		var record = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var record = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var value;
 		if (record.get) {
 			value = record.get(field);
@@ -267,7 +280,7 @@ public class BaseModel extends JsObject {
      * @return the field value
      */
     public native float getAsFloat(String field) /*-{
-		var record = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var record = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var value;
 		if (record.get) {
 			value = record.get(field);
@@ -285,7 +298,7 @@ public class BaseModel extends JsObject {
      * @return the field value
      */
     public native double getAsDouble(String field) /*-{
-		var record = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var record = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var value;
 		if (record.get) {
 			value = record.get(field);
@@ -306,7 +319,7 @@ public class BaseModel extends JsObject {
      * @return the field value
      */
     public native boolean getAsBoolean(String field) /*-{
-		var record = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var record = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var value;
 		if (record.get) {
 			value = record.get(field);
@@ -323,7 +336,7 @@ public class BaseModel extends JsObject {
      *            the record ID
      */
     public native void setId(String id) /*-{
-		var record = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var record = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		record.id = id;
     }-*/;
 

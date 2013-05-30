@@ -16,13 +16,13 @@
  */
 package com.emitrom.pilot.maps.client.services.elevation;
 
-import java.util.ArrayList;
-
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+
+import java.util.ArrayList;
 
 /**
  * An elevation query sent by the ElevationService containing the path along
@@ -45,7 +45,7 @@ public class PathElevationRequest extends JsObject {
     /**
      * The path along which to collect elevation values.
      * 
-     * @param values
+     * @param locations
      */
 
     public void setPath(ArrayList<LatLng> locations) {
@@ -65,7 +65,7 @@ public class PathElevationRequest extends JsObject {
     }
 
     private native void _setPath(JsArray<JavaScriptObject> values)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.path = values;
     }-*/;
 
@@ -79,7 +79,7 @@ public class PathElevationRequest extends JsObject {
     }
 
     private native JsArray<JavaScriptObject> _getPath()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.path;
     }-*/;
 
@@ -91,12 +91,12 @@ public class PathElevationRequest extends JsObject {
      * @param value
      */
     public final native void setSamples(double value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.samples = value;
     }-*/;
 
     public final native double getSamples()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.samples;
     }-*/;
 

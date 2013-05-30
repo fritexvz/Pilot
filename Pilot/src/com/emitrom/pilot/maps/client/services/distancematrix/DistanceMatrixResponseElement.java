@@ -16,11 +16,11 @@
  */
 package com.emitrom.pilot.maps.client.services.distancematrix;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.core.Distance;
 import com.emitrom.pilot.maps.client.core.Duration;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A single element of a response to a DistanceMatrixService request, which
@@ -43,7 +43,7 @@ public class DistanceMatrixResponseElement extends JsObject {
      * @return
      */
     public native Distance getDistance()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.distance;
 		var toReturn = @com.emitrom.pilot.maps.client.core.Distance::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -56,7 +56,7 @@ public class DistanceMatrixResponseElement extends JsObject {
      * @return
      */
     public native Duration getDuration()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.duration;
 		var toReturn = @com.emitrom.pilot.maps.client.core.Duration::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -70,7 +70,7 @@ public class DistanceMatrixResponseElement extends JsObject {
     }
 
     private native String _getStatus()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.status;
     }-*/;
 

@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.streetview;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.controls.ControlPosition;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Options for the rendering of the Street View address control.
@@ -40,7 +40,7 @@ public class StreetViewAddressContropOptions extends JsObject {
     }
 
     private native void setControlPosition(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.controlPosition = value;
     }-*/;
 

@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.geom;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * 
@@ -55,9 +55,9 @@ public class Point extends JsObject {
      * @return
      */
     public final native boolean equals(Point other)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso
-				.equals(other.@com.pilot.shared.client.core.JsObject::getJsObj()());
+				.equals(other.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -66,27 +66,27 @@ public class Point extends JsObject {
      * @return
      */
     public final native String toStringValue()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.toString();
     }-*/;
 
     public final native void setX(double value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.x = value;
     }-*/;
 
     public final native double getX()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.x;
     }-*/;
 
     public final native void setY(double value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.y = value;
     }-*/;
 
     public final native double getY()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.y;
     }-*/;
 

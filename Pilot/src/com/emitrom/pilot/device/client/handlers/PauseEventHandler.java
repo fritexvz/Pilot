@@ -16,7 +16,7 @@
  */
 package com.emitrom.pilot.device.client.handlers;
 
-import com.pilot.shared.client.core.Function;
+import com.emitrom.pilot.core.shared.client.core.Function;
 
 
 /**

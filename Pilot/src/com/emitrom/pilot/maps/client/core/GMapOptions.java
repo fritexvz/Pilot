@@ -17,22 +17,16 @@
 
 package com.emitrom.pilot.maps.client.core;
 
-import java.util.ArrayList;
-
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.base.LatLng;
-import com.emitrom.pilot.maps.client.controls.MapTypeControlOptions;
-import com.emitrom.pilot.maps.client.controls.OverviewMapControlOptions;
-import com.emitrom.pilot.maps.client.controls.PanControlOptions;
-import com.emitrom.pilot.maps.client.controls.RotateControlOptions;
-import com.emitrom.pilot.maps.client.controls.ScaleControlOptions;
-import com.emitrom.pilot.maps.client.controls.StreetViewControlOptions;
-import com.emitrom.pilot.maps.client.controls.ZoomControlOptions;
+import com.emitrom.pilot.maps.client.controls.*;
 import com.emitrom.pilot.maps.client.maptypes.MapTypeStyle;
 import com.emitrom.pilot.maps.client.streetview.StreetViewPanorama;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+
+import java.util.ArrayList;
 
 /**
  * MapOptions as specified by the Google Documentation:
@@ -62,7 +56,6 @@ public class GMapOptions extends JsObject {
      * visible when tiles have not yet loaded as the user pans. This option can
      * only be set when the map is initialized.
      * 
-     * @param value
      */
     public String getBackgroundColor() {
         return JsoHelper.getAttribute(jsObj, "backGroundColor");
@@ -83,7 +76,7 @@ public class GMapOptions extends JsObject {
      * @return
      */
     public native LatLng getCenter() /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var center = jso.center;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(center);
 		return toReturn;
@@ -109,12 +102,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setDisableDoubleClickZoom(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.disableDoubleClickZoom = value;
     }-*/;
 
     public native boolean isDoubleClickZoomDisabled()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.disableDoubleClickZoom;
     }-*/;
 
@@ -125,12 +118,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setDraggable(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.draggable = value;
     }-*/;
 
     public native boolean isDraggable()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.draggable;
     }-*/;
 
@@ -140,12 +133,12 @@ public class GMapOptions extends JsObject {
      * @return
      */
     public native void setDraggableCursor(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.draggableCursor = value;
     }-*/;
 
     public native String getDraggableCursor()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.draggableCursor;
     }-*/;
 
@@ -155,12 +148,12 @@ public class GMapOptions extends JsObject {
      * @return
      */
     public native void setDraggingCursor(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.draggingCursor = value;
     }-*/;
 
     public native String getDraggingCursor()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.draggingCursor;
     }-*/;
 
@@ -172,12 +165,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setHeading(double value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.heading = value;
     }-*/;
 
     public native double getHeading()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.heading;
     }-*/;
 
@@ -188,22 +181,22 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setKeyboardShortcuts(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.keyboardShortcuts = value;
     }-*/;
 
     public native boolean hasKeyboardShortcuts()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.keyboardShortcuts;
     }-*/;
 
     public native void setMayTypeControl(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.mayTypeControl = value;
     }-*/;
 
     public native boolean hasMaptypeControl()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.maptypeControl;
     }-*/;
 
@@ -213,12 +206,12 @@ public class GMapOptions extends JsObject {
      * @param options
      */
     public native void setMapTypeControlOptions(MapTypeControlOptions options)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.mapTypeControlOptions = options.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.mapTypeControlOptions = options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native MapTypeControlOptions getMapTypeControlOptions()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.mapTypeControlOptions;
 		var toReturn = @com.emitrom.pilot.maps.client.controls.MapTypeControlOptions::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -234,7 +227,7 @@ public class GMapOptions extends JsObject {
     }
 
     private native void setMapTypeId(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.mapTypeId = value;
     }-*/;
 
@@ -243,7 +236,7 @@ public class GMapOptions extends JsObject {
     }
 
     private native String _getMapTypeId()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.mapTypeId;
     }-*/;
 
@@ -254,12 +247,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setMaxZoom(double value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.maxZoom = value;
     }-*/;
 
     public native double getMaxZoom()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.maxZoom;
     }-*/;
 
@@ -270,12 +263,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setMinZoom(double value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.minZoom = value;
     }-*/;
 
     public native double getMinZoom()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.minZoom;
     }-*/;
 
@@ -285,12 +278,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setNoClear(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.noClear = value;
     }-*/;
 
     public native boolean isNoClear()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.noClear;
     }-*/;
 
@@ -300,12 +293,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setOverviewMapControl(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.overviewMapControl = value;
     }-*/;
 
     public native boolean hasOverviewMapControl()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.overviewMapControl;
     }-*/;
 
@@ -315,12 +308,12 @@ public class GMapOptions extends JsObject {
      * @param options
      */
     public native void setOverviewMapControlOptions(OverviewMapControlOptions options)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.overviewMapControlOptions = options.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.overviewMapControlOptions = options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native OverviewMapControlOptions getOverviewMapControlOptions()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.overviewMapControlOptions;
 		var toReturn = @com.emitrom.pilot.maps.client.controls.OverviewMapControlOptions::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -332,12 +325,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setPanControl(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.panControl = value;
     }-*/;
 
     public native boolean hasPanControl()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.panControl;
     }-*/;
 
@@ -347,13 +340,13 @@ public class GMapOptions extends JsObject {
      * @param options
      */
     public native void setPanControlOptions(PanControlOptions options)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.panControlOptions = options.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.panControlOptions = options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		;
     }-*/;
 
     public native PanControlOptions getPanControlOptions()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.panControlOptions;
 		var toReturn = @com.emitrom.pilot.maps.client.controls.PanControlOptions::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -365,12 +358,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setRotateControl(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.rotateControl = value;
     }-*/;
 
     public native boolean hasRotateControl()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.rotateControl;
     }-*/;
 
@@ -380,11 +373,11 @@ public class GMapOptions extends JsObject {
      * @param options
      */
     public native void setRotateControlOptions(RotateControlOptions options)/*-{
-		jso.rotateControlOptions = options.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.rotateControlOptions = options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native RotateControlOptions getRotateControlOptions()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.rotateControlOptions;
 		var toReturn = @com.emitrom.pilot.maps.client.controls.RotateControlOptions::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -396,12 +389,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setScaleControl(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.scaleControl = value;
     }-*/;
 
     public native boolean hasScaleControl()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.scaleControl;
     }-*/;
 
@@ -411,11 +404,11 @@ public class GMapOptions extends JsObject {
      * @param options
      */
     public native void setScaleControlOptions(ScaleControlOptions options)/*-{
-		jso.scaleControlOptions = options.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.scaleControlOptions = options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native ScaleControlOptions getScaleControlOptions()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.scaleControlOptions;
 		var toReturn = @com.emitrom.pilot.maps.client.controls.ScaleControlOptions::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -428,7 +421,7 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setScroolWheel(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.scroolWheel = value;
     }-*/;
 
@@ -440,19 +433,19 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setStreetView(StreetViewPanorama value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.streetView = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.streetView = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native StreetViewPanorama getStreetView()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.streetView;
 		var toReturn = @com.emitrom.pilot.maps.client.streetview.StreetViewPanorama::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native boolean hasScrollWheel()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.scrollWheel;
     }-*/;
 
@@ -465,12 +458,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setStreetViewControl(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.streetViewControl = value;
     }-*/;
 
     public native boolean hasStreetViewControl()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.streetViewControl;
     }-*/;
 
@@ -480,11 +473,11 @@ public class GMapOptions extends JsObject {
      * @param options
      */
     public native void setStreeViewControlOptions(StreetViewControlOptions options)/*-{
-		jso.streetViewControlOptions = options.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.streetViewControlOptions = options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native StreetViewControlOptions getStreeViewControlOptions()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.streetViewControlOptions;
 		var toReturn = @com.emitrom.pilot.maps.client.controls.StreetViewControlOptions::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -495,7 +488,7 @@ public class GMapOptions extends JsObject {
      * apply only to the labels and geometry in Satellite/Hybrid and Terrain
      * modes.
      * 
-     * @param values
+     * @param styles
      */
 
     public void setStyles(ArrayList<MapTypeStyle> styles) {
@@ -507,7 +500,7 @@ public class GMapOptions extends JsObject {
     }
 
     private native void _setStyles(JsArray<JavaScriptObject> values)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.styles = values;
     }-*/;
 
@@ -521,7 +514,7 @@ public class GMapOptions extends JsObject {
     }
 
     private native JsArray<JavaScriptObject> _getStyles()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.styles;
     }-*/;
 
@@ -535,12 +528,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setTilt(double value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.tilt = value;
     }-*/;
 
     public native double getTilt()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.tilt;
     }-*/;
 
@@ -550,12 +543,12 @@ public class GMapOptions extends JsObject {
      * @return
      */
     public native double getZoom() /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.zoom;
     }-*/;
 
     public native void setZoom(double value) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.zoom = value;
     }-*/;
 
@@ -565,12 +558,12 @@ public class GMapOptions extends JsObject {
      * @param value
      */
     public native void setZoomControl(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.zoomControl = value;
     }-*/;
 
     public native boolean hasZoomControl()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.zoomControl;
     }-*/;
 
@@ -580,12 +573,12 @@ public class GMapOptions extends JsObject {
      * @param options
      */
     public native void setZoomControlOptions(ZoomControlOptions options)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.zoomControlOptions = options.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.zoomControlOptions = options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native ZoomControlOptions getZoomControlOptions()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.zoomControlOptions;
 		var toReturn = @com.emitrom.pilot.maps.client.controls.ZoomControlOptions::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

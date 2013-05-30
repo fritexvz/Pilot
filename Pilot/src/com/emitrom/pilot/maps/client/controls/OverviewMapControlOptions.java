@@ -17,9 +17,9 @@
 
 package com.emitrom.pilot.maps.client.controls;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Options for the rendering of the Overview Map control.
@@ -49,7 +49,6 @@ public class OverviewMapControlOptions extends JsObject {
      * Whether the control displays in opened mode or collapsed (minimized)
      * mode. By default, the control is closed.
      * 
-     * @param value
      */
     public boolean isOpened() {
         return JsoHelper.getAttributeAsBoolean(jsObj, "opened");

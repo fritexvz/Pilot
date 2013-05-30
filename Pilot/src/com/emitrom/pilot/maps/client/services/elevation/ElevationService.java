@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.services.elevation;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
 import com.emitrom.pilot.maps.client.services.handlers.ElevationServiceHandler;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
 
 /**
  * Defines a service class that talks directly to Google servers for requesting
@@ -43,10 +43,10 @@ public class ElevationService extends JsObject {
      * @param callBack
      */
     public native void getElevationAlongPath(PathElevationRequest request, ElevationServiceHandler callBack)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		$entry(jso
 				.getElevationAlongPath(
-						request.@com.pilot.shared.client.core.JsObject::getJsObj()(),
+						request.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()(),
 						function(results, status) {
 							var elevationStatus = @com.emitrom.pilot.maps.client.services.elevation.ElevationStatus::fromValue(Ljava/lang/String;)(status);
 							var values = @com.emitrom.pilot.maps.client.services.ServicesUtil::createElevationResultList(Lcom/google/gwt/core/client/JsArray;)(request);
@@ -61,10 +61,10 @@ public class ElevationService extends JsObject {
      * @param callBack
      */
     public native void getElevationForLocations(LocationElevationRequest request, ElevationServiceHandler callBack)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		$entry(jso
 				.getElevationForLocations(
-						request.@com.pilot.shared.client.core.JsObject::getJsObj()(),
+						request.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()(),
 						function(results, status) {
 							var elevationStatus = @com.emitrom.pilot.maps.client.services.elevation.ElevationStatus::fromValue(Ljava/lang/String;)(status);
 							var values = @com.emitrom.pilot.maps.client.services.ServicesUtil::createElevationResultList(Lcom/google/gwt/core/client/JsArray;)(request);

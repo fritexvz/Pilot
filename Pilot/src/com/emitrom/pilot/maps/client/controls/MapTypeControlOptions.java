@@ -16,13 +16,13 @@
  */
 package com.emitrom.pilot.maps.client.controls;
 
-import java.util.ArrayList;
-
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.core.MapTypeId;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayString;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+
+import java.util.ArrayList;
 
 /**
  * Options for the rendering of the map type control.
@@ -62,7 +62,7 @@ public class MapTypeControlOptions extends JsObject {
     /**
      * Style id. Used to select what style of map type control to display.
      * 
-     * @param value
+     * @param style
      */
     public final void setStyle(MapTypeControlStyle style) {
         this.setStyle(style.getValue());
@@ -92,7 +92,7 @@ public class MapTypeControlOptions extends JsObject {
     /**
      * IDs of map types to show in the control.
      * 
-     * @param values
+     * @param ids
      */
     public final void setMapTypeIds(ArrayList<MapTypeId> ids) {
         JsArrayString strings = JsArrayString.createArray().cast();
@@ -105,7 +105,6 @@ public class MapTypeControlOptions extends JsObject {
     /**
      * IDs of map types to show in the control.
      * 
-     * @param values
      */
     public final ArrayList<MapTypeId> getMapTypeIds() {
         ArrayList<MapTypeId> ids = new ArrayList<MapTypeId>();
@@ -117,7 +116,7 @@ public class MapTypeControlOptions extends JsObject {
     }
 
     private final native JsArrayString _getMapTypeIds()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.mapTypeIds;
     }-*/;
 

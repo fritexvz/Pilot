@@ -16,10 +16,10 @@
  */
 package com.emitrom.pilot.device.client.file;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.device.client.core.handlers.file.FileWriterHandler;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 public class FileWriter extends JsObject {
 
@@ -80,7 +80,7 @@ public class FileWriter extends JsObject {
      * Aborts writing file.
      */
     public native void abort()/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.abort();
     }-*/;
 
@@ -88,7 +88,7 @@ public class FileWriter extends JsObject {
      * Moves the file pointer to the byte specified.
      */
     public native void seek(int bytes)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.seek(bytes);
     }-*/;
 
@@ -96,7 +96,7 @@ public class FileWriter extends JsObject {
      * Shortens the file to the length specified.
      */
     public native void truncate(int length)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.truncate(length);
     }-*/;
 
@@ -104,7 +104,7 @@ public class FileWriter extends JsObject {
      * Writes data to the file.
      */
     public native void write(String value)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.write(value);
     }-*/;
 
@@ -114,7 +114,7 @@ public class FileWriter extends JsObject {
      * @param handler
      */
     public native void onWriteStart(FileWriterHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.onwriteStart = $entry(function(w) {
 			var writerObject = @com.emitrom.pilot.device.client.file.FileWriter::new(Lcom/google/gwt/core/client/JavaScriptObject;)(w);
 			handler.@com.emitrom.pilot.device.client.core.handlers.file.FileWriterHandler::onEvent(Lcom/emitrom/pilot/device/client/file/FileWriter;)(writerObject);
@@ -127,7 +127,7 @@ public class FileWriter extends JsObject {
      * @param handler
      */
     public native void onWrite(FileWriterHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.onwrite = $entry(function(w) {
 			var writerObject = @com.emitrom.pilot.device.client.file.FileWriter::new(Lcom/google/gwt/core/client/JavaScriptObject;)(w);
 			handler.@com.emitrom.pilot.device.client.core.handlers.file.FileWriterHandler::onEvent(Lcom/emitrom/pilot/device/client/file/FileWriter;)(writerObject);
@@ -140,7 +140,7 @@ public class FileWriter extends JsObject {
      * @param handler
      */
     public native void onAbort(FileWriterHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.onabort = $entry(function(w) {
 			var writerObject = @com.emitrom.pilot.device.client.file.FileWriter::new(Lcom/google/gwt/core/client/JavaScriptObject;)(w);
 			handler.@com.emitrom.pilot.device.client.core.handlers.file.FileWriterHandler::onEvent(Lcom/emitrom/pilot/device/client/file/FileWriter;)(writerObject);
@@ -154,7 +154,7 @@ public class FileWriter extends JsObject {
      * @param handler
      */
     public native void onError(FileWriterHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.onerror = $entry(function(w) {
 			var writerObject = @com.emitrom.pilot.device.client.file.FileWriter::new(Lcom/google/gwt/core/client/JavaScriptObject;)(w);
 			handler.@com.emitrom.pilot.device.client.core.handlers.file.FileWriterHandler::onEvent(Lcom/emitrom/pilot/device/client/file/FileWriter;)(writerObject);
@@ -168,7 +168,7 @@ public class FileWriter extends JsObject {
      * @param handler
      */
     public native void onWriteEnd(FileWriterHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer.onwriteEnd = $entry(function(w) {
 			var writerObject = @com.emitrom.pilot.device.client.file.FileWriter::new(Lcom/google/gwt/core/client/JavaScriptObject;)(w);
 			handler.@com.emitrom.pilot.device.client.core.handlers.file.FileWriterHandler::onEvent(Lcom/emitrom/pilot/device/client/file/FileWriter;)(writerObject);

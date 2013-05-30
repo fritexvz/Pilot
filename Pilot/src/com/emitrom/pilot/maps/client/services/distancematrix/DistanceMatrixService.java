@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.services.distancematrix;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
 import com.emitrom.pilot.maps.client.services.handlers.DistanceMatrixServiceHandler;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
 
 /**
  * A service for computing distances between multiple origins and destinations.
@@ -41,10 +41,10 @@ public class DistanceMatrixService extends JsObject {
      * @param callBack
      */
     public native void getDistanceMatrix(DistanceMatrixRequest request, DistanceMatrixServiceHandler callBack)/*-{
-    	var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+    	var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		$entry(jso
 				.getDistanceMatrix(
-						request.@com.pilot.shared.client.core.JsObject::getJsObj()(),
+						request.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()(),
 						function(response, status) {
 							var responseStatus = @com.emitrom.pilot.maps.client.services.distancematrix.DistanceMatrixStatus::fromValue(Ljava/lang/String;)(status);
 							var responseObject = @com.emitrom.pilot.maps.client.services.distancematrix.DistanceMatrixResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(response);

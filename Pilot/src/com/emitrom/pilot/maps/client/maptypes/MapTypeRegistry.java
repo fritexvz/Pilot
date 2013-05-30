@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.maptypes;
 
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.core.MVCObject;
 import com.emitrom.pilot.maps.client.core.MapTypeId;
-import com.pilot.shared.client.core.JsoHelper;
 
 public class MapTypeRegistry extends MVCObject {
 
@@ -45,7 +45,7 @@ public class MapTypeRegistry extends MVCObject {
     }
 
     private native void set(String id, String mapType)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.set(id, mapType);
     }-*/;
 

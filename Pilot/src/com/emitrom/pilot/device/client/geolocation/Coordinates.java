@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.device.client.geolocation;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A set of properties that describe the geographic coordinates of a position.

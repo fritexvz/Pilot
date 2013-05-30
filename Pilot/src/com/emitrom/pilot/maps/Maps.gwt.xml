@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module>
     <inherits name='com.google.gwt.core.Core' />
+    <inherits name='com.google.gwt.user.DOM' />
     <inherits name='com.emitrom.pilot.util.Util' />
-      <inherits name='com.pilot.shared.Shared' />
+    <inherits name='com.emitrom.pilot.core.shared.Shared' />
 </module>

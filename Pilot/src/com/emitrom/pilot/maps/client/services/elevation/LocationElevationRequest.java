@@ -16,13 +16,13 @@
  */
 package com.emitrom.pilot.maps.client.services.elevation;
 
-import java.util.ArrayList;
-
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+
+import java.util.ArrayList;
 
 /**
  * An elevation request sent by the ElevationService containing the list of
@@ -38,7 +38,7 @@ public class LocationElevationRequest extends JsObject {
     /**
      * The discrete locations for which to retrieve elevations.
      * 
-     * @param values
+     * @param locations
      */
     public void setLocation(ArrayList<LatLng> locations) {
         JsArray<JavaScriptObject> values = JsArray.createArray().cast();
@@ -57,7 +57,7 @@ public class LocationElevationRequest extends JsObject {
     }
 
     private native void _setLocations(JsArray<JavaScriptObject> values)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.locations = values;
     }-*/;
 
@@ -71,7 +71,7 @@ public class LocationElevationRequest extends JsObject {
     }
 
     private native JsArray<JavaScriptObject> _getLocations()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.locations;
     }-*/;
 

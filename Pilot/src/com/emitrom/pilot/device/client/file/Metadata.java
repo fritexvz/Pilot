@@ -16,11 +16,11 @@
  */
 package com.emitrom.pilot.device.client.file;
 
-import java.util.Date;
-
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+
+import java.util.Date;
 
 /**
  * This class supplies information about the state of a file or directory.

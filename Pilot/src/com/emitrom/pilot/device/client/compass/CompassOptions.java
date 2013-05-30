@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.device.client.compass;
 
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 
 /**
  * An optional parameter to customize the retrieval of the compass.

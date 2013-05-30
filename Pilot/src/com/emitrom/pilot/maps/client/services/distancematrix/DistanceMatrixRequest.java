@@ -16,16 +16,16 @@
  */
 package com.emitrom.pilot.maps.client.services.distancematrix;
 
-import java.util.ArrayList;
-
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.emitrom.pilot.maps.client.services.TravelMode;
 import com.emitrom.pilot.maps.client.services.UnitSystem;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayString;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+
+import java.util.ArrayList;
 
 /**
  * A distance matrix query sent by the DistanceMatrixService containing arrays
@@ -46,12 +46,12 @@ public class DistanceMatrixRequest extends JsObject {
      * @param value
      */
     public native void setAvoidHighways(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.avoidHighways = value;
     }-*/;
 
     public native boolean isAvoidHighways()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.avoidHighways;
     }-*/;
 
@@ -62,12 +62,12 @@ public class DistanceMatrixRequest extends JsObject {
      * @param value
      */
     public native void setAvoidTolls(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.avoidTolls = value;
     }-*/;
 
     public native boolean isAvoidTolls()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.avoidTolls;
     }-*/;
 
@@ -75,7 +75,7 @@ public class DistanceMatrixRequest extends JsObject {
      * An array containing destination address strings and/or LatLngs, to which
      * to calculate distance and time. Required.
      * 
-     * @param value
+     * @param destinations
      */
     public void setDestinationsAsString(ArrayList<String> destinations) {
         JsArrayString values = JsArrayString.createArray().cast();
@@ -94,7 +94,7 @@ public class DistanceMatrixRequest extends JsObject {
     }
 
     private native void _setDestinations(JsArrayString values)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.destinations = values;
     }-*/;
 
@@ -102,7 +102,7 @@ public class DistanceMatrixRequest extends JsObject {
      * An array containing destination address strings and/or LatLngs, to which
      * to calculate distance and time. Required.
      * 
-     * @param value
+     * @param destinations
      */
     public void setDestinations(ArrayList<LatLng> destinations) {
         JsArray<JavaScriptObject> values = JsArray.createArray().cast();
@@ -121,12 +121,12 @@ public class DistanceMatrixRequest extends JsObject {
     }
 
     private native void _setDestinations(JsArray<JavaScriptObject> values)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.destinations = values;
     }-*/;
 
     public native JsArrayString getDestinations()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.destinations;
     }-*/;
 
@@ -134,7 +134,7 @@ public class DistanceMatrixRequest extends JsObject {
      * An array containing origin address strings and/or LatLngs, from which to
      * calculate distance and time. Required.
      * 
-     * @param value
+     * @param destinations
      */
 
     public void setOriginsAsString(ArrayList<String> destinations) {
@@ -146,7 +146,7 @@ public class DistanceMatrixRequest extends JsObject {
     }
 
     public native void _setOrigins(JsArrayString value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.origins = value;
     }-*/;
 
@@ -154,7 +154,7 @@ public class DistanceMatrixRequest extends JsObject {
      * An array containing origin address strings and/or LatLngs, from which to
      * calculate distance and time. Required.
      * 
-     * @param value
+     * @param origin
      */
     public void setOrigins(ArrayList<LatLng> origin) {
         JsArray<JavaScriptObject> values = JsArray.createArray().cast();
@@ -173,12 +173,12 @@ public class DistanceMatrixRequest extends JsObject {
     }
 
     private native void _setOrigins(JsArray<JavaScriptObject> value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.origins = value;
     }-*/;
 
     public native JsArrayString getOriginsAsStringArray()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return this.origins;
     }-*/;
 
@@ -188,26 +188,26 @@ public class DistanceMatrixRequest extends JsObject {
      * @param value
      */
     public native void setRegion(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.region = value;
     }-*/;
 
     public native String getRegion()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.region;
     }-*/;
 
     /**
      * AnimationType of routing requested. Required.
      * 
-     * @param value
+     * @param mode
      */
     public void setTravelMode(TravelMode mode) {
         setTravelMode(mode.getValue());
     }
 
     private native void setTravelMode(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.travelMode = value;
     }-*/;
 
@@ -216,7 +216,7 @@ public class DistanceMatrixRequest extends JsObject {
     }
 
     private native String _getTravelMode()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.travelMode;
     }-*/;
 
@@ -224,7 +224,7 @@ public class DistanceMatrixRequest extends JsObject {
      * Preferred unit system to use when displaying distance. Optional; defaults
      * to metric.
      * 
-     * @param value
+     * @param system
      */
 
     public void setUnitSystem(UnitSystem system) {
@@ -232,7 +232,7 @@ public class DistanceMatrixRequest extends JsObject {
     }
 
     private native void setUnitSystem(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.unitSystem = value;
     }-*/;
 

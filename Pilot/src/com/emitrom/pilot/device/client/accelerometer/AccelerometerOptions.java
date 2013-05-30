@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.device.client.accelerometer;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.util.client.core.Attributes;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * An optional parameter to customize the retrieval of the accelerometer.

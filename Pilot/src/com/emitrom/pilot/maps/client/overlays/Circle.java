@@ -62,15 +62,15 @@ public class Circle extends MVCObject {
      * @return
      */
     public final native LatLngBounds getBounds()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.bounds;
 		var toReturn = @com.emitrom.pilot.maps.client.core.LatLngBounds::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public final native void setBounds(LatLngBounds value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.bounds = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.bounds = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -87,8 +87,8 @@ public class Circle extends MVCObject {
     }-*/;
 
     public final native void setOptions(CircleOptions value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.options = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.options = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -97,12 +97,12 @@ public class Circle extends MVCObject {
      * @param value
      */
     public final native void setRadius(double value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.setRadius(value);
     }-*/;
 
     public final native double getRadius()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.getRadius();
     }-*/;
 
@@ -112,13 +112,13 @@ public class Circle extends MVCObject {
      * @param value
      */
     public final native void setCenter(LatLng value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso
-				.setCenter(value.@com.pilot.shared.client.core.JsObject::getJsObj()());
+				.setCenter(value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     public final native LatLng getCenter()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getCenter();
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

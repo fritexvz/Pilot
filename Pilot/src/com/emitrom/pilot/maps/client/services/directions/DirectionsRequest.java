@@ -16,15 +16,15 @@
  */
 package com.emitrom.pilot.maps.client.services.directions;
 
-import java.util.ArrayList;
-
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.emitrom.pilot.maps.client.services.TravelMode;
 import com.emitrom.pilot.maps.client.services.UnitSystem;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+
+import java.util.ArrayList;
 
 /**
  * A directions query to be sent to the DirectionsService.
@@ -43,12 +43,12 @@ public class DirectionsRequest extends JsObject {
      * @param value
      */
     public native void setAvoidHighways(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.avoidHighways = value;
     }-*/;
 
     public native boolean isAvoidHighways()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.avoidHighways;
     }-*/;
 
@@ -59,7 +59,7 @@ public class DirectionsRequest extends JsObject {
      * @param value
      */
     public native void setAvoidTolls(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.avoidTolls = value;
     }-*/;
 
@@ -73,7 +73,7 @@ public class DirectionsRequest extends JsObject {
      * @param value
      */
     public native void setDestination(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.destination = value;
     }-*/;
 
@@ -83,12 +83,12 @@ public class DirectionsRequest extends JsObject {
      * @param value
      */
     public native void setDestination(LatLng value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.destination = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.destination = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native LatLng getDestination()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.destination;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -100,12 +100,12 @@ public class DirectionsRequest extends JsObject {
      * @param value
      */
     public native void setProvideRouteAlternatives(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.provideRouteAlternatives = value;
     }-*/;
 
     public native boolean providesRouteAlternatives()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.provideRouteAlternatives;
     }-*/;
 
@@ -118,12 +118,12 @@ public class DirectionsRequest extends JsObject {
      * @param value
      */
     public native void setOptimizeWaypoints(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.optimizeWaypoints = value;
     }-*/;
 
     public native boolean optimizeWaypoints()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.optimizeWaypoints;
     }-*/;
 
@@ -133,7 +133,7 @@ public class DirectionsRequest extends JsObject {
      * @param value
      */
     public native void setOrigin(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.origin = value;
     }-*/;
 
@@ -143,13 +143,13 @@ public class DirectionsRequest extends JsObject {
      * @param value
      */
     public native void setOrigin(LatLng value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.origin = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.origin = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		;
     }-*/;
 
     public native LatLng getOrigin()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.origin;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -161,26 +161,26 @@ public class DirectionsRequest extends JsObject {
      * @param value
      */
     public native void setRegion(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.region = value;
     }-*/;
 
     public native String getRegion()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.region;
     }-*/;
 
     /**
      * AnimationType of routing requested. Required.
      * 
-     * @param value
+     * @param mode
      */
     public void setTravelMode(TravelMode mode) {
         setTravelMode(mode.getValue());
     }
 
     private native void setTravelMode(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.travelMode = value;
     }-*/;
 
@@ -189,7 +189,7 @@ public class DirectionsRequest extends JsObject {
     }
 
     private native String _getTravelMode()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.travelMode;
     }-*/;
 
@@ -197,7 +197,7 @@ public class DirectionsRequest extends JsObject {
      * Preferred unit system to use when displaying distance. Defaults to the
      * unit system used in the country of origin.
      * 
-     * @param value
+     * @param system
      */
 
     public void setUnitSystem(UnitSystem system) {
@@ -205,7 +205,7 @@ public class DirectionsRequest extends JsObject {
     }
 
     private native void setUnitSystem(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.unitSystem = value;
     }-*/;
 
@@ -214,7 +214,7 @@ public class DirectionsRequest extends JsObject {
     }
 
     private native String _getUnitSystem()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.unitSystem;
     }-*/;
 
@@ -223,7 +223,7 @@ public class DirectionsRequest extends JsObject {
      * origin to the destination by way of each waypoint in this array.
      * Optional.
      * 
-     * @param values
+     * @param wayPoints
      */
     public void setWayPoints(ArrayList<DirectionsWaypoints> wayPoints) {
         JsArray<JavaScriptObject> values = JsArray.createArray().cast();
@@ -242,7 +242,7 @@ public class DirectionsRequest extends JsObject {
     }
 
     private native void _setWayPoints(JsArray<JavaScriptObject> values)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.wayPoints = values;
     }-*/;
 
@@ -256,7 +256,7 @@ public class DirectionsRequest extends JsObject {
     }
 
     private native JsArray<JavaScriptObject> _getWayPoints()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.wayPoints;
     }-*/;
 

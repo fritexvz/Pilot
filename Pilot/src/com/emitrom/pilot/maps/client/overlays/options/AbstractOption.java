@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.overlays.options;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
 import com.emitrom.pilot.maps.client.GMap;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
 
 public abstract class AbstractOption extends JsObject {
 
@@ -28,7 +28,7 @@ public abstract class AbstractOption extends JsObject {
      * @return
      */
     public native GMap getMap()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.map;
 		var toReturn = @com.emitrom.pilot.maps.client.GMap::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -39,7 +39,7 @@ public abstract class AbstractOption extends JsObject {
     }
 
     private native void setMap(JavaScriptObject value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.map = value;
     }-*/;
 

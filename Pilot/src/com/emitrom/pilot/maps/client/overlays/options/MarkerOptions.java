@@ -17,12 +17,12 @@
 
 package com.emitrom.pilot.maps.client.overlays.options;
 
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.emitrom.pilot.maps.client.core.Animation;
 import com.emitrom.pilot.maps.client.overlays.MarkerImage;
 import com.emitrom.pilot.maps.client.overlays.MarkerShape;
 import com.emitrom.pilot.maps.client.streetview.StreetViewPanorama;
-import com.pilot.shared.client.core.JsoHelper;
 
 public class MarkerOptions extends AbstractOption {
 
@@ -40,7 +40,7 @@ public class MarkerOptions extends AbstractOption {
     }
 
     public native String _getAnimation()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.animation;
     }-*/;
 
@@ -49,7 +49,7 @@ public class MarkerOptions extends AbstractOption {
     }
 
     private native void setAnimation(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.animation = value;
     }-*/;
 
@@ -60,12 +60,12 @@ public class MarkerOptions extends AbstractOption {
      * @return
      */
     public native boolean isClickable() /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.clickable;
     }-*/;
 
     public native void setClickable(boolean value) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.clickable = value;
     }-*/;
 
@@ -75,12 +75,12 @@ public class MarkerOptions extends AbstractOption {
      * @return
      */
     public native String getCursor()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.cursor;
     }-*/;
 
     public native void setCursor(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.cursor = value;
     }-*/;
 
@@ -90,12 +90,12 @@ public class MarkerOptions extends AbstractOption {
      * @return
      */
     public native boolean isDraggable() /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.draggable;
     }-*/;
 
     public native void setDraggable(boolean value) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.draggable = value;
     }-*/;
 
@@ -105,23 +105,23 @@ public class MarkerOptions extends AbstractOption {
      * @param value
      */
     public native void setFlat(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.flat = value;
     }-*/;
 
     public native boolean isFlat()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.flat;
     }-*/;
 
     public native void setIcon(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.icon = value;
     }-*/;
 
     public native void setIcon(MarkerImage value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.icon = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.icon = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -130,7 +130,7 @@ public class MarkerOptions extends AbstractOption {
      * @return
      */
     public native String getIcon()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.icon;
     }-*/;
 
@@ -140,26 +140,26 @@ public class MarkerOptions extends AbstractOption {
      * @return
      */
     public native MarkerImage getIconAsMarkerImage()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.icon;
 		var toReturn = @com.emitrom.pilot.maps.client.overlays.MarkerImage::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native StreetViewPanorama getMapAsStreeviewPanorama()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.map;
 		var toReturn = @com.emitrom.pilot.maps.client.streetview.StreetViewPanorama::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setMap(StreetViewPanorama value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		jso.map = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		jso.map = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native boolean isOptimized()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.optimized;
     }-*/;
 
@@ -172,12 +172,12 @@ public class MarkerOptions extends AbstractOption {
      * @param value
      */
     public native void setOptimized(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.optimized = value;
     }-*/;
 
     public native LatLng getPosition()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.position;
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -189,12 +189,12 @@ public class MarkerOptions extends AbstractOption {
      * @param value
      */
     public native void setPosition(LatLng value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		this.position = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		this.position = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native boolean raiseOnDrag()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.raiseOnDrag;
     }-*/;
 
@@ -205,17 +205,17 @@ public class MarkerOptions extends AbstractOption {
      * @param value
      */
     public native void setRaiseOnDrag(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.raiseOnDrag = value;
     }-*/;
 
     public native String getShadow()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.shadow;
     }-*/;
 
     public native MarkerImage getShadowAsMarkerImage()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.shadow;
 		var toReturn = @com.emitrom.pilot.maps.client.overlays.MarkerImage::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -227,7 +227,7 @@ public class MarkerOptions extends AbstractOption {
      * @param value
      */
     public native void setShadow(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.shadow = value;
     }-*/;
 
@@ -237,8 +237,8 @@ public class MarkerOptions extends AbstractOption {
      * @param value
      */
     public native void setShadow(MarkerImage value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		this.shadow = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		this.shadow = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		;
     }-*/;
 
@@ -251,7 +251,7 @@ public class MarkerOptions extends AbstractOption {
     }-*/;
 
     public native String getTitle()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return this.title;
     }-*/;
 
@@ -261,7 +261,7 @@ public class MarkerOptions extends AbstractOption {
      * @param value
      */
     public native void setTitle(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.title = value;
     }-*/;
 
@@ -271,12 +271,12 @@ public class MarkerOptions extends AbstractOption {
      * @return
      */
     public native boolean isVisible()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.visible;
     }-*/;
 
     public native void setVisible(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.visible = value;
     }-*/;
 
@@ -290,12 +290,12 @@ public class MarkerOptions extends AbstractOption {
      * @param value
      */
     public native void setZIndex(double value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.zIndex = value;
     }-*/;
 
     public native double getZIndex()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.zIndex;
     }-*/;
 

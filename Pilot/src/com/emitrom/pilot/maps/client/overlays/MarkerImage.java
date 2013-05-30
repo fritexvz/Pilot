@@ -16,11 +16,11 @@
  */
 package com.emitrom.pilot.maps.client.overlays;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.geom.Point;
 import com.emitrom.pilot.maps.client.geom.Size;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A structure representing a Marker icon or shadow image.
@@ -57,7 +57,7 @@ public class MarkerImage extends JsObject {
     }
 
     public final native Point getAnchor()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.anchor;
 		var toReturn = @com.emitrom.pilot.maps.client.geom.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -71,8 +71,8 @@ public class MarkerImage extends JsObject {
      * @param value
      */
     public final native void setAnchor(Point value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		this.anchor = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		this.anchor = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -82,12 +82,12 @@ public class MarkerImage extends JsObject {
      * @param value
      */
     public final native void setOrigin(Point value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		this.origin = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		this.origin = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public final native Point getOrigin()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.origin;
 		var toReturn = @com.emitrom.pilot.maps.client.geom.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -100,12 +100,12 @@ public class MarkerImage extends JsObject {
      * @param value
      */
     public final native void setScaledSize(Size value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		this.scaledSize = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		this.scaledSize = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public final native Size getScaledSize()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.scaledSize;
 		var toReturn = @com.emitrom.pilot.maps.client.geom.Size::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -119,12 +119,12 @@ public class MarkerImage extends JsObject {
      * @param value
      */
     public final native void setSize(Size value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
-		this.size = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
+		this.size = value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public final native Size getSize()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.size;
 		var toReturn = @com.emitrom.pilot.maps.client.geom.Size::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -136,12 +136,12 @@ public class MarkerImage extends JsObject {
      * @param value
      */
     public final native void setUrl(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.url = value;
     }-*/;
 
     public final native String getUrl()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.url;
     }-*/;
 

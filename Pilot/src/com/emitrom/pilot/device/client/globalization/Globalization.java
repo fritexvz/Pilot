@@ -17,6 +17,7 @@
 
 package com.emitrom.pilot.device.client.globalization;
 
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.device.client.core.Module;
 import com.emitrom.pilot.device.client.core.ModuleFactory;
 import com.emitrom.pilot.device.client.core.handlers.globalization.GlobalizationDateHandler;
@@ -24,7 +25,6 @@ import com.emitrom.pilot.device.client.core.handlers.globalization.Globalization
 import com.emitrom.pilot.device.client.core.handlers.globalization.GlobalizationLocaleHandler;
 import com.emitrom.pilot.device.client.core.handlers.globalization.GlobalizationNameHandler;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -62,7 +62,7 @@ public class Globalization extends Module {
      * @param handler
      */
     public native void getPreferredLanguage(GlobalizationLanguageHandler handler)/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getPreferredLanguage(
 						$entry(function(language) {
@@ -80,7 +80,7 @@ public class Globalization extends Module {
      * @param handler
      */
     public native void getLocale(GlobalizationLocaleHandler handler) /*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getLocaleName(
 						$entry(function(l) {
@@ -99,7 +99,7 @@ public class Globalization extends Module {
      * @param handler
      */
     public native void dateToString(Date date, GlobalizationDateHandler handler) /*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.dateToString(
 						date,
@@ -120,7 +120,7 @@ public class Globalization extends Module {
      * @param options
      */
     public native void dateToString(Date date, GlobalizationDateHandler handler, GlobalizationOptions options) /*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.dateToString(
 						date,
@@ -131,7 +131,7 @@ public class Globalization extends Module {
 						$entry(function() {
 							handler.@com.emitrom.pilot.device.client.core.handlers.globalization.GlobalizationDateHandler::onError()();
 						}),
-						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
+						options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -143,7 +143,7 @@ public class Globalization extends Module {
      * @param handler
      */
     public native void stringToDate(String dateString, GlobalizationDateHandler handler) /*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.stringToDate(
 						dateString,
@@ -166,7 +166,7 @@ public class Globalization extends Module {
      * @param options
      */
     public native void stringToDate(String dateString, GlobalizationDateHandler handler, GlobalizationOptions options) /*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.stringToDate(
 						dateString,
@@ -177,7 +177,7 @@ public class Globalization extends Module {
 						$entry(function() {
 							handler.@com.emitrom.pilot.device.client.core.handlers.globalization.GlobalizationDateHandler::onError()();
 						}),
-						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
+						options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -187,7 +187,7 @@ public class Globalization extends Module {
      * @param handler
      */
     public native void getDatePattern(GlobalizationDateHandler handler) /*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getDatePattern(
 						$entry(function(date) {
@@ -207,7 +207,7 @@ public class Globalization extends Module {
      * @param options
      */
     public native void getDatePattern(GlobalizationDateHandler handler, GlobalizationOptions options) /*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getDatePattern(
 						$entry(function(date) {
@@ -217,7 +217,7 @@ public class Globalization extends Module {
 						$entry(function() {
 							handler.@com.emitrom.pilot.device.client.core.handlers.globalization.GlobalizationDateHandler::onError()();
 						}),
-						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
+						options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -225,7 +225,7 @@ public class Globalization extends Module {
      * according to the client's user preferences and calendar.
      */
     public native void getDateNames(GlobalizationNameHandler handler) /*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getDataNames(
 						$entry(function(names) {
@@ -242,7 +242,7 @@ public class Globalization extends Module {
      * according to the client's user preferences and calendar.
      */
     public native void getDateNames(GlobalizationNameHandler handler, GlobalizationOptions options) /*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getDataNames(
 						$entry(function(names) {
@@ -252,11 +252,11 @@ public class Globalization extends Module {
 						$entry(function() {
 							handler.@com.emitrom.pilot.device.client.core.handlers.globalization.GlobalizationNameHandler::onError()();
 						}),
-						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
+						options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     public native void isDayLightSavingsTime(Date date, GlobalizationDateHandler handler) /*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getDatePattern(
 						new $wnd.Date(date.getTime()),

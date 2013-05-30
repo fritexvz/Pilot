@@ -16,7 +16,7 @@
  */
 package com.emitrom.pilot.maps.client.overlays.options;
 
-import com.pilot.shared.client.core.JsoHelper;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 
 public class GroundOverlayOptions extends AbstractOption {
 
@@ -30,12 +30,12 @@ public class GroundOverlayOptions extends AbstractOption {
      * @param value
      */
     public native void setClickable(boolean value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.clickable = value;
     }-*/;
 
     public native boolean isClickable()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.clickable;
     }-*/;
 

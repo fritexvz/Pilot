@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.device.client.globalization;
 
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 
 public class GlobalizationOptions extends JsObject {
     public GlobalizationOptions() {

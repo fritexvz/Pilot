@@ -17,9 +17,9 @@
 
 package com.emitrom.pilot.maps.client.controls;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Options for the rendering of the map scale control.
@@ -59,7 +59,7 @@ public class ZoomControlOptions extends JsObject {
     /**
      * Style id. Used to select what style of map type control to display.
      * 
-     * @param value
+     * @param style
      */
     public final void setStyle(ZoomControlStyle style) {
         this.setStyle(style.getValue());
@@ -72,7 +72,6 @@ public class ZoomControlOptions extends JsObject {
     /**
      * Style id. Used to select what style of map type control to display.
      * 
-     * @param value
      */
     public ZoomControlStyle getStyle() {
         return ZoomControlStyle.fromValue(_getStyle());

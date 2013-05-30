@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.device.client.inappbrowser;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
 
 /**
  * The object that is passed to the callback function from an addEventListener
@@ -33,7 +33,7 @@ public class InAppBrowserEvent extends JsObject {
      * the eventname (String) - one of loadstart, loadstop, loaderror or exit
      */
     public native String getType() /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		return jso.type;
     }-*/;
 
@@ -41,7 +41,7 @@ public class InAppBrowserEvent extends JsObject {
      * the URL that was loaded (String)
      */
     public native String getUrl() /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		return jso.url;
     }-*/;
 
@@ -49,7 +49,7 @@ public class InAppBrowserEvent extends JsObject {
      * the error code (Number) - only in the case of loaderror
      */
     public native int getCode() /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		return jso.code;
     }-*/;
 
@@ -57,7 +57,7 @@ public class InAppBrowserEvent extends JsObject {
      * the error message (String) - only in the case of loaderror
      */
     public native String getMessage() /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		return jso.message;
     }-*/;
 

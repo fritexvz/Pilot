@@ -65,7 +65,7 @@ public class Polygon extends MVCObject {
      * @return
      */
     public native GMap getMap()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getMap();
 		var toReturn = @com.emitrom.pilot.maps.client.GMap::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -78,9 +78,9 @@ public class Polygon extends MVCObject {
      * @param value
      */
     public native void setMap(GMap value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso
-				.setMap(value.@com.pilot.shared.client.core.JsObject::getJsObj()());
+				.setMap(value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -89,7 +89,7 @@ public class Polygon extends MVCObject {
      * @return
      */
     public native MVCArray getPath()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getPath();
 		var toReturn = @com.emitrom.pilot.maps.client.core.MVCArray::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -101,7 +101,7 @@ public class Polygon extends MVCObject {
      * @return, an array of arrays
      */
     public native MVCArray getPaths()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getPaths();
 		var toReturn = @com.emitrom.pilot.maps.client.core.MVCArray::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -112,9 +112,9 @@ public class Polygon extends MVCObject {
      * @param options
      */
     public native void setOptions(PolygonOptions options)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		this
-				.setOptions(options.@com.pilot.shared.client.core.JsObject::getJsObj()());
+				.setOptions(options.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -122,23 +122,23 @@ public class Polygon extends MVCObject {
      * com.emitrom.pilot.maps.client.overlays.PolylineOptions for more
      * details.
      * 
-     * @param options
+     * @param value
      */
     public native void setPath(MVCArray value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso
-				.setPath(value.@com.pilot.shared.client.core.JsObject::getJsObj()());
+				.setPath(value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
      * Sets the path for this Polygon.
      * 
-     * @param options
+     * @param value
      */
     public native void setPaths(MVCArray value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso
-				.setPaths(value.@com.pilot.shared.client.core.JsObject::getJsObj()());
+				.setPaths(value.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     private static native JavaScriptObject create() /*-{

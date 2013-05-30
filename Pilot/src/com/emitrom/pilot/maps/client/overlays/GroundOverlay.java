@@ -17,12 +17,12 @@
 
 package com.emitrom.pilot.maps.client.overlays;
 
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.maps.client.GMap;
 import com.emitrom.pilot.maps.client.core.LatLngBounds;
 import com.emitrom.pilot.maps.client.core.MVCObject;
 import com.emitrom.pilot.maps.client.overlays.options.GroundOverlayOptions;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A rectangular image overlay on the map.
@@ -65,7 +65,7 @@ public class GroundOverlay extends MVCObject {
      * @return
      */
     public final native LatLngBounds getBounds()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getBounds();
 		var toReturn = @com.emitrom.pilot.maps.client.core.LatLngBounds::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -74,10 +74,9 @@ public class GroundOverlay extends MVCObject {
     /**
      * Returns the map on which this ground overlay is displayed.
      * 
-     * @param value
      */
     public final native GMap getMap()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getMap();
 		var toReturn = @com.emitrom.pilot.maps.client.GMap::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -89,7 +88,7 @@ public class GroundOverlay extends MVCObject {
      * @return
      */
     public final native String getUrl()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.getUrl();
     }-*/;
 
@@ -100,9 +99,9 @@ public class GroundOverlay extends MVCObject {
      * @param map
      */
     public final native void setMap(GMap map)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		this
-				.setMap(map.@com.pilot.shared.client.core.JsObject::getJsObj()());
+				.setMap(map.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     private static native JavaScriptObject create(String url, JavaScriptObject bounds) /*-{

@@ -16,11 +16,11 @@
  */
 package com.emitrom.pilot.device.client.inappbrowser;
 
+import com.emitrom.pilot.core.shared.client.core.JsObject;
 import com.emitrom.pilot.device.client.handlers.InAppBrowserEventHandler;
 import com.emitrom.pilot.device.client.handlers.InAppBrowserExecuteScriptHandler;
 import com.emitrom.pilot.device.client.handlers.InAppBrowserInsertCssHandler;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.pilot.shared.client.core.JsObject;
 
 /**
  * The InAppBrowser is a web-browser that is shown in your app when you use the
@@ -59,7 +59,7 @@ public class InAppBrowser extends JsObject {
      * Closes this InAppBrowser window.
      */
     public native void close() /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		jso.close();
     }-*/;
 
@@ -70,7 +70,7 @@ public class InAppBrowser extends JsObject {
      *            the URL containing the script that will be executed
      */
     public native void executeScriptFromFile(String url) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		jso.executeScript({
 			file : url
 		});
@@ -85,7 +85,7 @@ public class InAppBrowser extends JsObject {
      * 
      */
     public native void executeScriptFromFile(String url, InAppBrowserExecuteScriptHandler handler) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		var result = jso
 				.executeScript(
 						{
@@ -104,7 +104,7 @@ public class InAppBrowser extends JsObject {
      *            , text of the script to inject
      */
     public native void executeScriptFromCode(String script) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		jso.executeScript({
 			code : script
 		});
@@ -118,7 +118,7 @@ public class InAppBrowser extends JsObject {
      * @param handler
      */
     public native void executeScriptFromCode(String script, InAppBrowserExecuteScriptHandler handler) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		var result = jso
 				.executeScript(
 						{
@@ -137,7 +137,7 @@ public class InAppBrowser extends JsObject {
      *            , the URL of the stylesheet to inject
      */
     public native void insertCssFromUrl(String url) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		jso.insertCss({
 			file : url
 		});
@@ -152,7 +152,7 @@ public class InAppBrowser extends JsObject {
      * @param handler
      */
     public native void insertCssFromUrl(String url, InAppBrowserInsertCssHandler handler) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		jso
 				.insertCss(
 						{
@@ -170,7 +170,7 @@ public class InAppBrowser extends JsObject {
      *            , text of the stylesheet to inject
      */
     public native void insertCssFromCode(String css) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		jso.insertCss({
 			code : css
 		});
@@ -185,7 +185,7 @@ public class InAppBrowser extends JsObject {
      * @param handler
      */
     public native void insertCssFromCode(String css, InAppBrowserInsertCssHandler handler) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		jso
 				.insertCss(
 						{
@@ -242,7 +242,7 @@ public class InAppBrowser extends JsObject {
      * Adds a listener for an event from the InAppBrowser.
      */
     private native InAppBrowserHandlerRegistration addEventListener(String event, InAppBrowserEventHandler handler) /*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::jsObj;
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::jsObj;
 		var fn = function(e) {
 			var event = @com.emitrom.pilot.device.client.inappbrowser.InAppBrowserEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 			handler.@com.emitrom.pilot.device.client.handlers.InAppBrowserEventHandler::onEvent(Lcom/emitrom/pilot/device/client/inappbrowser/InAppBrowserEvent;)(event);

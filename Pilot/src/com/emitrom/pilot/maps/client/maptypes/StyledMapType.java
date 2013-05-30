@@ -16,11 +16,11 @@
  */
 package com.emitrom.pilot.maps.client.maptypes;
 
-import java.util.ArrayList;
-
+import com.emitrom.pilot.core.shared.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.core.JsObject;
+
+import java.util.ArrayList;
 
 /**
  * Creates a MapType with a custom style

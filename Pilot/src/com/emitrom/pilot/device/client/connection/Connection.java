@@ -56,7 +56,7 @@ public class Connection extends Module {
     }
 
     private native String _getType()/*-{
-		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return peer.type;
     }-*/;
 

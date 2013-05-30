@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.maps.client.services;
 
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 
 public class EncodedPolylineData extends JsObject {
 

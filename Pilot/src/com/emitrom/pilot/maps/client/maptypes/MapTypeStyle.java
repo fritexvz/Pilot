@@ -16,12 +16,12 @@
  */
 package com.emitrom.pilot.maps.client.maptypes;
 
-import java.util.ArrayList;
-
+import com.emitrom.pilot.core.shared.client.core.JsObject;
+import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.pilot.shared.client.core.JsObject;
-import com.pilot.shared.client.core.JsoHelper;
+
+import java.util.ArrayList;
 
 /**
  * The MapTypeStyle is a collection of selectors and stylers that define how the
@@ -45,14 +45,14 @@ public class MapTypeStyle extends JsObject {
      * Optional; if elementType is not specified, the value is assumed to be
      * 'all'.
      * 
-     * @param element
+     * @param type
      */
     public void setElementType(MapTypeStyleElementType type) {
         setElementType(type.getValue());
     }
 
     private native void setElementType(String element)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.elementType = element;
     }-*/;
 
@@ -61,7 +61,7 @@ public class MapTypeStyle extends JsObject {
     }
 
     private native String _getElementType()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.elementType;
     }-*/;
 
@@ -70,14 +70,14 @@ public class MapTypeStyle extends JsObject {
      * applied. Optional; if featureType is not specified, the value is assumed
      * to be 'all'.
      * 
-     * @param value
+     * @param type
      */
     public void setFeatureType(MapTypeStyleFeatureType type) {
         setFeatureType(type.getValue());
     }
 
     private native void setFeatureType(String value)/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		jso.featureType = value;
     }-*/;
 
@@ -86,7 +86,7 @@ public class MapTypeStyle extends JsObject {
     }
 
     private native String _getFeatureType()/*-{
-		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		var jso = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return jso.featureType;
     }-*/;
 
