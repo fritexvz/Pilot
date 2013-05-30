@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.streetview;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A point of view object which specifies the camera's orientation at the Street
@@ -43,12 +43,12 @@ public class StreetViewPov extends JsObject {
      * @param value
      */
     public native void setHeading(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.heading = value;
     }-*/;
 
     public native double getHeading()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return this.heading;
     }-*/;
 
@@ -59,12 +59,12 @@ public class StreetViewPov extends JsObject {
      * @param value
      */
     public native void setPitch(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.pitch = value;
     }-*/;
 
     public native double getPitch()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.pitch;
     }-*/;
 
@@ -75,12 +75,12 @@ public class StreetViewPov extends JsObject {
      * @param value
      */
     public native void setZoom(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.zoom = value;
     }-*/;
 
     public native double getZoom()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.zoom;
     }-*/;
 

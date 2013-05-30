@@ -17,8 +17,8 @@
 
 package com.emitrom.pilot.device.client.camera;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Parameters only used by iOS to specify the anchor element location and 

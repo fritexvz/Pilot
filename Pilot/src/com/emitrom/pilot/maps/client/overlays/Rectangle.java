@@ -52,15 +52,15 @@ public class Rectangle extends MVCObject {
      * @return
      */
     public final native LatLngBounds getBounds()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.bounds;
 		var toReturn = @com.emitrom.pilot.maps.client.core.LatLngBounds::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public final native void setBounds(LatLngBounds value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.bounds = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.bounds = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -69,7 +69,7 @@ public class Rectangle extends MVCObject {
      * @return
      */
     public native GMap getMap()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getMap();
 		var toReturn = @com.emitrom.pilot.maps.client.GMap::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -82,15 +82,15 @@ public class Rectangle extends MVCObject {
      * @param value
      */
     public native void setMap(GMap value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso
-				.setMap(value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setMap(value.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     public native void setOptions(RectangleOptions value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso
-				.options(value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.options(value.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     private static native JavaScriptObject create()/*-{

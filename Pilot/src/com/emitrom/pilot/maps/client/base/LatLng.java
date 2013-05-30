@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.maps.client.base;
 
-import com.emitrom.pilot.util.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.core.JsObject;
 
 public class LatLng extends JsObject {
 
@@ -63,7 +63,7 @@ public class LatLng extends JsObject {
      * @return
      */
     public native double getLat()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.lat();
     }-*/;
 
@@ -73,7 +73,7 @@ public class LatLng extends JsObject {
      * @return
      */
     public native double getLng()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.lng();
     }-*/;
 
@@ -84,8 +84,8 @@ public class LatLng extends JsObject {
      * @return
      */
     public final native boolean isEqualTo(LatLng other) /*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		return jso.equals(other.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		return jso.equals(other.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -95,7 +95,7 @@ public class LatLng extends JsObject {
      * @return
      */
     public final native String toUrlValue() /*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.toUrlValue();
     }-*/;
 
@@ -107,7 +107,7 @@ public class LatLng extends JsObject {
      * @return
      */
     public final native String toUrlValue(double precision) /*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.toUrlValue(precision);
     }-*/;
 
@@ -117,7 +117,7 @@ public class LatLng extends JsObject {
      * @return
      */
     public final native String toStringValue()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.toString();
     }-*/;
 

@@ -18,10 +18,10 @@ package com.emitrom.pilot.maps.client.streetview;
 
 import java.util.ArrayList;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * The representation of a panorama returned from the provider defined using
@@ -45,12 +45,12 @@ public class StreetviewPanoramaData extends JsObject {
      * @return
      */
     public native void setCopyright(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.copyright = value;
     }-*/;
 
     public native String getCopyright()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.copyright;
     }-*/;
 
@@ -69,7 +69,7 @@ public class StreetviewPanoramaData extends JsObject {
     }
 
     public native void _setLinks(JsArray<JavaScriptObject> values)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.links = values;
     }-*/;
 
@@ -83,7 +83,7 @@ public class StreetviewPanoramaData extends JsObject {
     }
 
     private native JsArray<JavaScriptObject> _getLinks()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.getLinks();
     }-*/;
 
@@ -93,13 +93,13 @@ public class StreetviewPanoramaData extends JsObject {
      * @param value
      */
     public native void setLocation(StreetViewLocation value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.location = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.location = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		;
     }-*/;
 
     public native StreetViewLocation getLocation()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.location;
 		var toReturn = @com.emitrom.pilot.maps.client.streetview.StreetViewLocation::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -111,8 +111,8 @@ public class StreetviewPanoramaData extends JsObject {
      * @param value
      */
     public native void setTiles(StreetViewTileData value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.tiles = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.tiles = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native StreetViewTileData getTiles()/*-{

@@ -16,9 +16,9 @@
  */
 package com.emitrom.pilot.maps.client.geom;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 public class Size extends JsObject {
 
@@ -53,9 +53,9 @@ public class Size extends JsObject {
      * @return
      */
     public final native boolean equals(Size other)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso
-				.equals(other.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.equals(other.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -64,27 +64,27 @@ public class Size extends JsObject {
      * @return
      */
     public final native String toStringValue()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.toString();
     }-*/;
 
     public final native void setWidth(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.width = value;
     }-*/;
 
     public final native double getHeight()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.height;
     }-*/;
 
     public final native void setHeight(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.height = value;
     }-*/;
 
     public final native double getWidth()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.width;
     }-*/;
 

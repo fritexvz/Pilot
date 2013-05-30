@@ -74,35 +74,35 @@ public class InfoWindow extends MVCObject {
      * @param value
      */
     public  native void setContent(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.setContent(value);
     }-*/;
 
     public  native String getContent()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.getContent();
     }-*/;
 
     public  native LatLng getPosition()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.getPosition();
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public  native void setPosition(LatLng value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso
-				.setPosition(value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setPosition(value.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     public  native double getZIndex()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.getZIndex();
     }-*/;
 
     public  native void setZIndex(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.setZIndex(value);
     }-*/;
 
@@ -118,44 +118,44 @@ public class InfoWindow extends MVCObject {
      * @param anchor
      */
     public  native void open(GMap map, MVCObject anchor)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso
 				.open(
-						map.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
-						anchor.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+						map.@com.pilot.shared.client.core.JsObject::getJsObj()(),
+						anchor.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     public  native void open(GMap map)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso
-				.open(map.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.open(map.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     public  native void open(StreetViewPanorama view, MVCObject anchor)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso
 				.open(
-						map.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
-						anchor.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+						map.@com.pilot.shared.client.core.JsObject::getJsObj()(),
+						anchor.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     public  native void open(StreetViewPanorama view)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso
-				.open(map.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.open(map.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     public  native void setOptions(InfoWindowOptions options)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso
-				.setOptions(options.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.setOptions(options.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
     
     /**
      * Close the info window
      */
     public  native void close()/*-{
-  		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+  		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
   		jso.close();
       }-*/;
 

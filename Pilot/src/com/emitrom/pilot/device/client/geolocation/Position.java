@@ -18,9 +18,9 @@ package com.emitrom.pilot.device.client.geolocation;
 
 import java.util.Date;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Contains Position coordinates that are created by the geolocation API.

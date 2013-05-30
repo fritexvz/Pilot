@@ -18,8 +18,8 @@ package com.emitrom.pilot.device.client.media;
 
 import com.emitrom.pilot.device.client.core.ModuleError;
 import com.emitrom.pilot.util.client.core.Attributes;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * The Media object provides the ability to record and play back audio files on a device.

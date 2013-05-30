@@ -64,7 +64,7 @@ public class Contacts extends Module {
      * @return Contact
      */
     public native Contact createContact()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = peer.create();
 		var toReturn = @com.emitrom.pilot.device.client.contacts.Contact::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -109,7 +109,7 @@ public class Contacts extends Module {
 
     private native void find(List<String> contactFields, ContactFindHandler callBack)/*-{
 		var me = this;
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var fields = @com.emitrom.pilot.device.client.contacts.Contacts::fromListOfString(Ljava/util/List;)(contactFields);
 		peer
 				.find(
@@ -129,7 +129,7 @@ public class Contacts extends Module {
 
     private native void find(List<String> contactFields, ContactFindHandler callBack, ContactFindOptions options)/*-{
 		var me = this;
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var fields = @com.emitrom.pilot.device.client.contacts.Contacts::fromListOfString(Ljava/util/List;)(contactFields);
 		peer
 				.find(
@@ -145,11 +145,11 @@ public class Contacts extends Module {
 							var errorObject = @com.emitrom.pilot.device.client.contacts.ContactError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
 							callBack.@com.emitrom.pilot.device.client.core.handlers.contacts.ContactFindHandler::onError(Lcom/emitrom/pilot/device/client/contacts/ContactError;)(errorObject);
 						}),
-						options.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     static native JavaScriptObject createNative()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = peer.create();
 		return obj;
     }-*/;

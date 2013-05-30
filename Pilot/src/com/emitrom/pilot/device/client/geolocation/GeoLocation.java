@@ -64,7 +64,7 @@ public class GeoLocation extends Module {
      * @param handler
      */
     public native void getCurrentLocation(GeoLocationHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getCurrentPosition(
 						$entry(function(pos) {
@@ -87,7 +87,7 @@ public class GeoLocation extends Module {
      * @param handler
      */
     public native void getCurrentLocation(GeoLocationHandler handler, GeoLocationOptions options)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.getCurrentPosition(
 						$entry(function(pos) {
@@ -98,7 +98,7 @@ public class GeoLocation extends Module {
 							var errorObject = @com.emitrom.pilot.device.client.geolocation.PositionError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
 							handler.@com.emitrom.pilot.device.client.core.handlers.geolocation.GeoLocationHandler::onError(Lcom/emitrom/pilot/device/client/geolocation/PositionError;)(errorObject);
 						}),
-						options.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -107,7 +107,7 @@ public class GeoLocation extends Module {
      * @param handler
      */
     public native String watchPosition(GeoLocationHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer
 				.watchPosition(
 						$entry(function(pos) {
@@ -126,7 +126,7 @@ public class GeoLocation extends Module {
      * @param handler
      */
     public native String watchPosition(GeoLocationHandler handler, GeoLocationOptions options)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer
 				.watchPosition(
 						$entry(function(pos) {
@@ -137,7 +137,7 @@ public class GeoLocation extends Module {
 							var errorObject = @com.emitrom.pilot.device.client.geolocation.PositionError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
 							handler.@com.emitrom.pilot.device.client.core.handlers.geolocation.GeoLocationHandler::onError(Lcom/emitrom/pilot/device/client/geolocation/PositionError;)(errorObject);
 						}),
-						options.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -147,7 +147,7 @@ public class GeoLocation extends Module {
      * @param watchId
      */
     public native void clearWatch(String watchId)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.clearWatch(watchId);
     }-*/;
 

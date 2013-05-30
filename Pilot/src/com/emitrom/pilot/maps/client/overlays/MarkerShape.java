@@ -16,10 +16,10 @@
  */
 package com.emitrom.pilot.maps.client.overlays;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayNumber;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * This object defines the marker shape to use in determination of a marker's
@@ -62,7 +62,7 @@ public class MarkerShape extends JsObject {
     }
 
     private native void setCoords(JsArrayNumber values)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.coords = values;
     }-*/;
 
@@ -85,12 +85,12 @@ public class MarkerShape extends JsObject {
      * @param value
      */
     public native void setType(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.type = value;
     }-*/;
 
     public native String getType()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.type;
     }-*/;
 

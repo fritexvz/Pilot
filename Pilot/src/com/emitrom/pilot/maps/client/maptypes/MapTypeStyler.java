@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.maps.client.maptypes;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A styler affects how a map's elements will be styled. Each MapTypeStyler
@@ -40,12 +40,12 @@ public class MapTypeStyler extends JsObject {
      * @param value
      */
     public native void setGamma(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.gamma = value;
     }-*/;
 
     public native double getGamma()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.gamma;
     }-*/;
 
@@ -58,12 +58,12 @@ public class MapTypeStyler extends JsObject {
      * @param value
      */
     public native void setHue(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.hue = value;
     }-*/;
 
     public native String getHue()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.hue;
     }-*/;
 
@@ -74,12 +74,12 @@ public class MapTypeStyler extends JsObject {
      * @param value
      */
     public native void setInvertLightness(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.invert_lightness = value;
     }-*/;
 
     public native boolean invertLightness()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.invert_lightness;
     }-*/;
 
@@ -91,12 +91,12 @@ public class MapTypeStyler extends JsObject {
      * @param value
      */
     public native void setLightness(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.lightness = value;
     }-*/;
 
     public native double getLightness()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.lightness;
     }-*/;
 
@@ -108,12 +108,12 @@ public class MapTypeStyler extends JsObject {
      * @param value
      */
     public native void setSaturation(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.saturation = value;
     }-*/;
 
     public native double getSaturation()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.saturation;
     }-*/;
 
@@ -123,12 +123,12 @@ public class MapTypeStyler extends JsObject {
      * @param value
      */
     public native void setVisibility(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.visibility = value;
     }-*/;
 
     public native String getVisibility()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.visibility;
     }-*/;
 

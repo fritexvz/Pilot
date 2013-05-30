@@ -18,9 +18,9 @@ package com.emitrom.pilot.maps.client.maptypes;
 
 import com.emitrom.pilot.maps.client.base.LatLng;
 import com.emitrom.pilot.maps.client.geom.Point;
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 public class Projection extends JsObject {
 
@@ -44,11 +44,11 @@ public class Projection extends JsObject {
      * @return
      */
     public native Point fromLatLgnToPoint(LatLng latLgn, Point point)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso
 				.fromLatLgnToPoint(
-						latLgn.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
-						point.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+						latLgn.@com.pilot.shared.client.core.JsObject::getJsObj()(),
+						point.@com.pilot.shared.client.core.JsObject::getJsObj()());
 
 		var toReturn = @com.emitrom.pilot.maps.client.geom.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -64,9 +64,9 @@ public class Projection extends JsObject {
      * @return
      */
     public native LatLng fromPointToLatLgn(Point point)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso
-				.fromPointToLatLgn(point.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+				.fromPointToLatLgn(point.@com.pilot.shared.client.core.JsObject::getJsObj()());
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
@@ -81,10 +81,10 @@ public class Projection extends JsObject {
      * @return
      */
     public native LatLng fromPointToLatLgn(Point point, boolean noWRap)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso
 				.fromPointToLatLgn(
-						point.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
+						point.@com.pilot.shared.client.core.JsObject::getJsObj()(),
 						noWrap);
 		var toReturn = @com.emitrom.pilot.maps.client.base.LatLng::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

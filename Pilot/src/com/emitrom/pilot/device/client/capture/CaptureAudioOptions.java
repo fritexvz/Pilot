@@ -16,8 +16,8 @@
  */
 package com.emitrom.pilot.device.client.capture;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Encapsulates audio capture configuration options.

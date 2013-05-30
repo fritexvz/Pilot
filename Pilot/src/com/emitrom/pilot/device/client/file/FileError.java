@@ -17,9 +17,9 @@
 package com.emitrom.pilot.device.client.file;
 
 import com.emitrom.pilot.util.client.core.Attributes;
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * A 'FileError' object is set when an error occurs in any of the File API

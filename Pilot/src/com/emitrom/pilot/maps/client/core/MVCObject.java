@@ -17,10 +17,10 @@
 package com.emitrom.pilot.maps.client.core;
 
 import com.emitrom.pilot.maps.client.events.handlers.MapEventHandler;
-import com.emitrom.pilot.util.client.core.Function;
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.core.Function;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 public abstract class MVCObject extends JsObject {
 
@@ -75,11 +75,11 @@ public abstract class MVCObject extends JsObject {
      * @param target
      */
     public native void bindTo(String key, MVCObject target)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		this
 				.bindTo(
 						key,
-						target.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+						target.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -89,11 +89,11 @@ public abstract class MVCObject extends JsObject {
      * @param target
      */
     public native void bindTo(String key, MVCObject target, String targetKey)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		this
 				.bindTo(
 						key,
-						target.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
+						target.@com.pilot.shared.client.core.JsObject::getJsObj()(),
 						targetKey);
     }-*/;
 
@@ -104,11 +104,11 @@ public abstract class MVCObject extends JsObject {
      * @param target
      */
     public native void bindTo(String key, MVCObject target, String targetKey, boolean notify)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		this
 				.bindTo(
 						key,
-						target.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
+						target.@com.pilot.shared.client.core.JsObject::getJsObj()(),
 						targetKey, notify);
     }-*/;
 
@@ -120,7 +120,7 @@ public abstract class MVCObject extends JsObject {
      * @return
      */
     public native <T> T get(String key)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.get(key);
     }-*/;
 
@@ -132,7 +132,7 @@ public abstract class MVCObject extends JsObject {
      * @param key
      */
     public native void notify(String key)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.notify(key);
     }-*/;
 
@@ -143,7 +143,7 @@ public abstract class MVCObject extends JsObject {
      * @param value
      */
     public native void set(String key, Object value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.set(key, value);
     }-*/;
 
@@ -153,7 +153,7 @@ public abstract class MVCObject extends JsObject {
      * @param values
      */
     public native void setValues(Object values)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.setValues(values);
     }-*/;
 
@@ -163,7 +163,7 @@ public abstract class MVCObject extends JsObject {
      * 
      */
     public native void unbind(String key)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.unbind(key);
     }-*/;
 
@@ -171,7 +171,7 @@ public abstract class MVCObject extends JsObject {
      * Removes all bindings.
      */
     public native void unbindAll()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.unbindAll();
     }-*/;
 

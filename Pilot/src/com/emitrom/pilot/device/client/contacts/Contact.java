@@ -22,10 +22,10 @@ import java.util.List;
 
 import com.emitrom.pilot.device.client.core.handlers.contacts.ContactRemoveHandler;
 import com.emitrom.pilot.device.client.core.handlers.contacts.ContactSaveHandler;
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Contains properties that describe a contact, such as a user's personal or
@@ -138,7 +138,7 @@ public class Contact extends JsObject {
     }
 
     private native void _setPhoneNumbers(JsArray<JavaScriptObject> values)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.phoneNumbers = values;
     }-*/;
 
@@ -160,7 +160,7 @@ public class Contact extends JsObject {
     }
 
     private native JavaScriptObject _getPhoneNumbers()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.phoneNumbers;
     }-*/;
 
@@ -183,7 +183,7 @@ public class Contact extends JsObject {
     }
 
     private native void _setEmails(JsArray<JavaScriptObject> values)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.emails = values;
     }-*/;
 
@@ -205,7 +205,7 @@ public class Contact extends JsObject {
     }
 
     private native JavaScriptObject _getEmails()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.emails;
     }-*/;
 
@@ -228,7 +228,7 @@ public class Contact extends JsObject {
     }
 
     private native void _setAddresses(JsArray<JavaScriptObject> values)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.addresses = values;
     }-*/;
 
@@ -250,7 +250,7 @@ public class Contact extends JsObject {
     }
 
     private native JavaScriptObject _getAddresses()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.addresses;
     }-*/;
 
@@ -273,7 +273,7 @@ public class Contact extends JsObject {
     }
 
     private native void _setIms(JsArray<JavaScriptObject> values)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.ims = values;
     }-*/;
 
@@ -296,7 +296,7 @@ public class Contact extends JsObject {
     }
 
     private native JavaScriptObject _getIms()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.ims;
     }-*/;
 
@@ -318,7 +318,7 @@ public class Contact extends JsObject {
     }
 
     private native JavaScriptObject _getOrganizations()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.organizations;
     }-*/;
 
@@ -341,7 +341,7 @@ public class Contact extends JsObject {
     }
 
     private native void _setOrganizations(JsArray<JavaScriptObject> values)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.organizations = values;
     }-*/;
 
@@ -400,7 +400,7 @@ public class Contact extends JsObject {
     }
 
     private native void _setPhotos(JsArray<JavaScriptObject> values)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.photos = values;
     }-*/;
 
@@ -422,7 +422,7 @@ public class Contact extends JsObject {
     }
 
     private native JavaScriptObject _getPhotos()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.photos;
     }-*/;
 
@@ -445,7 +445,7 @@ public class Contact extends JsObject {
     }
 
     private native void _setCategories(JsArray<JavaScriptObject> values)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.categories = values;
     }-*/;
 
@@ -485,7 +485,7 @@ public class Contact extends JsObject {
     }
 
     private native void _setUrls(JsArray<JavaScriptObject> values)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer.urls = values;
     }-*/;
 
@@ -507,12 +507,12 @@ public class Contact extends JsObject {
     }
 
     private native JavaScriptObject _getUrls()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.urls;
     }-*/;
 
     private native JavaScriptObject _getCategories()/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return peer.categories;
     }-*/;
 
@@ -524,7 +524,7 @@ public class Contact extends JsObject {
      * @return Contact
      */
     public native Contact clone(Contact contact)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = peer.clone();
 		var toReturn = @com.emitrom.pilot.device.client.contacts.Contact::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -537,7 +537,7 @@ public class Contact extends JsObject {
      * @param callBack
      */
     public native void remove(ContactRemoveHandler callBack)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.remove(
 						$entry(function() {
@@ -556,7 +556,7 @@ public class Contact extends JsObject {
      * @param callBack
      */
     public native void save(ContactSaveHandler callBack)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.save(
 						$entry(function(contact) {

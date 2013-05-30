@@ -18,8 +18,8 @@ package com.emitrom.pilot.device.client.file;
 
 import com.emitrom.pilot.device.client.core.handlers.file.FileTransferHandler;
 import com.emitrom.pilot.device.client.core.handlers.file.FileTransferProgressHandler;
-import com.emitrom.pilot.util.client.core.JsObject;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.core.JsObject;
 
 import java.util.Map;
 
@@ -45,7 +45,7 @@ public class FileTransfer extends JsObject {
      * @param handler
      */
     public native void addFileTransferProgressHandler(FileTransferProgressHandler handler)/*-{
-        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
         peer.onprogress = $entry(function(progressEvent) {
             var progressObject = @com.emitrom.pilot.device.client.file.FileTransferProgress::new(Lcom/google/gwt/core/client/JavaScriptObject;)(progressEvent);
             handler.@com.emitrom.pilot.device.client.core.handlers.file.FileTransferProgressHandler::onProgress(Lcom/emitrom/pilot/device/client/file/FileTransferProgress;)(progressEvent);
@@ -60,7 +60,7 @@ public class FileTransfer extends JsObject {
      * @param handler
      */
     public native void upload(String filePath, String server, FileTransferHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.upload(
 						filePath,
@@ -84,7 +84,7 @@ public class FileTransfer extends JsObject {
      * @param options
      */
     public native void upload(String filePath, String server, FileTransferHandler handler, FileUploadOptions options)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.upload(
 						filePath,
@@ -97,7 +97,7 @@ public class FileTransfer extends JsObject {
 							var errorObject = @com.emitrom.pilot.device.client.file.FileTransferError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
 							handler.@com.emitrom.pilot.device.client.core.handlers.file.FileTransferHandler::onError(Lcom/emitrom/pilot/device/client/file/FileTransferError;)(errorObject);
 						}),
-						options.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()());
+						options.@com.pilot.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     /**
@@ -110,7 +110,7 @@ public class FileTransfer extends JsObject {
      * @param trustAllHosts
      */
     public native void upload(String filePath, String server, FileTransferHandler handler, FileUploadOptions options, boolean trustAllHosts)/*-{
-        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
         peer
             .upload(
                 filePath,
@@ -123,7 +123,7 @@ public class FileTransfer extends JsObject {
                     var errorObject = @com.emitrom.pilot.device.client.file.FileTransferError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(error);
                     handler.@com.emitrom.pilot.device.client.core.handlers.file.FileTransferHandler::onError(Lcom/emitrom/pilot/device/client/file/FileTransferError;)(errorObject);
                 }),
-                options.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()(),
+                options.@com.pilot.shared.client.core.JsObject::getJsObj()(),
                 trustAllHosts
             );
     }-*/;
@@ -136,7 +136,7 @@ public class FileTransfer extends JsObject {
      * @param handler
      */
     public native void download(String source, String target, FileTransferHandler handler)/*-{
-		var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		peer
 				.download(
 						source,
@@ -161,7 +161,7 @@ public class FileTransfer extends JsObject {
      *                       Not recommended for production use.
      */
     public native void download(String source, String target, FileTransferHandler handler, boolean trustAllHosts)/*-{
-        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
         peer
             .download(
                 source,
@@ -189,7 +189,7 @@ public class FileTransfer extends JsObject {
      * @param options Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
      */
     public native void download(String source, String target, FileTransferHandler handler, boolean trustAllHosts, Map<String, String> options)/*-{
-        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
         peer
             .download(
                 source,
@@ -213,7 +213,7 @@ public class FileTransfer extends JsObject {
      * @param handler
      */
     public native void abort(FileTransferHandler handler)/*-{
-        var peer = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+        var peer = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
         peer
                 .abort(
                         $entry(function(error) {

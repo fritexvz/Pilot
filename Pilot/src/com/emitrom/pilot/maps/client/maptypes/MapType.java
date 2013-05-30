@@ -19,9 +19,9 @@ package com.emitrom.pilot.maps.client.maptypes;
 
 import com.emitrom.pilot.maps.client.geom.Point;
 import com.emitrom.pilot.maps.client.geom.Size;
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * This class defines map type. This class is typically used for base maps such
@@ -44,7 +44,7 @@ public class MapType extends JsObject {
      * @return
      */
     public native <T> T getTitle(Point titleCoord, double zoom, JavaScriptObject ownerDocument)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.getTitle(titleCoord, zoom, ownerDocument);
     }-*/;
 
@@ -57,7 +57,7 @@ public class MapType extends JsObject {
      * @return
      */
     public native <T> T releaseNode(Object value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.releaseNode(value);
     }-*/;
 
@@ -68,12 +68,12 @@ public class MapType extends JsObject {
      * @param value
      */
     public native void setAlt(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.alt = value;
     }-*/;
 
     public native String getAlt()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.alt;
     }-*/;
 
@@ -84,12 +84,12 @@ public class MapType extends JsObject {
      * @param value
      */
     public native void setMaxZoom(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.maxZoom = value;
     }-*/;
 
     public native double getMaxZoom()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.maxZoom;
     }-*/;
 
@@ -100,12 +100,12 @@ public class MapType extends JsObject {
      * @param value
      */
     public native void setMinZoom(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.minZoom = value;
     }-*/;
 
     public native double getMinZoom()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.minZoom;
     }-*/;
 
@@ -115,12 +115,12 @@ public class MapType extends JsObject {
      * @param value
      */
     public native void setName(String value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.name = value;
     }-*/;
 
     public native String getName()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.name;
     }-*/;
 
@@ -131,12 +131,12 @@ public class MapType extends JsObject {
      * @param value
      */
     public native void setProjection(Projection value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.projection = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.projection = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native Projection getProjection()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.position;
 		var toReturn = @com.emitrom.pilot.maps.client.maptypes.Projection::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -149,12 +149,12 @@ public class MapType extends JsObject {
      * @param value
      */
     public native void setRadius(double value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.radius = value;
     }-*/;
 
     public native double getRadius()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		return jso.radius;
     }-*/;
 
@@ -164,12 +164,12 @@ public class MapType extends JsObject {
      * @param value
      */
     public native void setTileSize(Size value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.tileSize = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.tileSize = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     public native Size getTileSize()/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		var obj = jso.titleSize;
 		var toReturn = @com.emitrom.pilot.maps.client.geom.Size::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

@@ -20,9 +20,9 @@ import com.emitrom.pilot.maps.client.GMap;
 import com.emitrom.pilot.maps.client.overlays.InfoWindow;
 import com.emitrom.pilot.maps.client.overlays.options.MarkerOptions;
 import com.emitrom.pilot.maps.client.overlays.options.PolylineOptions;
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * This object defines the properties that can be set on a DirectionsRenderer
@@ -46,8 +46,8 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setDirections(DirectionsResult value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.directions = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.directions = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		;
     }-*/;
 
@@ -58,7 +58,7 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setDraggable(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.draggable = value;
     }-*/;
 
@@ -71,7 +71,7 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setHideRouteList(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.hideRouteList = value;
     }-*/;
 
@@ -85,8 +85,8 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setInfoWindow(InfoWindow value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.infoWindow = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.infoWindow = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		;
     }-*/;
 
@@ -96,8 +96,8 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setMap(GMap value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.map = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.map = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -107,8 +107,8 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setMarkerOptions(MarkerOptions value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.markerOptions = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.markerOptions = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -118,8 +118,8 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setPolylineOptions(PolylineOptions value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
-		jso.polylineOptions = value.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
+		jso.polylineOptions = value.@com.pilot.shared.client.core.JsObject::getJsObj()();
     }-*/;
 
     /**
@@ -130,7 +130,7 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setPreserveViewPort(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.preserveViewPort = value;
     }-*/;
 
@@ -141,7 +141,7 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setRouteIndex(int value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.routeIndex = value;
     }-*/;
 
@@ -152,7 +152,7 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setSuppressBicyclingLayer(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.suppressBicyclingLayer = value;
     }-*/;
 
@@ -162,7 +162,7 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setSuppressInfoWindows(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.suppressInfoWindows = value;
     }-*/;
 
@@ -172,7 +172,7 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setSuppressMarker(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.suppressMarker = value;
     }-*/;
 
@@ -182,7 +182,7 @@ public class DirectionRendererOptions extends JsObject {
      * @param value
      */
     public native void setSuppressPolylines(boolean value)/*-{
-		var jso = this.@com.emitrom.pilot.util.client.core.JsObject::getJsObj()();
+		var jso = this.@com.pilot.shared.client.core.JsObject::getJsObj()();
 		jso.suppressPolylines = value;
     }-*/;
 

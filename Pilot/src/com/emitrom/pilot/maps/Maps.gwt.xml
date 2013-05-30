@@ -2,4 +2,5 @@
 <module>
     <inherits name='com.google.gwt.core.Core' />
     <inherits name='com.emitrom.pilot.util.Util' />
+      <inherits name='com.pilot.shared.Shared' />
 </module>

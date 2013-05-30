@@ -19,10 +19,10 @@ package com.emitrom.pilot.device.client.contacts;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.emitrom.pilot.util.client.core.JsObject;
-import com.emitrom.pilot.util.client.core.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
+import com.pilot.shared.client.core.JsObject;
+import com.pilot.shared.client.core.JsoHelper;
 
 /**
  * Contains address properties for a Contact object.
