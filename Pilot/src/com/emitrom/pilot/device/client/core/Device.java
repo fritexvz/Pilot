@@ -20,7 +20,21 @@ import com.emitrom.pilot.core.shared.client.core.Function;
 import com.emitrom.pilot.core.shared.client.core.JsoHelper;
 import com.emitrom.pilot.device.client.core.handlers.notification.ConfirmHandler;
 import com.emitrom.pilot.device.client.events.DeviceEvent;
-import com.emitrom.pilot.device.client.handlers.*;
+import com.emitrom.pilot.device.client.handlers.BackButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.BatteryCriticalEventHandler;
+import com.emitrom.pilot.device.client.handlers.BatteryLowEventHandler;
+import com.emitrom.pilot.device.client.handlers.BatteryStatusEventHandler;
+import com.emitrom.pilot.device.client.handlers.DeviceReadyEventHandler;
+import com.emitrom.pilot.device.client.handlers.EndCallButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.MenuButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.OfflineEventHandler;
+import com.emitrom.pilot.device.client.handlers.OnlineEventHandler;
+import com.emitrom.pilot.device.client.handlers.PauseEventHandler;
+import com.emitrom.pilot.device.client.handlers.ResumeEventHandler;
+import com.emitrom.pilot.device.client.handlers.SearchButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.StartCallButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.VolumeDownButtonEventHandler;
+import com.emitrom.pilot.device.client.handlers.VolumeUpButtonEventHandler;
 import com.emitrom.pilot.device.client.notification.Notification;
 import com.emitrom.pilot.util.client.core.Attributes;
 
@@ -159,9 +173,12 @@ public class Device extends Module {
      * @param callBack
      */
     public native static void addEventListener(String event, Function callBack)/*-{
-		$doc.addEventListener(event, $entry(function() {
-			callBack.@com.emitrom.pilot.core.shared.client.core.Function::execute()();
-		}), false);
+		$doc
+				.addEventListener(
+						event,
+						$entry(function() {
+							callBack.@com.emitrom.pilot.core.shared.client.core.Function::execute()();
+						}), false);
     }-*/;
 
     /**
@@ -473,5 +490,13 @@ public class Device extends Module {
     public static void vibrate() {
         Notification.get().vibrate();
     }
+
+    public static native boolean pluginExists(String pluginName)/*-{
+		if (!$wnd.plugins)
+			return false;
+		if (!$wnd.plugins[pluginName])
+			return false;
+		return true;
+    }-*/;
 
 }

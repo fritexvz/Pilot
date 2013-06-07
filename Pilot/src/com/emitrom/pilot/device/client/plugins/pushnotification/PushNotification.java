@@ -1,27 +1,29 @@
 /**
- Copyright (c) 2012 Emitrom LLC. All rights reserved.
- For licensing questions, please contact us at licensing@emitrom.com
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+ * Copyright (c) 2012 Emitrom LLC. All rights reserved. For licensing questions,
+ * please contact us at licensing@emitrom.com
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  */
 package com.emitrom.pilot.device.client.plugins.pushnotification;
 
+import com.emitrom.pilot.device.client.core.Device;
 import com.emitrom.pilot.device.client.plugins.Plugin;
 
 /**
  * Java binding for PushNotification.js
- *
- * @see <a href=https://github.com/phonegap-build/PushPlugin>https://github.com/phonegap-build/PushPlugin</a>
+ * 
+ * @see <a href=https://github.com/phonegap-build/PushPlugin>https://github.com/
+ *      phonegap-build/PushPlugin</a>
  */
 public class PushNotification implements Plugin {
 
@@ -37,70 +39,72 @@ public class PushNotification implements Plugin {
 
     @Override
     public void init() {
-        if (!pluginExists()) {
+        if (!Device.pluginExists("pushNotification")) {
             throw new IllegalStateException(
-                    "Can not find PushNotification plugin - did you include PushNotification.js?");
+                            "Can not find PushNotification plugin - did you include PushNotification.js?");
         }
     }
 
     private native boolean pluginExists()/*-{
-        if (!$wnd.plugins)
-            return false;
-        if (!$wnd.plugins.pushNotification)
-            return false;
-        return true;
+		if (!$wnd.plugins)
+			return false;
+		if (!$wnd.plugins.pushNotification)
+			return false;
+		return true;
     }-*/;
 
     public native void register(PushNotificationRegisterConfig config, PushNotificationRegisterCallback callback)/*-{
-        $wnd.plugins.pushNotification
-            .register(
-            function (s) {
-                callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onSuccess(Ljava/lang/String;)(s);
-            },
-            function (e) {
-                callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onError(Ljava/lang/String;)(e);
-            },
-            config.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
+		$wnd.plugins.pushNotification
+				.register(
+						function(s) {
+							callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onSuccess(Ljava/lang/String;)(s);
+						},
+						function(e) {
+							callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onError(Ljava/lang/String;)(e);
+						},
+						config.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()());
     }-*/;
 
     public native void unregister(PushNotificationRegisterCallback callback)/*-{
-        $wnd.plugins.pushNotification
-            .register(
-            function (s) {
-                callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onSuccess(Ljava/lang/String;)(s);
-            },
-            function (e) {
-                callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onError(Ljava/lang/String;)(e);
-            });
+		$wnd.plugins.pushNotification
+				.register(
+						function(s) {
+							callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onSuccess(Ljava/lang/String;)(s);
+						},
+						function(e) {
+							callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onError(Ljava/lang/String;)(e);
+						});
     }-*/;
 
     /**
      * Set the badge count visible when the app is not running
-     *
-     * @param badgeCount , an integer indicating what number should show up in the
-     *                   badge. Passing 0 will clear the badge.
+     * 
+     * @param badgeCount
+     *            , an integer indicating what number should show up in the
+     *            badge. Passing 0 will clear the badge.
      */
     public native void setApplicationBadgeNumber(PushNotificationRegisterCallback callback, int badgeCount)/*-{
-        $wnd.plugins.pushNotification
-            .setApplicationIconBadgeNumber(
-            function (s) {
-                callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onSuccess(Ljava/lang/String;)(s);
-            },
-            function (e) {
-                callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onError(Ljava/lang/String;)(e);
-            }, badgeCount);
+		$wnd.plugins.pushNotification
+				.setApplicationIconBadgeNumber(
+						function(s) {
+							callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onSuccess(Ljava/lang/String;)(s);
+						},
+						function(e) {
+							callback.@com.emitrom.pilot.device.client.plugins.pushnotification.PushNotificationRegisterCallback::onError(Ljava/lang/String;)(e);
+						}, badgeCount);
     }-*/;
 
     /**
      * Set the badge count visible when the app is not running(IOS Only)
-     *
-     * @param badgeCount , an integer indicating what number should show up in the
-     *                   badge. Passing 0 will clear the badge.
+     * 
+     * @param badgeCount
+     *            , an integer indicating what number should show up in the
+     *            badge. Passing 0 will clear the badge.
      */
     public native void setApplicationBadgeNumber(int badgeCount)/*-{
-        $wnd.plugins.pushNotification.setApplicationIconBadgeNumber(
-            function (s) {
-            }, badgeCount);
+		$wnd.plugins.pushNotification.setApplicationIconBadgeNumber(
+				function(s) {
+				}, badgeCount);
     }-*/;
 
 }
