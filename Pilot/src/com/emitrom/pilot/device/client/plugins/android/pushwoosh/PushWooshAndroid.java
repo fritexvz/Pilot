@@ -33,7 +33,7 @@ public class PushWooshAndroid implements Plugin {
      * @param projectId
      * @param appId
      */
-    public native void registerDevice(String id, String applicationId, PushWooshEventHandler callback)/*-{
+    public native void registerDevice(String id, String applicationId, PushWooshAndroidEventHandler callback)/*-{
 		$wnd.plugins.pushNotification
 				.registerDevice(
 						{
@@ -41,45 +41,45 @@ public class PushWooshAndroid implements Plugin {
 							'appId' : applicationId
 						},
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onSuccess(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onSuccess(Ljava/lang/String;)(status);
 						},
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onError(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onError(Ljava/lang/String;)(status);
 						});
     }-*/;
 
-    public native void unregisterDevice(PushWooshEventHandler callback)/*-{
+    public native void unregisterDevice(PushWooshAndroidEventHandler callback)/*-{
 		$wnd.plugins.pushNotification
 				.unregisterDevice(
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onSuccess(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onSuccess(Ljava/lang/String;)(status);
 						},
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onError(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onError(Ljava/lang/String;)(status);
 						});
     }-*/;
 
-    public native void setTags(PushWooshAndroidObject tags, PushWooshEventHandler callback)/*-{
+    public native void setTags(PushWooshAndroidObject tags, PushWooshAndroidEventHandler callback)/*-{
 		$wnd.plugins.pushNotification
 				.setTags(
 						tags.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()(),
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onSuccess(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onSuccess(Ljava/lang/String;)(status);
 						},
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onError(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onError(Ljava/lang/String;)(status);
 						});
     }-*/;
 
-    public native void startGeoPushes(PushWooshEventHandler callback)/*-{
+    public native void startGeoPushes(PushWooshAndroidEventHandler callback)/*-{
 		$wnd.plugins.pushNotification
 				.startGeoPushes(
 
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onSuccess(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onSuccess(Ljava/lang/String;)(status);
 						},
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onError(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onError(Ljava/lang/String;)(status);
 						});
     }-*/;
 
@@ -89,15 +89,15 @@ public class PushWooshAndroid implements Plugin {
 		});
     }-*/;
 
-    public native void stopGeoPushes(PushWooshEventHandler callback)/*-{
+    public native void stopGeoPushes(PushWooshAndroidEventHandler callback)/*-{
 		$wnd.plugins.pushNotification
 				.stopGeoPushes(
 
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onSuccess(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onSuccess(Ljava/lang/String;)(status);
 						},
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onError(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onError(Ljava/lang/String;)(status);
 						});
     }-*/;
 
@@ -107,15 +107,15 @@ public class PushWooshAndroid implements Plugin {
 		});
     }-*/;
 
-    public native void setMultiNotificationMode(PushWooshEventHandler callback)/*-{
+    public native void setMultiNotificationMode(PushWooshAndroidEventHandler callback)/*-{
 		$wnd.plugins.pushNotification
 				.setMultiNotificationMode(
 
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onSuccess(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onSuccess(Ljava/lang/String;)(status);
 						},
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onError(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onError(Ljava/lang/String;)(status);
 						});
     }-*/;
 
@@ -126,15 +126,15 @@ public class PushWooshAndroid implements Plugin {
 				});
     }-*/;
 
-    public native void setSingleNotificationMode(PushWooshEventHandler callback)/*-{
+    public native void setSingleNotificationMode(PushWooshAndroidEventHandler callback)/*-{
 		$wnd.plugins.pushNotification
 				.setSingleNotificationMode(
 
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onSuccess(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onSuccess(Ljava/lang/String;)(status);
 						},
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onError(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onError(Ljava/lang/String;)(status);
 						});
     }-*/;
 
@@ -145,15 +145,15 @@ public class PushWooshAndroid implements Plugin {
 				});
     }-*/;
 
-    public native void setSoundType(int type, PushWooshEventHandler callback)/*-{
+    public native void setSoundType(int type, PushWooshAndroidEventHandler callback)/*-{
 		$wnd.plugins.pushNotification
 				.setSoundType(
 						type,
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onSuccess(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onSuccess(Ljava/lang/String;)(status);
 						},
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onError(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onError(Ljava/lang/String;)(status);
 						});
 
     }-*/;
@@ -164,15 +164,15 @@ public class PushWooshAndroid implements Plugin {
 		});
     }-*/;
 
-    public native void setVibrateType(int type, PushWooshEventHandler callback)/*-{
+    public native void setVibrateType(int type, PushWooshAndroidEventHandler callback)/*-{
 		$wnd.plugins.pushNotification
 				.setVibrateType(
 						type,
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onSuccess(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onSuccess(Ljava/lang/String;)(status);
 						},
 						function(status) {
-							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshEventHandler::onError(Ljava/lang/String;)(status);
+							callback.@com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidEventHandler::onError(Ljava/lang/String;)(status);
 						});
 
     }-*/;

@@ -10,12 +10,12 @@ public class PushWooshAndroidEvent extends JsObject {
     }
 
     public native String getTitle()/*-{
-		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()()
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		return peer.notification.title;
     }-*/;
 
     public native PushWooshAndroidObject getUserData()/*-{
-		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()()
+		var peer = this.@com.emitrom.pilot.core.shared.client.core.JsObject::getJsObj()();
 		var obj = peer.notification.userData;
 		return @com.emitrom.pilot.device.client.plugins.android.pushwoosh.PushWooshAndroidObject::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
