@@ -4,6 +4,6 @@
    <inherits name='com.google.gwt.user.DOM' />
    
    <generate-with class="com.emitrom.pilot.core.shared.rebind.BeanModelGenerator">
-		<when-type-assignable class="com.emitrom.pilot.core.shared.data.BeanLookup" />
+		<when-type-assignable class="com.emitrom.pilot.core.shared.client.data.BeanLookup" />
 	</generate-with>
 </module>
