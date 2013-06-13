@@ -46,8 +46,9 @@ public class PushWooshAndroid implements Plugin {
     /**
      * register for push notifications and retreive a deviceToken
      * 
-     * @param projectId
-     * @param appId
+     * @param id
+     * @param applicationId
+     * @param callback
      */
     public native void registerDevice(String id, String applicationId, PushWooshAndroidEventHandler callback)/*-{
 		$wnd.plugins.pushNotification

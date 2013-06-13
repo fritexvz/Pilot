@@ -18,19 +18,14 @@ package com.emitrom.pilot.device.client.plugins.blackberry.pushwoosh;
 
 import com.emitrom.pilot.device.client.plugins.Plugin;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.http.client.Request;
-import com.google.gwt.http.client.RequestBuilder;
-import com.google.gwt.http.client.RequestCallback;
-import com.google.gwt.http.client.RequestException;
-import com.google.gwt.http.client.Response;
+import com.google.gwt.http.client.*;
 
 
 /**
  * Based upon the PushWoosh Blackberry Phonegap/WebWorks plugin
  * https://github.com/shaders/phonegap-cordova-push-notifications/blob/master/BlackBerry/pushwoosh.js
  * http://www.pushwoosh.com/programming-push-notification/blackberry-html5-webworks-push-notification-sdk/
- * @author mvniekerk
- *	
+ *
  */
 public class PushWooshBlackBerry implements Plugin {
 	private static final PushWooshBlackBerry INSTANCE = new PushWooshBlackBerry();
@@ -227,7 +222,7 @@ public class PushWooshBlackBerry implements Plugin {
      * @return
      */
     public static final native String getLanguage() /*-{
-    	val ret = window.navigator.language;
+    	var ret = window.navigator.language;
     	if (ret) {
     		ret = ret.substring(0,2);
     	} else {
